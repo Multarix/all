@@ -2,7 +2,7 @@
 title: D&D-Dice
 group: dnd-dice
 description: A NodeJS module for rolling dice in Dungeons and Dragons.
-permalink: /projects/dnd-dice/
+permalink: /projects/dice/
 ---
 
 {% capture programCode %}import { Die, Coin } from 'dnd-dice';

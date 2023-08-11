@@ -2,7 +2,7 @@
 title: D&D-NPC
 group: npc
 description: A NodeJS module for generating random NPCs in Dungeons and Dragons.
-permalink: /projects/dnd-npc/
+permalink: /projects/npc/
 ---
 
 {% capture programCode %}import NPC from 'dnd-npc';

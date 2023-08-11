@@ -2,7 +2,7 @@
 title: D&D-Loot
 group: loot
 description: A NodeJS module for generating encounter loot in Dungeons and Dragons.
-permalink: /projects/dnd-loot/
+permalink: /projects/loot/
 ---
 
 {% capture programCode %}import { Hoard } from "dnd-loot";
