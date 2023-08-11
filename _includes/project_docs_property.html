@@ -1,0 +1,28 @@
+{% capture arrayString %}<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="open-in-new">Array</a>{% endcapture %}
+
+<h4 class="no-border top-pad project-property">
+	<a href="#{{ include.id | downcase }}" id="{{ include.id | downcase }}" class="heading-anchor">.{{ include.name }}</a>
+	
+	{% if include.readonly %}
+	<small class="project-docs-readonly">READ ONLY</small>
+	{% endif %}
+</h4>
+<p>{{ include.desc }}<br>
+	<b>Type: {% if include.isArray %}{{ arrayString }} &lt;{% endif %}
+		{% case include.type %}
+			{% when "number" %}
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" class="open-in-new">Number</a>
+			{% when "string" %}
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="open-in-new">String</a>
+			{% when "boolean" %}
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" class="open-in-new">Boolean</a>
+			{% when "array" %}
+				{{ arrayString }}
+			{% when "object" %}
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="open-in-new">Object</a>
+			{% else %}
+				<a href="{{ include.link }}">{{ include.type }}</a>
+		{% endcase %}
+		{% if include.isArray %}&gt;{% endif %}
+	</b>
+</p>

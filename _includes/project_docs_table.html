@@ -1,0 +1,17 @@
+<table>
+	<tr>
+		<th>Argument</th>
+		<th>Type</th>
+		<th>Description</th>
+		<th>Optional</th>
+	</tr>
+	{% for item in include.arguments %}
+		{% assign variable = item | split: ", " %}
+		<tr>
+			<td>{{ variable[0] }}</td>
+			<td>{{ variable[1] }}</td>
+			<td>{{ variable[2] }}</td>
+			<td>{{ variable[3] }}</td>
+		</tr>
+	{% endfor %}
+</table>

@@ -1,0 +1,79 @@
+[
+	{
+		"name": "base conversions",
+		"url": "/projects/base-conversion",
+		"img": "/assets/images/project-icons/conversion.png",
+		"shortDesc": "Convert between Binary, Octal, Decimal and Hexadecimal.",
+		"longDesc": "Converts between the bases and gives all the 'magical' steps' that would make a Math teacher wet. Disgusting, but helpful right?"
+	},
+	{
+		"name": "bdo: hp gauge",
+		"url": "/projects/boss-hp",
+		"img": "/assets/images/project-icons/boss-hp.png",
+		"shortDesc": "A boss HP gauge for the game Black Desert Online.",
+		"longDesc": "Creates a transparent window that is overlayed on top of the game, allowing you to better see the percentage of boss HP left."
+	},
+	{
+		"name": "character tracker",
+		"url": "/projects/character-tracker",
+		"img": "/assets/images/project-icons/character-tracker.png",
+		"shortDesc": "A program created in Python for tracking characters.",
+		"longDesc": "Can be used to keep track of characters in a story, game or even for a Dungeons and Dragons campaign."
+	},
+	{
+		"name": "discord: hide blocked messages",
+		"url": "/projects/discord-block-messages",
+		"img": "/assets/images/project-icons/discord.png",
+		"shortDesc": "A script written in Javascript to be used with Discord.",
+		"longDesc": "Removes the annoying element that says \"1 Blocked Message - Show Message\" when a user you've blocked sends a message."
+	},
+	{
+		"name": "discord: remove useless chat buttons",
+		"url": "/projects/discord-chat-buttons",
+		"img": "/assets/images/project-icons/discord.png",
+		"shortDesc": "A script written in Javascript to be used with Discord.",
+		"longDesc": "Removes various useless/ annoying buttons such as \"Gift Nitro\" from the chat bar. Various configurations are available."
+	},
+	{
+		"name": "dnd-dice",
+		"url": "/projects/dice",
+		"img": "/assets/images/project-icons/dnd.png",
+		"shortDesc": "A Node.js module for rolling dice for Dungeons and Dragons.",
+		"longDesc": "Allows you to quickly roll dice or even flip a coin for any D&D related purpose."
+	},
+	{
+		"name": "dnd-loot",
+		"url": "/projects/loot",
+		"img": "/assets/images/project-icons/dnd.png",
+		"shortDesc": "A Node.js module for generating encounter loot for Dungeons and Dragons.",
+		"longDesc": "Allows you to quickly generate loot for a single encounter or hoard encounter."
+	},
+	{
+		"name": "dnd-npc",
+		"url": "/projects/npc",
+		"img": "/assets/images/project-icons/dnd.png",
+		"shortDesc": "A Node.js module for generating random NPCs for Dungeons and Dragons.",
+		"longDesc": "Allows you to quickly generate NPCs that come fully armed, armoured and with legal stats."
+	},
+	{
+		"name": "python to pseudo",
+		"url": "/projects/pseudo-code",
+		"img": "/assets/images/project-icons/python.png",
+		"shortDesc": "A script that converts Python code into pseudo-code.",
+		"longDesc": "For those idiotic teachers who want you to write pseudo-code instead of actual code. Now you can do both at the same time!"
+	},
+	{
+		"name": "tera guide",
+		"url": "/projects/tera-guide",
+		"img": "/assets/images/project-icons/tera.png",
+		"shortDesc": "A module for Tera Toolbox.",
+		"longDesc": "Calls out dungeon/ boss mechanics, recommended skill usage (mainly for healers and tanks), telegraphs attack ranges and more."
+	},
+	{
+		"name": "truth table",
+		"url": "/projects/truth-table",
+		"img": "/assets/images/project-icons/tables.png",
+		"shortDesc": "Creates a Truth Table from a javascript statement.",
+		"longDesc": "Remembering the math symbols for boolean logic and writing out a truth table by hand is a tedious and painful experience. This does it all for you."
+	}
+]
