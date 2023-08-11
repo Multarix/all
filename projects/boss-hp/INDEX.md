@@ -2,6 +2,7 @@
 title: Boss HP
 group: boss-hp
 description: A semi-transparent, always-on-top boss HP gauge for the game Black Desert Online.
+permalink: /projects/boss-hp/
 ---
 
 {% capture description %}{{ page.description }}{% endcapture %}

@@ -2,6 +2,7 @@
 title: Pseudo-Code
 group: pseudo-code
 description: A script that converts Python code into pseudo-code
+permalink: /projects/pseudo-code/
 ---
 
 {% capture description %}{{ page.description }}{% endcapture %}

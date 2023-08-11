@@ -2,6 +2,7 @@
 title: Character Tracker
 group: character-tracker
 description: Add characters, world building or more with this program. Can be used to keep track of characters in a story, game or even for a Dungeons and Dragons campaign.
+permalink: /projects/character-tracker/
 ---
 
 {% capture description %}{{ page.description }}{% endcapture %}

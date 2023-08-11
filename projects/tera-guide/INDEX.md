@@ -2,6 +2,7 @@
 title: TERA Guide
 group: tera-guide
 description: A TERA Toolbox module that telegraphs boss attacks, calls out mechanics, recommended skill usage and more!
+permalink: /projects/tera-guide/
 ---
 
 {% capture description %}{{ page.description }}{% endcapture %}

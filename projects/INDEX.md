@@ -1,7 +1,9 @@
 ---
 title: Projects
+description: All of the available projects by Multarix
 group: all-projects
 layout: projects-page
+permalink: /projects/
 ---
 
 <h1 class="text-center title-margin">Projects</h1>

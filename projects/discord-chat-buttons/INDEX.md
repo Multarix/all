@@ -2,6 +2,7 @@
 title: Discord - Chat Buttons
 group: discord-chat
 description: Removes buttons from the chatbar that you don&apos;t or can&apos;t use, such as &quot;Gift Nitro&quot; &quot;Stickers&quot; or &quot;Boost Server&quot;.
+permalink: /projects/discord-chat-buttons/
 ---
 
 {% capture description %}{{ page.description }}{% endcapture %}

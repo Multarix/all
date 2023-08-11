@@ -2,6 +2,7 @@
 title: Discord - Blocked Messages
 group: discord-block
 description: Remove that annoying "1 Blocked Message - Show Message" element when a user you blocked sends a message.
+permalink: /projects/discord-block-messages/
 ---
 
 {% capture description %}{{ page.description }}{% endcapture %}
