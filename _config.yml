@@ -64,3 +64,4 @@ url: multarix.com
 
 exclude:
   - readme.md
+  - test.md
