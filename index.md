@@ -1,5 +1,4 @@
 ---
-permalink: /
 title: Home
 group: home
 description: A centralised location for all of Multarix's projects.

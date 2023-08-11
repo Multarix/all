@@ -1,5 +1,4 @@
 ---
-permalink: /projects
 title: Projects
 group: all-projects
 layout: projects-page

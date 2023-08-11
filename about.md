@@ -1,5 +1,4 @@
 ---
-permalink: /about
 group: about
 title: About
 description: All about Multarix, and this website.

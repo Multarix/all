@@ -1,5 +1,4 @@
 ---
-permalink: /test/
 title: Test
 description: This page shouldn't exist.
 layout: basic
