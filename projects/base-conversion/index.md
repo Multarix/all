@@ -1,7 +1,7 @@
 ---
 title: Base Conversions
 group: base-conversion
-description: Convert between different number bases, as well as to and from Binary Encoded Decimal, while also supplying valid "working" instructions.
+description: Convert between different number bases, as well as to and from Binary Encoded Decimal, while also supplying valid working instructions.
 permalink: /projects/base-conversion/
 ---
 

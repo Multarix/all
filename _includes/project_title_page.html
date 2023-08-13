@@ -1,11 +1,11 @@
 <div class="project-title-wrapper">
 	<div class="text-center">
-		<img src="{{ include.img }}" class="project-title-image" height="200" width="200" loading="eager">
+		<img alt="project-logo" src="{{ include.img }}" class="project-title-image" height="200" width="200" loading="eager">
 		
 		{% if include.npm %}
 			<br>
 			<a class="title-npm-link" href="https://npmjs.com/package/{{ include.npm }}">
-				<img class="title-npm-img" src="https://nodei.co/npm/{{ include.npm }}.png?compact=true" loading="eager">
+				<img alt="npm-stats" class="title-npm-img" src="https://nodei.co/npm/{{ include.npm }}.png?compact=true" loading="eager">
 			</a>
 		{% endif %}
 		
