@@ -17,6 +17,8 @@ a.project-button {
 	padding: 0.5em 1.25em;
 	margin: 0.3em;
 	
+	display: inline-table;
+	
 	&:hover {
 		color: white;
 		border-color: var(--font-color);
@@ -74,6 +76,13 @@ a.project-button {
 	font-size: 0.4em;
 	font-style: italic;
 	vertical-align: middle;
+}
+
+.current {
+	font-size: 0.6em;
+	font-style: italic;
+	
+	color: #999;
 }
 
 @media screen and (max-width: 424px) {
