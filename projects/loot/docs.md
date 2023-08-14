@@ -39,20 +39,20 @@ permalink: /projects/loot/docs
 Loot from a individual encounter
 {: .bot-pad .text-center .no-margin-top .no-margin-bot }
 
-### [Constructor](#individualloot#constructor){: .heading-anchor }
-{: id="individualloot#constructor" }
+### [Constructor](#individualloot-constructor){: .heading-anchor }
+{: id="individualloot-constructor" }
 
 {% assign individualConstructorArgs = "level, number, Challenge level of the encounter, true" | split: "|#|" %}
 {% include project_docs_table.html
 	arguments = individualConstructorArgs
 %}
 
-### [Properties](#individualloot#properties){: .heading-anchor }
-{: id="individualloot#properties" .top-pad }
+### [Properties](#individualloot-properties){: .heading-anchor }
+{: id="individualloot-properties" .top-pad }
 
 {% include project_docs_property.html
 	name		= "challengelevel"
-	id			= "individualloot#challengelevel"
+	id			= "individualloot-challengelevel"
 	desc		= "The challenge level of the encounter."
 	type		= "Money"
 	link		= "#money"
@@ -61,7 +61,7 @@ Loot from a individual encounter
 
 {% include project_docs_property.html
 	name		= "money"
-	id			= "individualloot#money"
+	id			= "individualloot-money"
 	desc		= "All of the coins obtained from the encounter."
 	type		= "number"
 	readonly	= true
@@ -81,20 +81,20 @@ Loot from a individual encounter
 Loot from a hoard encounter
 {: .bot-pad .text-center .no-margin-top .no-margin-bot }
 
-### [Constructor](#hoardloot#constructor){: .heading-anchor }
-{: id="hoardloot#constructor" }
+### [Constructor](#hoardloot-constructor){: .heading-anchor }
+{: id="hoardloot-constructor" }
 
 {% assign hoardConstructorArgs = "level, number, Challenge level of the encounter, true" | split: "|#|" %}
 {% include project_docs_table.html
 	arguments = hoardConstructorArgs
 %}
 
-### [Properties](#hoardloot#properties){: .heading-anchor }
-{: id="hoardloot#properties" .top-pad }
+### [Properties](#hoardloot-properties){: .heading-anchor }
+{: id="hoardloot-properties" .top-pad }
 
 {% include project_docs_property.html
 	name		= "items"
-	id			= "hoardloot#items"
+	id			= "hoardloot-items"
 	desc		= "All of the items obtained from the encounter."
 	type		= "AllItems"
 	link		= "#allitems"
@@ -113,20 +113,20 @@ Loot from a hoard encounter
 Represents all the money obtained from an encounter
 {: .bot-pad .text-center .no-margin-top .no-margin-bot }
 
-### [Constructor](#money#constructor){: .heading-anchor }
-{: id="money#constructor" }
+### [Constructor](#money-constructor){: .heading-anchor }
+{: id="money-constructor" }
 
 {% assign moneyConstructorArgs = "roll, number, The value rolled on the table, false|#|type, string, The type loot rolls being done (individual or hoard), false|#|difficultyRating, string, The challenge rating of the encounter, false" | split: "|#|" %}
 {% include project_docs_table.html
 	arguments = moneyConstructorArgs
 %}
 
-### [Properties](#money#properties){: .heading-anchor }
-{: id="money#properties" .top-pad }
+### [Properties](#money-properties){: .heading-anchor }
+{: id="money-properties" .top-pad }
 
 {% include project_docs_property.html
 	name		= "copper"
-	id			= "money#copper"
+	id			= "money-copper"
 	desc		= "The copper coins obtained."
 	type		= "CoinData"
 	link		= "#coindata"
@@ -135,7 +135,7 @@ Represents all the money obtained from an encounter
 
 {% include project_docs_property.html
 	name		= "silver"
-	id			= "money#silver"
+	id			= "money-silver"
 	desc		= "The silver coins obtained."
 	type		= "CoinData"
 	link		= "#coindata"
@@ -144,7 +144,7 @@ Represents all the money obtained from an encounter
 
 {% include project_docs_property.html
 	name		= "electrum"
-	id			= "money#electrum"
+	id			= "money-electrum"
 	desc		= "The electrum coins obtained."
 	type		= "CoinData"
 	link		= "#coindata"
@@ -153,7 +153,7 @@ Represents all the money obtained from an encounter
 
 {% include project_docs_property.html
 	name		= "gold"
-	id			= "money#gold"
+	id			= "money-gold"
 	desc		= "The gold coins obtained."
 	type		= "CoinData"
 	link		= "#coindata"
@@ -162,7 +162,7 @@ Represents all the money obtained from an encounter
 
 {% include project_docs_property.html
 	name		= "platinum"
-	id			= "money#platinum"
+	id			= "money-platinum"
 	desc		= "The platinum coins obtained."
 	type		= "CoinData"
 	link		= "#coindata"
@@ -170,12 +170,12 @@ Represents all the money obtained from an encounter
 %}
 
 {% assign noArgs = "N/A, N/A, N/A, N/A" | split: "|#|" %}
-### [Methods](#money#methods){: class="heading-anchor" }
-{: id="money#methods" .top-pad }
+### [Methods](#money-methods){: class="heading-anchor" }
+{: id="money-methods" .top-pad }
 
 {% include project_docs_method.html
 	name		= "reroll"
-	id			= "money#reroll()"
+	id			= "money-reroll()"
 	desc		= "Rerolls the coins obtained."
 	returns		= "void"
 	arguments	= noArgs
@@ -183,7 +183,7 @@ Represents all the money obtained from an encounter
 
 {% include project_docs_method.html
 	name		= "inCopper"
-	id			= "money#inCopper()"
+	id			= "money-inCopper()"
 	desc		= "Returns the total value of all coins using copper as the highest denomination."
 	returns		= "string"
 	arguments	= noArgs
@@ -191,7 +191,7 @@ Represents all the money obtained from an encounter
 
 {% include project_docs_method.html
 	name		= "inSilver"
-	id			= "money#inSilver()"
+	id			= "money-inSilver()"
 	desc		= "Returns the total value of all coins using silver as the highest denomination."
 	returns		= "string"
 	arguments	= noArgs
@@ -199,7 +199,7 @@ Represents all the money obtained from an encounter
 
 {% include project_docs_method.html
 	name		= "inElectrum"
-	id			= "money#inElectrum()"
+	id			= "money-inElectrum()"
 	desc		= "Returns the total value of all coins using electrum as the highest denomination."
 	returns		= "string"
 	arguments	= noArgs
@@ -207,7 +207,7 @@ Represents all the money obtained from an encounter
 
 {% include project_docs_method.html
 	name		= "inGold"
-	id			= "money#inGold()"
+	id			= "money-inGold()"
 	desc		= "Returns the total value of all coins using gold as the highest denomination."
 	returns		= "string"
 	arguments	= noArgs
@@ -215,7 +215,7 @@ Represents all the money obtained from an encounter
 
 {% include project_docs_method.html
 	name		= "inPlatinum"
-	id			= "money#inPlatinum()"
+	id			= "money-inPlatinum()"
 	desc		= "Returns the total value of all coins using platinum as the highest denomination."
 	returns		= "string"
 	arguments	= noArgs
@@ -233,20 +233,20 @@ Represents all the money obtained from an encounter
 Represents all the items obtained from an encounter.
 {: .bot-pad .text-center .no-margin-top .no-margin-bot }
 
-### [Constructor](#allitems#constructor){: .heading-anchor }
-{: id="allitems#constructor" }
+### [Constructor](#allitems-constructor){: .heading-anchor }
+{: id="allitems-constructor" }
 
 {% assign allitemsConstructorArgs = "difficulty, string, The value rolled on the table, false|#|lootTier, number, The type of loot rolls being done (individual or hoard), false" | split: "|#|" %}
 {% include project_docs_table.html
 	arguments = individualConstructorArgs
 %}
 
-### [Properties](#allitems#properties){: .heading-anchor }
-{: id="allitems#properties" .top-pad }
+### [Properties](#allitems-properties){: .heading-anchor }
+{: id="allitems-properties" .top-pad }
 
 {% include project_docs_property.html
 	name		= "art"
-	id			= "allitems#art"
+	id			= "allitems-art"
 	desc		= "The art objects obtained."
 	type		= "ArtData"
 	link		= "#artdata"
@@ -255,7 +255,7 @@ Represents all the items obtained from an encounter.
 
 {% include project_docs_property.html
 	name		= "gem"
-	id			= "allitems#gem"
+	id			= "allitems-gem"
 	desc		= "The gems obtained."
 	type		= "GemData"
 	link		= "#gemdata"
@@ -264,7 +264,7 @@ Represents all the items obtained from an encounter.
 
 {% include project_docs_property.html
 	name		= "magicItems"
-	id			= "allitems#magicItems"
+	id			= "allitems-magicItems"
 	desc		= "The magic items obtained."
 	type		= "MagicItem"
 	link		= "#magicitem"
@@ -272,12 +272,12 @@ Represents all the items obtained from an encounter.
 	readonly	= true
 %}
 
-### [Methods](#allitems#methods){: class="heading-anchor" }
-{: id="allitems#methods" .top-pad }
+### [Methods](#allitems-methods){: class="heading-anchor" }
+{: id="allitems-methods" .top-pad }
 
 {% include project_docs_method.html
 	name		= "reroll"
-	id			= "allitems#reroll()"
+	id			= "allitems-reroll()"
 	desc		= "Rerolls the items obtained."
 	returns		= "void"
 	arguments	= noArgs
