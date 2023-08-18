@@ -69,6 +69,12 @@
 				"img": "/assets/images/project-icons/dnd.png"
 			},
 			{
+				"name": "Lights Out",
+				"active-group": "lights-out",
+				"url": "/projects/lights-out",
+				"img": "/assets/images/project-icons/lights-out.png"
+			},
+			{
 				"name": "Python to Pseudo",
 				"active-group": "pseudo-code",
 				"url": "/projects/pseudo-code",

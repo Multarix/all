@@ -75,5 +75,12 @@
 		"img": "/assets/images/project-icons/tables.png",
 		"shortDesc": "Creates a Truth Table from a javascript statement.",
 		"longDesc": "Remembering the math symbols for boolean logic and writing out a truth table by hand is a tedious and painful experience. This does it all for you."
+	},
+	{
+		"name": "lights out",
+		"url": "/projects/lights-out",
+		"img": "/assets/images/project-icons/lights-out.png",
+		"shortDesc": "An implimentation of the classic game 'Lights Out'",
+		"longDesc": "Created using Javascript, CSS and HTML, it supports a 3x3 and 5x5 board size, along with two different sets of rules"
 	}
 ]

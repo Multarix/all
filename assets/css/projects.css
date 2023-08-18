@@ -85,6 +85,78 @@ a.project-button {
 	color: #999;
 }
 
+.light-intro {
+	margin-bottom: 20px;
+}
+
+.light-all {
+	width: 400px;
+	height: 400px;
+	max-width: 90vw;
+	max-height: 90vw;
+	margin: auto;
+	text-align: center;
+}
+
+.light-game-info {
+	width: 400px;
+	max-width: 90vw;
+	min-height: 2em;
+	margin: auto;
+}
+
+.light-box {
+	box-sizing: border-box;
+	border: #111 solid 5px;
+	position: relative;
+	float: left;
+	background-color: #9e3232;
+	cursor: pointer;
+}
+.light-box:hover {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+	cursor: pointer;
+}
+
+.box-three {
+	width: 33%;
+	height: 33%;
+}
+
+.box-five {
+	width: 20%;
+	height: 20%;
+}
+
+.light-clicked {
+	background-color: #32a852;
+}
+
+.light-win .light-clicked {
+	background-color: #065e12;
+	
+	&:hover {
+		cursor: unset;
+		background-image: unset;
+	}
+}
+
+.light-timer {
+	margin-left: 0.4em;
+	float: left;
+	position: relative;
+}
+
+.light-buttons {
+	margin-right: 0.6em;
+    float: right;
+	position: relative;
+}
+
+.light-reset {
+	margin: 0.5em 0;
+}
+
 @media screen and (max-width: 424px) {
 	.project-title-wrapper {
 		padding: 1em 0;
