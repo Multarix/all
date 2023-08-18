@@ -103,11 +103,12 @@ a.project-button {
 	max-width: 90vw;
 	min-height: 2em;
 	margin: auto;
+	margin-top: 4px;
 }
 
 .light-box {
 	box-sizing: border-box;
-	border: #111 solid 5px;
+	border: black solid 5px;
 	position: relative;
 	float: left;
 	background-color: #9e3232;
@@ -150,6 +151,12 @@ a.project-button {
 .light-buttons {
 	margin-right: 0.6em;
     float: right;
+	position: relative;
+}
+
+.light-buttons-five {
+	margin-right: 0.4em;
+	float: right;
 	position: relative;
 }
 
