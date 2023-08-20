@@ -58,13 +58,22 @@ function setBoardToRandomState(game) {
 	const gameID = `game-${game}`;
 	const allBoxes = document.querySelectorAll(`#${gameID} .light-box`);
 
-	const randNumber = Math.floor(Math.random() * allGameVars[gameID]['memory'].size);
-	const state = [...allGameVars[gameID]['memory'].keys()][randNumber];
+	if(gameID !== "game-4"){
+		const randNumber = Math.floor(Math.random() * allGameVars[gameID]['memory'].size);
+		const state = [...allGameVars[gameID]['memory'].keys()][randNumber];
 
-	const splitState = state.split('');
+		const splitState = state.split('');
 
-	for(let i = 0; i < splitState.length; i++){
-		if(splitState[i] === "T") allBoxes[i].classList.add('light-clicked');
+		for(let i = 0; i < splitState.length; i++){
+			if(splitState[i] === "T") allBoxes[i].classList.add('light-clicked');
+		}
+
+		return;
+	}
+
+	for(const box of allBoxes){
+		const rand = Math.random();
+		if(rand < 0.5) box.classList.add('light-clicked');
 	}
 }
 
@@ -130,13 +139,14 @@ async function reset(game) {
 	const gameID = `game-${game}`;
 
 	if(!allGameVars[gameID]['memLoaded']) await loadMemory(game);
+	document.getElementById(`${gameID}-reset`).innerText = "Reset";
 
 	stopBogo(game);
 	const bogoButton = document.getElementById(`${gameID}-bogo`);
 	bogoButton.disabled = false;
 
 	const quickButton = document.getElementById(`${gameID}-quick`);
-	quickButton.disabled = false;
+	if(gameID !== "game-4") quickButton.disabled = false;
 
 	clearInterval(allGameVars[gameID]['interval']);
 	allGameVars[gameID]['interval'] = null;
@@ -183,7 +193,7 @@ function stopBogo(game) {
 	const gameElement = document.getElementById(gameID);
 	gameElement.classList.remove('light-bot');
 
-	document.getElementById(`${gameID}-quick`).disabled = false;
+	if(gameID !== 'game-4') document.getElementById(`${gameID}-quick`).disabled = false;
 	const bogoButton = document.getElementById(`${gameID}-bogo`);
 
 	bogoButton.innerText = "Bogo Solve";
@@ -552,6 +562,7 @@ function doQueue(_game) {
 
 async function loadMemory(game) {
 	const gameID = `game-${game}`;
+	if(gameID === "game-4") return; // Game 4 takes too long to load
 	const gameElement = document.getElementById(gameID);
 
 	gameElement.classList.add("light-loading");
@@ -567,7 +578,6 @@ async function loadMemory(game) {
 	document.getElementById(`${gameID}-quick`).disabled = false;
 
 	document.getElementById(`${gameID}-to-complete`).classList.remove('hidden');
-	document.getElementById(`${gameID}-reset`).innerText = "Reset";
 
 	console.log(`[Game ${game}] Loaded states into memory!`);
 }
