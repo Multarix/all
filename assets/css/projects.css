@@ -107,6 +107,12 @@ a.project-button {
 }
 
 .light-box {
+	text-align: left;
+	color: white;
+	font-weight: bold;
+	font-size: 1.5em;
+	
+	padding-left: 3px;
 	box-sizing: border-box;
 	border: black solid 5px;
 	position: relative;
@@ -124,16 +130,20 @@ a.project-button {
 	height: 33%;
 }
 
-.box-five {
-	width: 20%;
-	height: 20%;
+.box-four {
+	width: 25%;
+	height: 25%;
 }
 
 .light-clicked {
+	color: black;
+	font-weight: bold;
+
 	background-color: #32a852;
 }
 
 .light-win .light-clicked {
+	color: white;
 	background-color: #065e12;
 	
 	&:hover {
@@ -142,10 +152,12 @@ a.project-button {
 	}
 }
 
-.light-timer {
+.light-extra {
 	margin-left: 0.4em;
 	float: left;
 	position: relative;
+	
+	font-family: 'Fira Code', monospace;
 }
 
 .light-buttons {
@@ -154,14 +166,65 @@ a.project-button {
 	position: relative;
 }
 
-.light-buttons-five {
+button.light {
+	all: inherit;
+	background-color: #333;
+	border: 1px solid var(--font-color);
+	border-radius: 5px;
+	
+	padding: 2px 6px 3px 6px;
+	margin: 0 0 0 2px;
+	display: inline-block;
+	text-align: center;
+	min-width: 90px;
+	
+	
+	&:hover {
+		cursor: pointer;
+		color: white;
+		border-color: white;
+	}
+	
+	&:disabled {
+		cursor: unset;
+		color: #999;
+		border-color: #999;
+	}
+	
+}
+
+.light-time {
+	all: inherit;
+	background-color: inherit;
+	border: 1px solid var(--background-color);
+	border-radius: 5px;
+	
+	padding-top: 4px;
+	border-left: unset;
+	display: inline-block;
+}
+
+.light-buttons-four {
 	margin-right: 0.4em;
 	float: right;
 	position: relative;
 }
 
+.light-bot .light-box {
+	cursor: unset;
+	
+	&:hover {
+		cursor: unset;
+		background-image: unset;
+	}
+}
+
 .light-reset {
 	margin: 0.5em 0;
+}
+
+.light-loading {
+	visibility: visible;
 }
 
 @media screen and (max-width: 424px) {
