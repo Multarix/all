@@ -62,12 +62,12 @@ function checkInput(numberToConvert, currentBase) {
 	if(!numberToConvert) return errorDiv.innerText = "Please enter a number to convert";
 
 	// Check if the number is valid for the respective base
-	if(currentBase === 2 && !/^[01]+$/.test(numberToConvert)){
+	if(currentBase === 2 && !/^[01\s]+$/.test(numberToConvert)){
 		showElement(errorDiv, true);
 		errorDiv.innerText = "Please enter a valid binary number";
 		return true;
 	}
-	if(currentBase === 8 && !/^[0-7]+$/.test(numberToConvert)){
+	if(currentBase === 8 && !/^[0-7\s]+$/.test(numberToConvert)){
 		showElement(errorDiv, true);
 		errorDiv.innerText = "Please enter a valid octal number";
 		return true;
@@ -77,7 +77,7 @@ function checkInput(numberToConvert, currentBase) {
 		errorDiv.innerText = "Please enter a valid decimal number";
 		return true;
 	}
-	if(currentBase === 16 && !/^[0-9A-Fa-f]+$/.test(numberToConvert)){
+	if(currentBase === 16 && !/^[0-9A-Fa-f\s]+$/.test(numberToConvert)){
 		showElement(errorDiv, true);
 		errorDiv.innerText = "Please enter a valid hexadecimal number";
 		return true;
