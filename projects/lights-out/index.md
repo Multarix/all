@@ -1,7 +1,7 @@
 ---
 title: Lights Out
 group: lights-out
-description: A simple implimentation of the classic game 'Lights Out'. Supports 3x3 and 5x5 boards.
+description: A simple implimentation of the classic game 'Lights Out'. Supports 3x3 and 4x4 boards.
 permalink: /projects/lights-out/
 ---
 
@@ -11,7 +11,7 @@ I was playing a game and encountered this type of puzzle. Obviously, this was no
 <br>
 Rather than having a button change the state of the directly adjacent buttons, it changed the state of all buttons near it, including the diagonal ones. This proved to make the game harder than anticipated.<br>
 <br>
-Feeling inspired, I decided to find out the name of what the puzzle was even called and make an implimentation of it. The "try it" page offers an implimentation of of a 3x3 and 5x5 board, along with both variations of the game.
+Feeling inspired, I decided to find out the name of what the puzzle was even called and make an implimentation of it. The "try it" page offers an implimentation of of a 3x3 and 4x4 board, along with both variations of the game.
 {% endcapture %}
 
 
