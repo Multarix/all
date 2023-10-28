@@ -41,13 +41,14 @@ const buttonsToHide = [
 ];
 
 let css = "";
+
 buttonsToHide.forEach(button => {
     css = css.concat(`[aria-label="${button}"]{display:none}`);
 });
 
 css = css.concat('[id="channel-attach-THREAD"]{display:none}');
 const style = document.createElement('style'); style.innerHTML = css;
-document.head.appendChild(style);
+document.body.appendChild(style);
 ```
 
 And that's it! You're done!
