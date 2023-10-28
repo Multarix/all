@@ -34,9 +34,9 @@ Once the console is open, Discord will likely spam you with a bunch of warnings 
 Assuming you're willing to ignore the warnings, copy and paste the below code into the console and press enter.<br>
 
 ```javascript
-const sheet = window.document.styleSheets[0];
-const rule = `ol > [class^='groupStart-'] { display: none; }`;
-sheet.insertRule(rule, sheet.cssRules.length);
+const css = `ol > [class^='groupStart_'] { display: none; }`;
+const style = document.createElement('style'); style.innerHTML = css;
+document.body.appendChild(style);
 ```
 
 And that's it! You're done!
