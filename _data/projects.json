@@ -27,6 +27,15 @@
 		"project": true
 	},
 	{
+		"name": "boids",
+		"active-group": "boids",
+		"url": "/projects/boids",
+		"img": "/src/img/project-icons/boids.png",
+		"shortDesc": "A flocking algorithm.",
+		"longDesc": "A flocking algorithm that simulates the behaviour of birds, fish or other similar flocking creatures",
+		"project": true
+	},
+	{
 		"name": "character tracker",
 		"active-group": "character-tracker",
 		"url": "/projects/character-tracker",

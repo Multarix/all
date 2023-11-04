@@ -11,6 +11,11 @@
 	
 	{% if include.script or include.docs or include.github %}
 	<div class="project-title-links">
+		{% if include.blog %}
+			<a class="project-button" href="blog">Blog</a>
+		{% endif %}
+		
+		
 		{% if include.script %}
 			<a class="project-button" href="try-it">Try it!</a>
 		{% endif %}

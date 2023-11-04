@@ -1,3 +1,11 @@
+---
+title: Boids
+group: boids
+description: A bird/ fish or other related flocking simulation.
+layout: docs
+---
+
+
 # Playing with boids
 
 ## The Idea
@@ -17,6 +25,8 @@ I decided to approach this topic using a game engine, Specifically, Godot.
 Starting out, the first goal is to actually impliment the rules, I won't be diving into the code for this, as it's all available on the github, however when I started, I decided to use Godot's custom language "GDScript", which for reasons I'll get into later, is quite a bad choice. Back on topic however, I first started with the stock standard, create 3 functions to get calculate the Seperation, Alignment and Cohesion for each individual boid, just to make sure it was working.
 
 The code I settled on is based on the implimentation found [here](https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html). There is plenty of bad, or plain wrong pseudo-code out there, proof that pseudo-code is (for the most part) a complete waste of time, but I digress. With the stock standard approach, I was capable of running around 100 boids at 60fps without much issue.
+
+<!-- Image here? -->
 
 ## Improving Performance
 
@@ -59,6 +69,9 @@ The downside was I had to essentially re-write the entire compute shader so that
 So what was the final total of boids I could run with this change? Well, around 32k before I started getting frame rate drops, but I could push it to around 40k without dropping below 50fps or so.
 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tsX_pB530Yg?si=8Ovrk90_fVxLepCN" title="YouTube video player" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 ### Reducing the time complexity
 
 I said earlier, that Boids have a time complexity of `O(n²)`, but there are a few ways we can change this. The two main methods, are quad trees, and spatial hashing. I won't bore you with the details, but quad trees would take us to a complexity of around `O(n log n)`, while spatial hashing takes us to `O(n)`.
@@ -72,4 +85,4 @@ From 100 Boids to 100k Boids while maintaining 60fps, this was certainly a fun e
 
 The code for my project is available over on my [github](https://github.com/Multarix/Boids-Compute-Shader/tree/master), so feel free to download and run the project yourself, or even make your own changes. I was running this using an RTX 2080, so your GPU may suffer more or less than mine at similar numbers.
 
-Ff you're at all interesting in creating your own simulation, starting from scratch and implimenting changes over time will give you a much more engaging and educational experience, and I highly recommend it.
+If you're at all interesting in creating your own simulation, starting from scratch and implimenting changes over time will give you a much more engaging and educational experience, and I highly recommend it.
