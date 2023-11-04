@@ -2,27 +2,37 @@
 title: TERA Guide
 group: tera-guide
 description: A TERA Toolbox module that telegraphs boss attacks, calls out mechanics, recommended skill usage and more!
-permalink: /projects/tera-guide/
+layout: title
 ---
 
-{% capture description %}{{ page.description }}{% endcapture %}
-{% capture WhyMakeThis %}
-Technically, I didn't make this. At least not the concept anyway. It started out as a fork of <a class="open-in-new" href="https://github.com/hsdn/tera-guide-core">HSDN's</a> guide module.<br>
-<br>
-After working with it for awhile, I decided to make a revised version that had cleaner code, and forced some consistancy by using a linter and more modern JS practices. Ultimately I also ended up removing several features I felt few people needed or used, while also adding in a few that could be more useful.<br>
-<br>
-Later, HSDN himself implimented most of my changes and additions to his own code base, before I stopped working on my own version when I quit the game.<br>
-<br>
-This project is no longer maintained and is archived, but it was still used by plenty of people when it was being worked on.
+{% capture DESC %}{{ page.description }}{% endcapture %}
+
+
+{% capture WHY %}
+<p>Originally, there was another guide module made by <a class="open-in-new" href="https://github.com/hsdn/tera-guide-core">HSDN</a>, but I found it to be lacking in some areas, or simply had pointless features. Taking his code as a base, I refactored, cleaned up and added/ removed things to my liking. In the process, creating what I felt was a faster and better module.</p>
+
+<p>Later, HSDN himself implimented quite a few of my changes and additions to his own module, and I quit the game awhile later. As such this module is archived and no longer maintained.</p>
 {% endcapture %}
 
 
+{%- capture ABOUT -%}
+<p>Supports a wide variety of features, including:</p>
+<ul>
+	<li>Attack Telegraphs</li>
+	<li>Dungeon mechanic notifications</li>
+	<li>Recommended skill notifications (mainly for tanks and healers)</li>
+	<li>Text to Speech callouts</li>
+	<li>Campfire spawning</li>
+</ul>
+<p>Guides for all current (at the time) dungeons were included.</p>
+{%- endcapture -%}
+
+
 {% include project_title_page.html
-	img			= "/assets/images/project-icons/tera.png"
-	desc		= description
-	why			= WhyMakeThis
+	name		= page.title
+	img			= "/src/img/project-icons/tera.png"
+	desc		= DESC
+	why			= WHY
+	about		= ABOUT
 	github		= "https://github.com/Multarix/tera-guide-revised"
-	codeExample	= programCode
-	extraTitle	= "Features"
-	extraDesc	= "TTS;Attack Telegraphs;Recommended skill usage;Dungeon mechanic notifications;Campfire spawning"
 %}

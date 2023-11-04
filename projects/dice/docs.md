@@ -3,34 +3,13 @@ title: D&D-Dice
 group: dnd-dice
 description: A NodeJS module for rolling dice in Dungeons and Dragons.
 permalink: /projects/dice/docs
+layout: docs
 ---
 
 
-<div markdown=1 class="text-center top-pad">
-<div markdown=1 class="inline-index">
-
-- [Classes](#classes)
-	- [Coin](#coin)
-	- [Die](#die)
-	- [D4](#d4)
-	- [D6](#d6)
-	- [D8](#d8)
-	- [D10](#d10)
-	- [D12](#d12)
-	- [D20](#d20)
-	- [D100](#d100)
-
-</div>
-</div>
-
-<br>
-
-
-# [Classes](#classes){: .heading-anchor }
-{: id="classes"}
 
 ## [Coin](#coin){: .heading-anchor }
-{: id="coin" .no-border .text-center .no-margin-bot .top-pad }
+{: id="coin" .no-border .text-center .no-margin-bot }
 
 Represents a standard coin.
 {: .bot-pad .text-center .no-margin-top .no-margin-bot }
