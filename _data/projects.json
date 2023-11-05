@@ -1,86 +1,128 @@
 [
 	{
+		"name": "all projects",
+		"active-group": "all-projects",
+		"url": "/projects",
+		"img": "/src/img/project-icons/projects.png",
+		"shortDesc": "",
+		"longDesc": "",
+		"project": false
+	},
+	{
 		"name": "base conversions",
+		"active-group": "base-conversion",
 		"url": "/projects/base-conversion",
-		"img": "/assets/images/project-icons/conversion.png",
+		"img": "/src/img/project-icons/conversion.png",
 		"shortDesc": "Convert between Binary, Octal, Decimal and Hexadecimal.",
-		"longDesc": "Converts between the bases and gives all the 'magical' steps' that would make a Math teacher wet. Disgusting, but helpful right?"
+		"longDesc": "Converts between the bases and gives all the 'magical' steps' that would make a Math teacher wet. Disgusting, but helpful right?",
+		"project": true
 	},
 	{
 		"name": "bdo: hp gauge",
+		"active-group": "boss-hp",
 		"url": "/projects/boss-hp",
-		"img": "/assets/images/project-icons/boss-hp.png",
+		"img": "/src/img/project-icons/boss-hp.png",
 		"shortDesc": "A boss HP gauge for the game Black Desert Online.",
-		"longDesc": "Creates a transparent window that is overlayed on top of the game, allowing you to better see the percentage of boss HP left."
+		"longDesc": "Creates a transparent window that is overlayed on top of the game, allowing you to better see the percentage of boss HP left.",
+		"project": true
+	},
+	{
+		"name": "boid simulation",
+		"active-group": "boids",
+		"url": "/projects/boids",
+		"img": "/src/img/project-icons/boids.png",
+		"shortDesc": "A flocking algorithm.",
+		"longDesc": "A flocking algorithm that simulates the behaviour of birds, fish or other similar flocking creatures",
+		"project": true
 	},
 	{
 		"name": "character tracker",
+		"active-group": "character-tracker",
 		"url": "/projects/character-tracker",
-		"img": "/assets/images/project-icons/character-tracker.png",
+		"img": "/src/img/project-icons/character-tracker.png",
 		"shortDesc": "A program created in Python for tracking characters.",
-		"longDesc": "Can be used to keep track of characters in a story, game or even for a Dungeons and Dragons campaign."
+		"longDesc": "Can be used to keep track of characters in a story, game or even for a Dungeons and Dragons campaign.",
+		"project": true
 	},
 	{
-		"name": "discord: hide blocked messages",
+		"name": "discord: block messages",
+		"active-group": "discord-block",
 		"url": "/projects/discord-block-messages",
-		"img": "/assets/images/project-icons/discord.png",
+		"img": "/src/img/project-icons/discord.png",
 		"shortDesc": "A script written in Javascript to be used with Discord.",
-		"longDesc": "Removes the annoying element that says \"1 Blocked Message - Show Message\" when a user you've blocked sends a message."
+		"longDesc": "Removes the annoying element that says \"1 Blocked Message - Show Message\" when a user you've blocked sends a message.",
+		"project": true
 	},
 	{
-		"name": "discord: remove useless chat buttons",
+		"name": "discord: chat buttons",
+		"active-group": "discord-chat",
 		"url": "/projects/discord-chat-buttons",
-		"img": "/assets/images/project-icons/discord.png",
+		"img": "/src/img/project-icons/discord.png",
 		"shortDesc": "A script written in Javascript to be used with Discord.",
-		"longDesc": "Removes various useless/ annoying buttons such as \"Gift Nitro\" from the chat bar. Various configurations are available."
+		"longDesc": "Removes various useless/ annoying buttons such as \"Gift Nitro\" from the chat bar. Various configurations are available.",
+		"project": true
 	},
 	{
 		"name": "dnd-dice",
+		"active-group": "dice",
 		"url": "/projects/dice",
-		"img": "/assets/images/project-icons/dnd.png",
+		"img": "/src/img/project-icons/dnd.png",
 		"shortDesc": "A Node.js module for rolling dice for Dungeons and Dragons.",
-		"longDesc": "Allows you to quickly roll dice or even flip a coin for any D&D related purpose."
+		"longDesc": "Allows you to quickly roll dice or even flip a coin for any D&D related purpose.",
+		"project": true
 	},
 	{
 		"name": "dnd-loot",
+		"active-group": "loot",
 		"url": "/projects/loot",
-		"img": "/assets/images/project-icons/dnd.png",
+		"img": "/src/img/project-icons/dnd.png",
 		"shortDesc": "A Node.js module for generating encounter loot for Dungeons and Dragons.",
-		"longDesc": "Allows you to quickly generate loot for a single encounter or hoard encounter."
+		"longDesc": "Allows you to quickly generate loot for a single encounter or hoard encounter.",
+		"project": true
 	},
 	{
 		"name": "dnd-npc",
+		"active-group": "npc",
 		"url": "/projects/npc",
-		"img": "/assets/images/project-icons/dnd.png",
+		"img": "/src/img/project-icons/dnd.png",
 		"shortDesc": "A Node.js module for generating random NPCs for Dungeons and Dragons.",
-		"longDesc": "Allows you to quickly generate NPCs that come fully armed, armoured and with legal stats."
-	},
-	{
-		"name": "python to pseudo",
-		"url": "/projects/pseudo-code",
-		"img": "/assets/images/project-icons/python.png",
-		"shortDesc": "A script that converts Python code into pseudo-code.",
-		"longDesc": "For those idiotic teachers who want you to write pseudo-code instead of actual code. Now you can do both at the same time!"
-	},
-	{
-		"name": "tera guide",
-		"url": "/projects/tera-guide",
-		"img": "/assets/images/project-icons/tera.png",
-		"shortDesc": "A module for Tera Toolbox.",
-		"longDesc": "Calls out dungeon/ boss mechanics, recommended skill usage (mainly for healers and tanks), telegraphs attack ranges and more."
-	},
-	{
-		"name": "truth table",
-		"url": "/projects/truth-table",
-		"img": "/assets/images/project-icons/tables.png",
-		"shortDesc": "Creates a Truth Table from a javascript statement.",
-		"longDesc": "Remembering the math symbols for boolean logic and writing out a truth table by hand is a tedious and painful experience. This does it all for you."
+		"longDesc": "Allows you to quickly generate NPCs that come fully armed, armoured and with legal stats.",
+		"project": true
 	},
 	{
 		"name": "lights out",
+		"active-group": "lights-out",
 		"url": "/projects/lights-out",
-		"img": "/assets/images/project-icons/lights-out.png",
+		"img": "/src/img/project-icons/lights-out.png",
+		"shortDesc": "A script that converts Python code into pseudo-code.",
+		"longDesc": "For those idiotic teachers who want you to write pseudo-code instead of actual code. Now you can do both at the same time!",
+		"project": true
+	},
+	{
+		"name": "python to pseudo",
+		"active-group": "pseudo-code",
+		"url": "/projects/pseudo-code",
+		"img": "/src/img/project-icons/python.png",
+		"shortDesc": "A module for Tera Toolbox.",
+		"longDesc": "Calls out dungeon/ boss mechanics, recommended skill usage (mainly for healers and tanks), telegraphs attack ranges and more.",
+		"project": true
+	},
+	{
+		"name": "tera guide",
+		"active-group": "tera-guide",
+		"url": "/projects/tera-guide",
+		"img": "/src/img/project-icons/tera.png",
+		"shortDesc": "Creates a Truth Table from a javascript statement.",
+		"longDesc": "Remembering the math symbols for boolean logic and writing out a truth table by hand is a tedious and painful experience. This does it all for you.",
+		"project": true
+	},
+	{
+		"name": "truth table",
+		"active-group": "truth-table",
+		"url": "/projects/truth-table",
+		"img": "/src/img/project-icons/tables.png",
 		"shortDesc": "An implimentation of the classic game 'Lights Out'",
-		"longDesc": "Created using Javascript, CSS and HTML, it supports a 3x3 and 5x5 board size, along with two different sets of rules"
+		"longDesc": "Created using Javascript, CSS and HTML, it supports a 3x3 and 5x5 board size, along with two different sets of rules",
+		"project": true
 	}
 ]

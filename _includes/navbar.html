@@ -1,42 +1,38 @@
-{% capture pageGroup %}{{ page.group | upcase }}{% endcapture %}
-
-<div class="navbar" id="navbar">
-	<div class="navbar-container">
-		{% for item in site.data.navbar-links %}
-			{% capture itemGroup %}{{ item.active-group | upcase }}{% endcapture %}
-			{% if item.dropdown %}
-				<div class="nav-dropdown">
-					
-					{% if itemGroup == pageGroup %}
-						<button class="nav-dropbtn active">{{ item.name  | upcase }}<span class="material-icons auto-size">arrow_drop_down</span></button>
-					{% else %}
-						<button class="nav-dropbtn">{{ item.name  | upcase }}<span class="material-icons auto-size">arrow_drop_down</span></button>
-					{% endif %}
-					
-					<div class="nav-dropdown-content">
-						{% for subitem in item.hover-links %}
-							{% capture subItemGroup %}{{ subitem.active-group | upcase }}{% endcapture %}
-							
-							{% if subItemGroup == pageGroup %}
-								<a class="active" href="{{ subitem.url }}">{{ subitem.name | upcase }}</a>
-							{% else %}
-								<a href="{{ subitem.url }}">{{ subitem.name | upcase }}</a>
-							{% endif %}
-							
-						{% endfor %}
-					</div>
-				</div>
-				
-			{% else %}
-			
-				{% if itemGroup == pageGroup %}
-					<a class="active" href="{{ item.url }}">{{ item.name | upcase }}</a>
-				{% else %}
-					<a href="{{ item.url }}">{{ item.name | upcase }}</a>
-				{% endif %}
-				
-			{% endif %}
-		{% endfor %}
-		<a class="mobile-bars" href="javascript:void(0);" onclick="topNavMobile()"><span class="material-icons">menu</span></a>
+<nav id="navbar">
+	<div id="nav-projects" class="nav-section nav-dropdown">
+		<a href="javascript:void(0)" onclick="hideSocials();">
+			<i class="fa-solid fa-folder-open"></i>
+		</a>
+		<div id="nav-project-dropdown" class="nav-dropdown-content">
+			{% for project in site.data.projects %}
+				<a href="{{ project.url }}">
+					{{ project.name | upcase }}
+				</a>
+			{% endfor %}
+		</div>
 	</div>
-</div>
+	
+	<div class="nav-section nav-empty"></div>
+	
+	<div id="mobile-bars" class="nav-section">
+		<a href="javascript:void(0)" onclick="toggleSocials()">
+			<i class="fa-solid fa-bars"></i>
+		</a>
+	</div>
+	{% if site.data.socials %}
+	<div class="out-social">
+
+		<div id="nav-social" class="nav-section">
+			
+			{% for social in site.data.socials %}
+				{% if social.username != "" %}
+				<a href="http://{{ social.url }}{{ social.username }}" target="_blank" rel="noreferrer">
+					<i class="{{ social.icon }}"></i>
+				</a>
+				{% endif %}
+			{% endfor %}
+	
+		</div>
+	</div>
+	{% endif %}
+</nav>

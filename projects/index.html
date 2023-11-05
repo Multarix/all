@@ -1,0 +1,22 @@
+---
+title: Projects
+group: projects
+layout: projects
+---
+
+<div class="project-container">
+	{% assign projects = site.data.projects | sort: 'name' %}
+	{% for project in projects %}
+		{% if project.project %}
+		
+			{% include project-tile.html
+				name		= project.name
+				url			= project.url
+				img			= project.img
+				shortDesc	= project.shortDesc
+				longDesc	= project.longDesc
+			%}
+		
+		{% endif %}
+	{% endfor %}
+<div class="container">

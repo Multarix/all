@@ -1,0 +1,45 @@
+[
+	{
+		"username": "multarix",
+		"url": "twitter.com/",
+		"title": "Twitter",
+		"icon": "fa brands fa-twitter"
+	},
+	{
+		"username": "",
+		"url": "facebook.com/",
+		"title": "Facebook",
+		"icon": "fa brands fa-facebook"
+	},
+	{
+		"username": "multarix_",
+		"url": "youtube.com/@",
+		"title": "Youtube",
+		"icon": "fa brands fa-youtube"
+	},
+	{
+		"username": "",
+		"url": "twitch.com/",
+		"title": "Twitch",
+		"icon": "fa brands fa-twitch"
+	},
+	{
+		"username": "",
+		"url": "reddit.com/u/",
+		"title": "Youtube",
+		"icon": "fa brands fa-reddit"
+	},
+	{
+		"username": "multarix",
+		"url": "steamcommunity.com/id/",
+		"title": "Steam",
+		"icon": "fa brands fa-steam"
+	},
+	{
+		"username": "multarix",
+		"url": "github.com/",
+		"title": "Github",
+		"icon": "fa brands fa-github"
+	}
+	
+]

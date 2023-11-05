@@ -4,7 +4,7 @@
 	<a href="#{{ include.id | downcase }}" id="{{ include.id | downcase }}" class="heading-anchor">.{{ include.name }}</a>
 	
 	{% if include.readonly %}
-	<small class="project-docs-readonly">READ ONLY</small>
+	<small class="docs-readonly">READ ONLY</small>
 	{% endif %}
 </h4>
 <p>{{ include.desc }}<br>

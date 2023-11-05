@@ -29,7 +29,7 @@ whitelist:
   - jekyll-coffeescript
   - jekyll-default-layout
   - jekyll-gist
-  # - jekyll-github-metadata
+  - jekyll-github-metadata
   - jekyll-optional-front-matter
   - jekyll-paginate
   - jekyll-readme-index
@@ -46,6 +46,23 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     disable: true
+    
+    
+socials:
+  - github: "https://github.com/multarix"
+  - steam: "https://steamcommunity.com/id/multarix"
+  
+  - twitter: "https://twitter.com/multarix"
+  - youtube: "https://youtube.com/multarix_"
+
+  - reddit: "https://reddit.com/u/multarix"
+  - twitch: "https://twitch.tv/multarix"
+  - instagram: "https://instagram.com/your-instagram"
+  - facebook: "https://facebook.com/your-facebook"
+  - snapchat: "https://snapchat.com/add/your-snapchat"
+
+  
+
 
 defaults:
   -
@@ -53,15 +70,12 @@ defaults:
       path: ""
     values:
       layout: "default"
-      siteName: "Multarix's Projects"
+      siteName: "Multarix Projects"
+      
 
-
-# Changes and stuff
 incremental: false
 livereload: true
 url: multarix.com
 
-
 exclude:
   - readme.md
-  - test.md

@@ -1,0 +1,9 @@
+<div class="project-tile" onclick="window.location.href = '{{ include.url }}'">
+	<div class="tile-header">
+		<div class="tile-title-container">
+			<h3 class="tile-title">{{ include.name | upcase }}</h3>
+		</div>
+		<img class="tile-icon" src="{{ include.img }}" alt="{{ include.name | upcase }} icon" height="80" width="80">
+	</div>
+	<p class="tile-desc">{{ include.shortDesc }}<br><br>{{ include.longDesc }}</p>
+</div>
