@@ -1,3 +1,4 @@
 _site
 assets/css/_default.css
 .jekyll-metadata
+_ignore.css

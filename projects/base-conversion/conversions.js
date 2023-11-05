@@ -1,4 +1,4 @@
-import { Signed, Unsigned } from "/assets/js/base-conversions/index.js";
+import { Signed, Unsigned } from "/src/js/base-conversions/index.js";
 
 const bitMax = {
 	"8": [-128, 127],

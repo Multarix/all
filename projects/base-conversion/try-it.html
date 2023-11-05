@@ -3,11 +3,12 @@ title: Base Conversions
 group: base-conversion
 description: Convert between different number bases, as well as to and from Binary Encoded Decimal, while also supplying valid working instructions.
 permalink: /projects/base-conversion/try-it/
+layout: conversions
 ---
 
 
 <script type="module">
-	import { submit, updateInputField, changeBase } from '../conversion.js';
+	import { submit, updateInputField, changeBase } from '../conversions.js';
 	
 	const signedInputs = document.getElementsByName("signed");
 	for(const element of signedInputs){
@@ -20,7 +21,7 @@ permalink: /projects/base-conversion/try-it/
 
 
 <h2 class="text-center">Base Conversions</h2>
-<div class="input-area div-center">
+<div class="input-area bc-div-center">
 	<div class="bc-conversion-zone" id="conversion-details">
 		<!-- Input Format Dropdown -->
 		<div class="bot-pad text-center">
@@ -63,9 +64,10 @@ permalink: /projects/base-conversion/try-it/
 	</div>
 </div>
 
-<div id="binary">
-	<h3>Binary</h3>
-	<pre><code id="binary-conversion" class="base-conversion language-plaintext">104 % 2 = 0
+<section class="bc-output">
+	<div id="binary">
+		<h3>Binary</h3>
+		<pre class="hljs"><code id="binary-conversion" class="language-plaintext">104 % 2 = 0
 52 % 2 = 0
 26 % 2 = 0
 13 % 2 = 1
@@ -74,26 +76,27 @@ permalink: /projects/base-conversion/try-it/
 1 % 2 = 1
 
 104₁₀ = 1101000₂</code></pre>
-</div>
+	</div>
 
-<div id="octal">
-	<h3>Octal</h3>
-	<pre><code id="octal-conversion" class="base-conversion language-plaintext">104 % 8 = 0
+	<div id="octal">
+		<h3>Octal</h3>
+		<pre class="hljs"><code id="octal-conversion" class="language-plaintext">104 % 8 = 0
 13 % 8 = 5
 1 % 8 = 1
 
 104₁₀ = 150₈</code></pre>
-</div>
+	</div>
 
-<div class="hidden" id="decimal">
-	<h3>Decimal</h3>
-	<pre><code id="decimal-conversion" class="base-conversion language-plaintext">104₁₀ = 104₁₀</code></pre>
-</div>
+	<div class="hidden" id="decimal">
+		<h3>Decimal</h3>
+		<pre class="hljs"><code id="decimal-conversion" class="language-plaintext">104₁₀ = 104₁₀</code></pre>
+	</div>
 
-<div id="hexadecimal">
-	<h3>Hexadecimal</h3>
-	<pre><code id="hexadecimal-conversion" class="base-conversion language-plaintext">104 % 16 = 8
+	<div id="hexadecimal">
+		<h3>Hexadecimal</h3>
+		<pre class="hljs"><code id="hexadecimal-conversion" class="language-plaintext">104 % 16 = 8
 6 % 16 = 6
 
 104₁₀ = 68₁₆</code></pre>
-</div>
+	</div>
+</section>
