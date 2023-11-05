@@ -50,6 +50,9 @@ body {
 	color: var(--text-color);
 }
 
+iframe {
+	width: 100%;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--text-color-hover);
@@ -219,7 +222,7 @@ nav a {
 	}
 }
 
-#nav-logo {
+#nav-projects {
 	border-left: unset;
 }
 
@@ -374,6 +377,7 @@ nav a {
 	height: 100px;
 	
 	padding-bottom: 5px;
+	margin-bottom: 1em;
 	border-bottom: 2px solid var(--border-color);
 }
 
@@ -590,6 +594,13 @@ nav a {
 }
 .no-margin-right {
 	margin-right: 0;
+}
+
+
+@media screen and (max-width: 1350px){
+	.main-projects > .project-container {
+		width: 100%;
+	}
 }
 
 

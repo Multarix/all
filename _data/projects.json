@@ -27,7 +27,7 @@
 		"project": true
 	},
 	{
-		"name": "boids",
+		"name": "boid simulation",
 		"active-group": "boids",
 		"url": "/projects/boids",
 		"img": "/src/img/project-icons/boids.png",
