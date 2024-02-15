@@ -94,7 +94,7 @@
 		"active-group": "lights-out",
 		"url": "/projects/lights-out",
 		"img": "/src/img/project-icons/lights-out.png",
-		"shortDesc": "A script that converts Python code into pseudo-code.",
+		"shortDesc": "An implimentation of the classic game 'Lights Out'",
 		"longDesc": "Created using Javascript, CSS and HTML, it supports a 3x3 and 5x5 board size, along with two different sets of rules",
 		"project": true
 	},
@@ -103,7 +103,7 @@
 		"active-group": "pseudo-code",
 		"url": "/projects/pseudo-code",
 		"img": "/src/img/project-icons/python.png",
-		"shortDesc": "A module for Tera Toolbox.",
+		"shortDesc": "A script that converts Python code into pseudo-code.",
 		"longDesc": "For those idiotic teachers who want you to write pseudo-code instead of actual code. Now you can do both at the same time!",
 		"project": true
 	},
@@ -112,7 +112,7 @@
 		"active-group": "tera-guide",
 		"url": "/projects/tera-guide",
 		"img": "/src/img/project-icons/tera.png",
-		"shortDesc": "Creates a Truth Table from a javascript statement.",
+		"shortDesc": "A module for Tera Toolbox.",
 		"longDesc": "Calls out dungeon/ boss mechanics, recommended skill usage (mainly for healers and tanks), telegraphs attack ranges and more.",
 		"project": true
 	},
@@ -121,7 +121,7 @@
 		"active-group": "truth-table",
 		"url": "/projects/truth-table",
 		"img": "/src/img/project-icons/tables.png",
-		"shortDesc": "An implimentation of the classic game 'Lights Out'",
+		"shortDesc": "Creates a Truth Table from a javascript statement.",
 		"longDesc": "Remembering the math symbols for boolean logic and writing out a truth table by hand is a tedious and painful experience. This does it all for you.",
 		"project": true
 	}
