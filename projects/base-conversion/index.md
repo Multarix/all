@@ -35,6 +35,5 @@ layout: title
 	desc		= DESC
 	why			= WHY
 	about		= ABOUT
-	script		= true
 	github		= "https://github.com/Multarix/baseConversions"
 %}

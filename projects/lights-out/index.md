@@ -30,6 +30,5 @@ Feeling inspired, I decided to find out the name of what the puzzle was even cal
 	desc		= DESC
 	why			= WHY
 	about		= ABOUT
-	script		= true
 	github		= "https://github.com/Multarix/lights-out"
 %}
