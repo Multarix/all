@@ -1,3 +1,9 @@
+---
+title: Grind Checklist
+permalink: /grind-checklist
+group: home
+---
+
 <script>
 		const agris = document.getElementById("agris");
 		const lootscroll = document.getElementById("lootscroll");
