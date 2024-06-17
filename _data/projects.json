@@ -18,6 +18,15 @@
 		"project": true
 	},
 	{
+		"name": "bdo: grind checklist",
+		"active-group": "home",
+		"url": "/grind-checklist",
+		"img": "/src/img/project-icons/dnd.png",
+		"shortDesc": "An online checklist for starting your grind in Black Desert.",
+		"longDesc": "Black Desert has far too many things you need to remember before you start your grind. This simple checklist should help you remember them all.",
+		"project": true
+	},
+	{
 		"name": "bdo: hp gauge",
 		"active-group": "boss-hp",
 		"url": "/projects/boss-hp",

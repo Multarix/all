@@ -2,6 +2,7 @@
 title: Grind Checklist
 permalink: /grind-checklist
 group: home
+layout: checklist
 ---
 
 <script>
@@ -55,7 +56,7 @@ group: home
 	}
 	
 	function resetAll(){
-		const allItems = [dropbuffs, grindbuffs, character, consumables, premium, misc];
+		const allItems = [...dropbuffs, ...grindbuffs, ...character, ...consumables, ...premium, ...misc];
 		for(const item in allItems){
 			item.checked = false;
 		}
@@ -109,7 +110,7 @@ group: home
 
 <hr>
 
-<button type="button" onclick="resetAll();">Reset Checlist</button>
+<button type="button" onclick="resetAll();">Reset Checklist</button>
 
 <!-- Full Reset Button
 <button type="button" onclick="selectAllInGroup(dropbuffs);">Reset Checlist</button>
