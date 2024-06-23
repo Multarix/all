@@ -316,6 +316,8 @@ nav a {
 
 /***************************/
 
+
+
 .main-projects {
 	margin: 1rem;
 }
@@ -654,6 +656,24 @@ nav a {
 }
 
 
+.mainChecklist {
+	margin: auto;
+	width: 90vw;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.checkboxType {
+	margin: 1rem;
+	padding: 0.5rem 1rem 1rem 1rem;
+	text-align: left;
+	border-radius: 10px;
+	background-color: var(--nav-background-hover);
+}
+
+.checkall {
+	vertical-align: middle;
+}
 
 
 @media screen and (max-width: 1350px){

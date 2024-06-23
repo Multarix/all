@@ -28,13 +28,16 @@
 		<script defer src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 		<script defer src="/src/js/index.js"></script>
 		
+		
 		<!-- Title -->
 		<title>{% if jekyll.environment == "development" %}(dev) {% endif %}{{ page.title }} | {{ page.siteName }}</title>
 	</head>
+	
+	
 
 	{% include navbar.html %}
 	<body>
-		<main class="main-default">
+		<main class="mainChecklist">
 			{{ content }}
 		</main>
 	</body>
