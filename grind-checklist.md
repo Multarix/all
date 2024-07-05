@@ -149,8 +149,6 @@ layout: checklist
 	</div>
 </div>
 
-<button type="button" onclick="resetAll();">Reset Checklist</button>
-<div class="bot-pad"></div>
 
 <script>
 	const agris = document.getElementById("agris");
@@ -209,6 +207,12 @@ layout: checklist
 		}
 	}
 </script>
+
+
+<button type="button" onclick="resetAll();">Reset Checklist</button>
+<div class="bot-pad"></div>
+
+
 
 <!-- Full Reset Button
 <button type="button" onclick="selectAllInGroup(dropbuffs);">Reset Checlist</button>
