@@ -9,7 +9,7 @@ layout: checklist
 
 
 <div class="checkboxType">
-	<h3>Drop Rate/ Amount Buffs <button class="checkall" type="button" onclick="selectAllInGroup(dropbuffs);" id="btn_drops">Check All</button></h3>
+	<h3>Drop Rate/ Amount Buffs <button class="checkall" type="button" onclick="selectAllInGroup(dropbuffs, true);" id="btn_drops">Check All</button></h3>
 	<div>
 		{% include checkbutton.html
 			id			= "agris"
@@ -36,7 +36,7 @@ layout: checklist
 
 
 <div class="checkboxType">
-	<h3>Grinding Buffs <button class="checkall"  type="button" onclick="selectAllInGroup(grindbuffs);" id="btn_grinding">Check All</button></h3>
+	<h3>Grinding Buffs <button class="checkall"  type="button" onclick="selectAllInGroup(grindbuffs, true);" id="btn_grinding">Check All</button></h3>
 	<div>
 		{% include checkbutton.html
 			id			= "elixirs"
@@ -71,7 +71,7 @@ layout: checklist
 
 
 <div class="checkboxType">
-	<h3>Character Specific <button class="checkall"  type="button" onclick="selectAllInGroup(character);" id="btn_chararcter">Check All</button></h3>
+	<h3>Character Specific <button class="checkall"  type="button" onclick="selectAllInGroup(character, true);" id="btn_chararcter">Check All</button></h3>
 	<div>
 		{% include checkbutton.html
 			id			= "awaksucc"
@@ -89,12 +89,16 @@ layout: checklist
 			id			= "crystals"
 			name		= "Crystals"
 		%}
+		{% include checkbutton.html
+			id			= "bsr"
+			name		= "Lock/ Unlock BSR Skills"
+		%}
 	</div>
 </div>
 
 
 <div class="checkboxType">
-	<h3>Extra Consumables <button class="checkall"  type="button" onclick="selectAllInGroup(consumables);" id="btn_consumables">Check All</button></h3>
+	<h3>Extra Consumables <button class="checkall"  type="button" onclick="selectAllInGroup(consumables, true);" id="btn_consumables">Check All</button></h3>
 	<div>
 		{% include checkbutton.html
 			id			= "cronmeal"
@@ -109,7 +113,7 @@ layout: checklist
 
 
 <div class="checkboxType">
-	<h3>Premium Items <button class="checkall"  type="button" onclick="selectAllInGroup(premium);">Check All</button></h3>
+	<h3>Premium Items <button class="checkall"  type="button" onclick="selectAllInGroup(premium, true);">Check All</button></h3>
 	<div>
 		{% include checkbutton.html
 			id			= "valuepack"
@@ -128,7 +132,7 @@ layout: checklist
 
 
 <div class="checkboxType">
-	<h3>Misc <button class="checkall"  type="button" onclick="selectAllInGroup(misc);" id="btn_misc">Check All</button></h3>
+	<h3>Misc <button class="checkall"  type="button" onclick="selectAllInGroup(misc, true);" id="btn_misc">Check All</button></h3>
 	<div>
 		{% include checkbutton.html
 			id			= "autopot"
@@ -150,13 +154,17 @@ layout: checklist
 </div>
 
 
+<button type="button" onclick="resetAll();">Reset Checklist</button>
+<div class="bot-pad"></div>
+
+
 <script>
 	const agris = document.getElementById("agris");
 	const lootscroll = document.getElementById("lootscroll");
 	const tentbuff = document.getElementById("tentbuff");
 	const lomlbuff = document.getElementById("lomlbuff");
 	const guildbuff = document.getElementById("guildbuff");
-	const dropbuffs = [agris, lootscroll, tentbuff, , lomlbuff, guildbuff];
+	const dropbuffs = [agris, lootscroll, tentbuff, lomlbuff, guildbuff];
 	
 	
 	const elixirs = document.getElementById("elixirs");
@@ -173,7 +181,8 @@ layout: checklist
 	const skilladdons = document.getElementById("skilladdons");
 	const artifacts = document.getElementById("artifacts");
 	const crystals = document.getElementById("crystals");
-	const character = [awaksucc, skilladdons, artifacts, crystals];
+	const bsr = document.getElementById("bsr");
+	const character = [awaksucc, skilladdons, artifacts, crystals, bsr];
 	
 	
 	const cronmeal = document.getElementById("cronmeal");
@@ -194,23 +203,20 @@ layout: checklist
 	const misc = [autopot, removeweight, altc, feedpets];
 	
 	
-	function selectAllInGroup(arr) {
+	function selectAllInGroup(arr, checked = true) {
 		for(const item of arr){
-			item.checked = true;
+			item.checked = checked;
 		}
 	}
 
 	function resetAll(){
 		const allItems = [...dropbuffs, ...grindbuffs, ...character, ...consumables, ...premium, ...misc];
-		for(const item of allItems){
-			item.checked = false;
-		}
+		selectAllInGroup(allItems, false);
 	}
 </script>
 
 
-<button type="button" onclick="resetAll();">Reset Checklist</button>
-<div class="bot-pad"></div>
+
 
 
 
