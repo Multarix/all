@@ -24,10 +24,6 @@ layout: checklist
 			name		= "Tent Buff"
 		%}
 		{% include checkbutton.html
-			id			= "housebuff"
-			name		= "House Buffs"
-		%}
-		{% include checkbutton.html
 			id			= "lomlbuff"
 			name		= "LOML Buffs (Server Based)"
 		%}
@@ -63,6 +59,10 @@ layout: checklist
 			name		= "Krogdolo Horse Gear Buff"
 		%}
 		{% include checkbutton.html
+			id			= "housebuff"
+			name		= "House Buffs"
+		%}
+		{% include checkbutton.html
 			id			= "carolinbuff"
 			name		= "Carolin Buff (30% Crit Damage)"
 		%}
@@ -94,7 +94,7 @@ layout: checklist
 
 
 <div class="checkboxType">
-	<h3>Consumables <button class="checkall"  type="button" onclick="selectAllInGroup(consumables);" id="btn_consumables">Check All</button></h3>
+	<h3>Extra Consumables <button class="checkall"  type="button" onclick="selectAllInGroup(consumables);" id="btn_consumables">Check All</button></h3>
 	<div>
 		{% include checkbutton.html
 			id			= "cronmeal"
@@ -156,18 +156,19 @@ layout: checklist
 	const agris = document.getElementById("agris");
 	const lootscroll = document.getElementById("lootscroll");
 	const tentbuff = document.getElementById("tentbuff");
-	const housebuff = document.getElementById("housebuff");
 	const lomlbuff = document.getElementById("lomlbuff");
 	const guildbuff = document.getElementById("guildbuff");
-	const dropbuffs = [agris, lootscroll, tentbuff, housebuff, lomlbuff, guildbuff];
+	const dropbuffs = [agris, lootscroll, tentbuff, , lomlbuff, guildbuff];
+	
 	
 	const elixirs = document.getElementById("elixirs");
 	const churchbuff = document.getElementById("churchbuff");
 	const villabuff = document.getElementById("villabuff");
 	const alchstone = document.getElementById("alchstone");
 	const kroggear = document.getElementById("kroggear");
+	const housebuff = document.getElementById("housebuff");
 	const carolinbuff = document.getElementById("carolinbuff");
-	const grindbuffs = [elixirs, churchbuff, villabuff, alchstone, kroggear, carolinbuff];
+	const grindbuffs = [elixirs, churchbuff, villabuff, alchstone, kroggear, housebuff, carolinbuff];
 	
 	
 	const awaksucc = document.getElementById("awaksucc");
