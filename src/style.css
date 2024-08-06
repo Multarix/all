@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('/src/fnt/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Using :root/ setting variables breaks these? */
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 7px;
+	height: 7px;
+}
+::-webkit-scrollbar-track {
+	background: #222;
+}
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+:root {
+	--background-color: rgb(15, 15, 15);
+	--text-color: rgb(255, 255, 255);
+	
+	--tile-color: rgb(25, 27, 29);
+	--tile-border-color: rgb(47, 49, 50);
+	--tile-border-color-hover: rgb(77, 79, 80);
+	
+	--nav-background-color: rgb(25, 27, 29);
+	--nav-background-color-hover: rgb(35, 37, 39);
+	--nav-text-color: rgb(200, 200, 200);
+	--nav-text-color-hover: rgb(255, 255, 255);
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: url('/src/img/bg.png') repeat var(--background-color);
+	
+	position: relative;
+	
+	width: 100vw;
+	max-width: 100%;
+	font-family: "OpenSansRegular", Arial, sans-serif;
+	color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	margin: 0.5em 0;
+}
