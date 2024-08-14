@@ -4,7 +4,7 @@ import "./style.css";
 import Navbar from "./componants/navbar";
 import ProjectTile from "./componants/projectTile";
 import Carousel from "./componants/carousel";
-import Logo from "./componants/logo";
+import TitleAndLogo from "./componants/logo";
 
 import { projectsData, socialsData } from "./modules/constants.js";
 
@@ -17,8 +17,8 @@ export default function App() {
 		<>
 			<Navbar projects={projectsData} socials={socialsData} />
 			<div className="body-padding">
-				<Logo />
-				<Carousel elements={projectTiles} elementWidth={300} gapSize={24} title="My Projects" />
+				<TitleAndLogo />
+				<Carousel elements={projectTiles} elementWidth={300} gapSize={24} title="" />
 			</div>
 		</>
 	);

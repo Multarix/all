@@ -1,6 +1,6 @@
 /* Navbar */
 :root {
-	--nav-background: var(--background-color);
+	--nav-background: rgb(from var(--background-color) calc(r - 4) calc(g - 4) calc(b - 4));
 	--nav-border: rgb(from var(--nav-background) calc(r + 25) calc(g + 25) calc(b + 25));
 	
 	--nav-hover-background: rgb(from var(--nav-background) calc(r + 10) calc(g + 10) calc(b + 10));
@@ -12,7 +12,7 @@ nav {
 	position: relative;
 	width: 100%;
 	background-color: var(--nav-background);
-	border-bottom: 2px outset var(--nav-border);
+	border-bottom: 3px outset var(--nav-border);
 }
 
 nav a {

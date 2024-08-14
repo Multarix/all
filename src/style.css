@@ -40,7 +40,7 @@
 	--text-color: rgb(235, 235, 235);
 	--background-color: rgb(15, 20, 15);
 	--primary-color: rgb(7, 162, 24);
-	--secondary-color: rgb(15, 55, 25);
+	--secondary-color: rgb(40, 100, 55);
 	--accent-color: rgb(23, 182, 182);
 	
 	/* --primary-color-add: rgb(from var(--primary-color) calc(r + 15) calc(g + 15) calc(b + 15)); */
@@ -64,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .body-padding {
+	display: block;
 	max-width: 1300px;
 	margin: 0 auto;
 }
@@ -76,6 +77,6 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 767px) {
 	body {
-		padding-top: 52px;
+		padding-top: 53px;
 	}
 }

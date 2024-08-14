@@ -75,7 +75,7 @@ const Carousel = (props: { elements: JSX.Element[], elementWidth: number, gapSiz
 	return (
 		<div ref={compRef} className="expand">
 			<div className="carousel-container">
-				<CarouselTitle title="My Projects" visibleTiles={config.elementsToShow} />
+				<CarouselTitle title={props.title} visibleTiles={config.elementsToShow} />
 				<style>{sliderStyle}</style>
 				<Slider {...sliderSettings}>
 					{props.elements}
