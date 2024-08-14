@@ -1,17 +1,19 @@
 import React, { useEffect } from "react";
 import './style.css';
 
-import { socialsData, projectsData } from "./data/data";
-import { useWindowDimensions } from "./functions.js";
+import { SocialData, ProjectData, TABLET_WIDTH } from "../../modules/constants.js";
+import { useWindowDimensions } from "../../modules/functions.js";
 
-const MOBILE_WIDTH = 600;
 
 
 // Componants
-function ProjectsSection(): JSX.Element {
+interface ProjectsSectionProps {
+	projects: ProjectData[]
+}
+function ProjectsSection(props: ProjectsSectionProps): JSX.Element {
 	const { width } = useWindowDimensions();
 
-	const projects = projectsData.map(project => {
+	const projects = props.projects.map(project => {
 		return (
 			<a key={project.id} href={project.url}>
 				{project.name.toUpperCase()}
@@ -19,7 +21,7 @@ function ProjectsSection(): JSX.Element {
 		);
 	});
 
-	if(width >= MOBILE_WIDTH){
+	if(width >= TABLET_WIDTH){
 		return (
 			<div id="nav-projects" className="nav-section nav-dropdown">
 				<a href={void (0)}>
@@ -67,8 +69,11 @@ function SocialMobileBars(): JSX.Element {
 
 
 
-function SocialLinks(): JSX.Element {
-	const socials = socialsData.filter(social => social.enable).map(social => {
+interface SocialLinksProps {
+	socials: SocialData[]
+}
+function SocialLinks(props: SocialLinksProps): JSX.Element {
+	const socials = props.socials.filter(social => social.enable).map(social => {
 		return (
 			<a key={ social.title } href={ "http://" + social.url + social.username } target="_blank" rel="noreferrer">
 				<i className={ social.icon }></i>
@@ -88,14 +93,17 @@ function SocialLinks(): JSX.Element {
 
 
 
-function SocialsSection(): JSX.Element {
+interface SocialsSectionProps {
+	socials: SocialData[]
+}
+function SocialsSection(props: SocialsSectionProps): JSX.Element {
 	const { width } = useWindowDimensions();
 
-	if(width >= MOBILE_WIDTH){
+	if(width >= TABLET_WIDTH){
 		return (
 			<>
 				<EmptySection />
-				<SocialLinks />
+				<SocialLinks socials={props.socials} />
 			</>
 		);
 	}
@@ -103,15 +111,20 @@ function SocialsSection(): JSX.Element {
 	// Mobile
 	return (
 		<>
+			<EmptySection />
 			<SocialMobileBars />
-			<SocialLinks />
+			<SocialLinks socials={props.socials} />
 		</>
 	);
 }
 
 
 
-export default function Navbar(): JSX.Element {
+interface NavbarProps {
+	projects: ProjectData[]
+	socials: SocialData[]
+}
+export default function Navbar(props: NavbarProps): JSX.Element {
 	const { width } = useWindowDimensions();
 
 	useEffect(() => {
@@ -135,11 +148,11 @@ export default function Navbar(): JSX.Element {
 
 
 
-	if(width >= MOBILE_WIDTH){
+	if(width >= TABLET_WIDTH){
 		return (
 			<nav id="navbar">
-				<ProjectsSection/>
-				<SocialsSection />
+				<ProjectsSection projects={props.projects} />
+				<SocialsSection socials={props.socials} />
 			</nav>
 		);
 	}
@@ -147,8 +160,8 @@ export default function Navbar(): JSX.Element {
 	// Mobile
 	return (
 		<nav id="navbar" className="mobile">
-			<ProjectsSection />
-			<SocialsSection />
+			<ProjectsSection projects={props.projects} />
+			<SocialsSection socials={props.socials} />
 		</nav>
 	);
 }

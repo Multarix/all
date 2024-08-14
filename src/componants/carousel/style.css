@@ -1,0 +1,69 @@
+/* Carousel */
+.expand {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.carousel-container {
+	margin: 0 auto;
+	padding: 0 0 45px 0;
+}
+
+.carousel-title {
+	font-size: 50px;
+	font-weight: bolder;
+}
+
+
+.dots-class {
+	display: block;
+	position: absolute;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.dots-class li {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.dots-class li button {
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	width: 20px;
+	height: 20px;
+	padding: 5px;
+	cursor: pointer;
+	color: transparent;
+	border: 0;
+	outline: none;
+	background: transparent;
+}
+
+.dots-class li button::before {
+	font-family: 'slick';
+	font-size: 6px;
+	line-height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	content: '•';
+	text-align: center;
+	opacity: 0.25;
+	color: #fff;
+}
+
+.dots-class li.slick-active button::before {
+	opacity: 0.5;
+}

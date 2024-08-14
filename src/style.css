@@ -5,6 +5,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('/src/fnt/OpenSans-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansExtraBold';
+    src: url('/src/fnt/OpenSans-ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Using :root/ setting variables breaks these? */
 ::-webkit-scrollbar {
 	-webkit-appearance: none;
@@ -23,29 +37,21 @@
 }
 
 :root {
-	--background-color: rgb(15, 15, 15);
-	--text-color: rgb(200, 200, 200);
-	--text-color-hover: rgb(255, 255, 255);
+	--text-color: rgb(235, 235, 235);
+	--background-color: rgb(15, 20, 15);
+	--primary-color: rgb(7, 162, 24);
+	--secondary-color: rgb(15, 55, 25);
+	--accent-color: rgb(23, 182, 182);
 	
-	--tile-color: rgb(25, 27, 29);
-	--tile-border-color: rgb(47, 49, 50);
-	--tile-border-color-hover: rgb(77, 79, 80);
-	
-	--nav-background-color: rgb(25, 27, 29);
-	--nav-background-color-hover: rgb(35, 37, 39);
-	--nav-border-color: rgb(47, 49, 50);
-	--nav-border-color-hover: rgb(77, 79, 80);
-	
+	/* --primary-color-add: rgb(from var(--primary-color) calc(r + 15) calc(g + 15) calc(b + 15)); */
+	/* --primary-color-opacity: rgb(from var(--primary-color) r g b / 0.5); */
 }
 
 body {
 	padding: 0;
 	margin: 0;
-	background: url('/src/img/bg.png') repeat var(--background-color);
+	background: var(--background-color);
 	
-	position: relative;
-	
-	width: 100vw;
 	max-width: 100%;
 	font-family: "OpenSansRegular", Arial, sans-serif;
 	color: var(--text-color);
@@ -54,233 +60,22 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 	margin: 0.5em 0;
+	font-family: "OpenSansBold", Arial, sans-serif;
 }
 
-a {
-	color: #ac7870;
-	text-decoration: none;
-	font-weight: bold;
-	
-	&:hover {
-		color: #764740;
-	}
-	&:active {
-		color: #764740;
-	}
+.body-padding {
+	max-width: 1300px;
+	margin: 0 auto;
 }
 
-/* Navbar */
-nav {
-	display: flex;
-	position: relative;
-	width: 100%;
-	background-color: var(--nav-background-color);
-	border-bottom: 2px outset var(--nav-border-color);
-}
-
-nav a {
-	color: var(--text-color);
-}
-
-.nav-section {
-	display: flex;
-	padding: 0.5rem 2rem;
-	gap: 1rem;
-	border-left: 1px solid var(--nav-border-color);
-	vertical-align: middle;
-	align-items: center;
-	justify-content: center;
-	white-space: nowrap;
-	font-size: 1.5em;
-	cursor: pointer;
-}
-
-.nav-section a {
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-
-.nav-section a i {
-	font-size: 1em;
-	padding: 5px;
-	transition: 0.3s;
-	
-	&:hover {
-		color: #fff;
-	}
-}
-
-.nav-section.nav-empty {
-	flex-basis: 100%;
-	cursor: unset;
-}
-
-
-.nav-dropdown:hover {
-	background-color: var(--nav-background-color-hover);
-}
-
-.nav-dropdown:hover > a {
-	color: white;
-}
-
-#nav-projects {
-	border-left: unset;
-}
-
-#nav-social {
-	text-align: right;
-	justify-content: flex-end;
-	gap: 1rem;
-}
-
-.nav-dropdown {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
+.centered {
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.nav-dropdown-content {
-	font-size: 0.75em;
-	left: 0;
-	top: 50px;
-	text-align: left;
-	display: none;
-	position: absolute;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-	
-	max-height: calc(100vh - 50px);
-	overflow-y: auto;
+@media screen and (max-width: 767px) {
+	body {
+		padding-top: 52px;
+	}
 }
-
-.nav-dropdown-content a {
-	background-color: var(--nav-background-color);
-	padding: 0.75rem 1rem;
-	text-decoration: none;
-	display: block;
-	
-	width: unset;
-	height: unset;
-	
-	border: 1px solid var(--nav-border-color);
-	border-bottom: unset;
-}
-
-.nav-dropdown-content a:last-child {
-	border-bottom: 1px solid var(--nav-border-color);
-}
-
-.nav-dropdown-content > a:hover {
-	color: white;
-	background-color: var(--nav-background-color-hover);
-	border-color: var(--nav-border-color-hover);
-}
-
-.nav-dropdown-content > a:hover + a {
-	border-top-color: var(--nav-border-color-hover);
-}
-
-.nav-dropdown:hover .nav-dropdown-content {
-	display: block;
-}
-
-.supress-hover.nav-dropdown:hover .nav-dropdown-content {
-	display: none;
-}
-
-/* Brand Icons */
-.nav-section .fa.brands.fa-twitter:hover {
-	color: #1c9aef;
-}
-
-.nav-section .fa.brands.fa-youtube:hover {
-	color: #fe0000;
-}
-
-.nav-section .fa.brands.fa-steam:hover {
-	color: #4a7ca5;
-}
-
-.nav-section .fa.brands.fa-github:hover {
-	color: #fff;
-}
-
-/* MOBILE */
-nav.mobile {
-	position: fixed;
-	top: 0;
-	z-index: 10;
-}
-
-nav.mobile .nav-dropdown {
-	position: unset;
-}
-
-nav.mobile .nav-dropdown-content {
-	right: 0;
-}
-
-nav.mobile #nav-projects {
-	flex-basis: 100%;
-}
-
-nav.mobile #nav-projects {
-	flex-basis: 100%;
-}
-
-nav.mobile .nav-section a {
-	color: white;
-}
-
-nav.mobile .socials-container {
-	overflow-x: clip;
-	position: absolute;
-	width: 100%;
-	
-	top: 49px;
-	right: 0;
-}
-
-nav.mobile #nav-social {
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	width: 96.5px;
-	text-align: center;
-	
-	background-color: var(--nav-background-color);
-	border-bottom: 1px solid var(--nav-border-color);
-	border-bottom-left-radius: 10px;
-	
-	gap: 1.5rem;
-	
-	position: absolute;
-	right: -96.5px;
-	top: 0;
-	
-	flex-basis: 100%;
-	
-	transition: 0.5s;
-	
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
-	
-	z-index: 10;
-}
-
-nav.mobile #nav-social.slide-in {
-	right: 0;
-}
-
-nav.mobile #nav-social a {
-	display: block;
-}
-
-nav.mobile #nav-projects-dropdown.show-projects {
-	display: block;
-}
-/* END NAVBAR */

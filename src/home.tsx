@@ -1,48 +1,25 @@
 import React from "react";
-import './style.css';
+import "./style.css";
 
-import Navbar from "./navbar";
-import { projectsData } from './data/data';
+import Navbar from "./componants/navbar";
+import ProjectTile from "./componants/projectTile";
+import Carousel from "./componants/carousel";
+import Logo from "./componants/logo";
+
+import { projectsData, socialsData } from "./modules/constants.js";
 
 
-
-function ProjectContainer(): JSX.Element {
-	const changeLocation = (url: string) => {
-		window.location.href = url;
-	};
-
-	const projectTileData = projectsData.filter(project => project.project);
-	const projectTiles = projectTileData.map(project => {
-		return (
-			<div key={project.id} onClick={changeLocation.bind(null, project.url)}>
-				<div>
-					<div>
-						<h3>{project.name.toUpperCase()}</h3>
-					</div>
-					<img src={project.img} alt={project.name + " icon"} height="80" width="80"></img>
-				</div>
-				<p>{project.shortDesc}<br></br><br></br>{project.longDesc}</p>
-			</div>
-		);
-	});
+export default function App() {
+	const projectTileData = projectsData.filter(item => item.isProject);
+	const projectTiles = projectTileData.map(project => <ProjectTile key={project.id} project={project} />);
 
 	return (
 		<>
-			{projectTiles}
-		</>
-	);
-}
-
-
-function App() {
-	return (
-		<>
-			<Navbar />
-			<div className="all-projects">
-				<ProjectContainer />
+			<Navbar projects={projectsData} socials={socialsData} />
+			<div className="body-padding">
+				<Logo />
+				<Carousel elements={projectTiles} elementWidth={300} gapSize={24} title="My Projects" />
 			</div>
 		</>
 	);
 }
-
-export default App;
