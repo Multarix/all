@@ -41,6 +41,7 @@ const Carousel = (props: { elements: JSX.Element[], elementWidth: number, gapSiz
 	const config = calculateSliderSettings();
 
 	const sliderSettings = {
+		className: "slider-bg",
 		dotsClass: "dots-class",
 		dots: true,
 		arrows: false,

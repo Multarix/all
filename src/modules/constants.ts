@@ -24,9 +24,9 @@ export const MOBILE_WIDTH = 360;
 
 export const projects: ProjectData[] = [
 	{
-		name: "all projects",
-		id: "AllProjects",
-		activeGroup: "all-projects",
+		name: "Home",
+		id: "Home",
+		activeGroup: "Home",
 		url: "/",
 		img: "conversion.png",
 		shortDesc: "",
