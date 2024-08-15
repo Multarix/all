@@ -11,7 +11,6 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/react-slick": "^0.23.13",
-    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
@@ -49,6 +48,7 @@
     "eslint": "^9.8.0",
     "eslint-plugin-react": "^7.35.0",
     "globals": "^15.9.0",
-    "typescript-eslint": "^8.0.1"
+    "typescript-eslint": "^8.0.1",
+	"gh-pages": "^6.1.1"
   }
 }
