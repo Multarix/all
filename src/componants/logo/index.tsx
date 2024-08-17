@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./style.css";
 
 import { TABLET_WIDTH } from "../../modules/constants";

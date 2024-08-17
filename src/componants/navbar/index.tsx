@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import './style.css';
 
 import { SocialData, ProjectData, TABLET_WIDTH } from "../../modules/constants.js";
@@ -7,17 +9,17 @@ import { useWindowDimensions } from "../../modules/functions.js";
 
 
 // Componants
-interface ProjectsSectionProps {
-	projects: ProjectData[]
-}
-function ProjectsSection(props: ProjectsSectionProps): JSX.Element {
+function ProjectsSection(props: { projects: ProjectData[] }): JSX.Element {
 	const { width } = useWindowDimensions();
+
+	// const projects = [];
+	// for(const project of props.projects){
+	// 	projects.push(<Link to="boids">{project.name.toUpperCase()}</Link>);
+	// }
 
 	const projects = props.projects.map(project => {
 		return (
-			<a key={project.id} href={project.url}>
-				{project.name.toUpperCase()}
-			</a>
+			<Link to={project.url} key={project.id}>{project.name.toUpperCase()}</Link>
 		);
 	});
 
@@ -69,10 +71,7 @@ function SocialMobileBars(): JSX.Element {
 
 
 
-interface SocialLinksProps {
-	socials: SocialData[]
-}
-function SocialLinks(props: SocialLinksProps): JSX.Element {
+function SocialLinks(props: { socials: SocialData[] }): JSX.Element {
 	const socials = props.socials.filter(social => social.enable).map(social => {
 		return (
 			<a key={ social.title } href={ "http://" + social.url + social.username } target="_blank" rel="noreferrer">
@@ -93,10 +92,7 @@ function SocialLinks(props: SocialLinksProps): JSX.Element {
 
 
 
-interface SocialsSectionProps {
-	socials: SocialData[]
-}
-function SocialsSection(props: SocialsSectionProps): JSX.Element {
+function SocialsSection(props: { socials: SocialData[] }): JSX.Element {
 	const { width } = useWindowDimensions();
 
 	if(width >= TABLET_WIDTH){
@@ -120,11 +116,7 @@ function SocialsSection(props: SocialsSectionProps): JSX.Element {
 
 
 
-interface NavbarProps {
-	projects: ProjectData[]
-	socials: SocialData[]
-}
-export default function Navbar(props: NavbarProps): JSX.Element {
+export default function Navbar(props: { projects: ProjectData[], socials: SocialData[] }): JSX.Element {
 	const { width } = useWindowDimensions();
 
 	useEffect(() => {
