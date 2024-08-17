@@ -1,46 +1,41 @@
 import React from 'react';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+// import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
 import "./style.css";
 
-
-import RootNode from './pages/Root';
+import Navbar from './componants/navbar';
 import Home from "./pages/Home";
 import ProjectsPage from "./pages/Projects";
 import ErrorPage from "./pages/ErrorPage";
 
-import { projectsData } from "./modules/constants.js";
+import { projectsData, socialsData } from "./modules/constants.js";
 
 
-const projectPages = projectsData.filter(p => p.isProject).map(project => {
-	return {
-		path: project.url,
-		element: <ProjectsPage />
-	};
-});
+const projectPages = projectsData.filter(p => p.isProject).map(project => <Route key={project.id} path={project.url} element={<ProjectsPage />} />);
 
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <RootNode />,
-		errorElement: <ErrorPage />,
-		children: [
-			{
-				path: "/",
-				element: <Home />
-			},
-			{
-				path: "/about",
-				element: <Home />
-			},
-			...projectPages
-		]
-	}
-]);
+// const router = createBrowserRouter([
+// 	{
+// 		path: "/",
+// 		element: <NavbarWrapper />,
+// 		errorElement: <ErrorPage />,
+// 		children: [
+// 			{
+// 				path: "/",
+// 				element: <Home />
+// 			},
+// 			{
+// 				path: "/about",
+// 				element: <Home />
+// 			},
+// 			...projectPages
+// 		]
+// 	}
+// ]);
 
 
 const root = ReactDOM.createRoot(
@@ -50,7 +45,19 @@ const root = ReactDOM.createRoot(
 
 root.render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<BrowserRouter>
+			<Navbar projects={projectsData} socials={socialsData} />
+			<div id="body-pad" className="body-padding">
+				<Routes>
+					<Route path="/" element={<Home />}/>
+					<Route path="/about" element={<Home />}/>
+
+					{projectPages}
+
+					<Route path="*" element={<ErrorPage />}/>
+				</Routes>
+			</div>
+		</BrowserRouter>
 	</React.StrictMode>
 );
 
