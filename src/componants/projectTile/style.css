@@ -1,3 +1,7 @@
+.tile-link {
+	all: unset;
+}
+
 /* Project Tiles */
 .projects-container {
 	padding: 1rem 0;
@@ -96,3 +100,4 @@
 .projects-container.mobile {
 	margin-top: 52px;
 }
+

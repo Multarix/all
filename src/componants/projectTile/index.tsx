@@ -1,17 +1,13 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 import "./style.css";
 
-import { TABLET_WIDTH, ProjectData } from "../../modules/constants.js";
-import { useWindowDimensions } from "../../modules/functions.js";
+import { ProjectData } from "../../modules/constants.js";
 
 
-interface ProjectHeaderProps {
-	name: string
-	img: string
-}
-function ProjectHeader(props: ProjectHeaderProps): JSX.Element {
+
+function ProjectHeader(props: { name: string, img: string }): JSX.Element {
 	return (
 		<div className="tile-header">
 			<div className="tile-title-container">
@@ -24,24 +20,18 @@ function ProjectHeader(props: ProjectHeaderProps): JSX.Element {
 
 
 
-interface ProjectTileProps {
-	project: ProjectData;
-}
-export default function ProjectTile(props: ProjectTileProps): JSX.Element {
-
-	const handleClick = (url: string) => {
-		console.log(`Would change location to: ${url}`);
-	};
-
+export default function ProjectTile(props: { project: ProjectData; }): JSX.Element {
 	return (
-		<div className="project-tile" onClick={handleClick.bind(null, props.project.url)}>
-			<ProjectHeader name={props.project.name} img={props.project.img} />
-			<p className="tile-desc">
-				{props.project.shortDesc}
-				<br></br>
-				<br></br>
-				{props.project.longDesc}
-			</p>
-		</div>
+		<Link to={props.project.url} className="tile-link">
+			<div className="project-tile">
+				<ProjectHeader name={props.project.name} img={props.project.img} />
+				<p className="tile-desc">
+					{props.project.shortDesc}
+					<br></br>
+					<br></br>
+					{props.project.longDesc}
+				</p>
+			</div>
+		</Link>
 	);
 }

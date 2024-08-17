@@ -18,31 +18,7 @@ import { projectsData, socialsData } from "./modules/constants.js";
 const projectPages = projectsData.filter(p => p.isProject).map(project => <Route key={project.id} path={project.url} element={<ProjectsPage />} />);
 
 
-// const router = createBrowserRouter([
-// 	{
-// 		path: "/",
-// 		element: <NavbarWrapper />,
-// 		errorElement: <ErrorPage />,
-// 		children: [
-// 			{
-// 				path: "/",
-// 				element: <Home />
-// 			},
-// 			{
-// 				path: "/about",
-// 				element: <Home />
-// 			},
-// 			...projectPages
-// 		]
-// 	}
-// ]);
-
-
-const root = ReactDOM.createRoot(
-	document.getElementById('root') as HTMLElement
-);
-
-
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>

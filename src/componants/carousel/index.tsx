@@ -48,14 +48,13 @@ const Carousel = (props: { elements: JSX.Element[], elementWidth: number, gapSiz
 
 		infinite: true,
 		speed: 1000,
-		// centerMode: true,
+		swipeToSlide: true,
 
 		rows: 1,
 		slidesToShow: config.elementsToShow,
 		slidesToScroll: 1,
 		initialSlide: 0,
 
-		// cssEase: "linear",
 		autoplay: true,
 		autoplaySpeed: 5000
 	};
