@@ -1,3 +1,77 @@
+import React, { useState, useEffect } from 'react';
+import {
+	TwitterIcon,
+	FacebookIcon,
+	RedditIcon,
+	YoutubeIcon,
+	TwitchIcon,
+	SteamIcon,
+	GithubIcon
+} from '../componants/svgs';
+
+
+
+function getWindowDimensions() {
+	const { innerWidth: width, innerHeight: height } = window;
+	return {
+		width,
+		height
+	};
+}
+
+
+
+export function useWindowDimensions() {
+	const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+	useEffect(() => {
+		function handleResize() {
+			setWindowDimensions(getWindowDimensions());
+		}
+
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
+	return windowDimensions;
+}
+
+
+
+export const useContainerDimensions = (reference: React.RefObject<HTMLElement>) => {
+	const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+
+	useEffect(() => {
+		const getDimensions = () => {
+			if(!reference) return ({ width: 0, height: 0 });
+			if(!reference.current) return ({ width: 0, height: 0 });
+			return ({
+				width: reference.current.offsetWidth,
+				height: reference.current.offsetHeight
+			});
+		};
+
+		const handleResize = () => {
+			setDimensions(getDimensions());
+		};
+
+		if(reference.current){
+			setDimensions(getDimensions());
+		}
+
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, [reference]);
+
+	return dimensions;
+};
+
+
+
 export interface ProjectData {
 	name: string
 	id: string
@@ -10,17 +84,22 @@ export interface ProjectData {
 }
 
 
+
 export interface SocialData {
 	username: string
 	url: string
 	title: string
-	icon: string
+	icon: Function // eslint-disable-line @typescript-eslint/no-unsafe-function-type
 	enable: boolean
 }
+
+
 
 export const DESKTOP_WIDTH = 1280;
 export const TABLET_WIDTH = 768;
 export const MOBILE_WIDTH = 360;
+
+
 
 export const projects: ProjectData[] = [
 	{
@@ -135,11 +214,15 @@ export const projects: ProjectData[] = [
 	}
 ];
 
+
+
 const images = require.context("../img/icons/", false);
 const imageList: { [key: string]: string } = {};
 images.keys().forEach(image => {
 	imageList[image] = images(image);
 });
+
+
 
 export const projectsData = projects.map(project => {
 	return {
@@ -154,54 +237,56 @@ export const projectsData = projects.map(project => {
 	};
 });
 
+
+
 export const socialsData: SocialData[] = [
 	{
 		username: "multarix",
 		url: "twitter.com/",
 		title: "Twitter",
-		icon: "fa brands fa-twitter",
-		enable: true
+		icon: TwitterIcon,
+		enable: false
 	},
 	{
 		username: "",
 		url: "facebook.com/",
 		title: "Facebook",
-		icon: "fa brands fa-facebook",
+		icon: FacebookIcon,
 		enable: false
 	},
 	{
 		username: "multarix_",
 		url: "youtube.com/@",
 		title: "Youtube",
-		icon: "fa brands fa-youtube",
+		icon: YoutubeIcon,
 		enable: true
 	},
 	{
-		username: "",
+		username: "multarix",
 		url: "twitch.com/",
 		title: "Twitch",
-		icon: "fa brands fa-twitch",
-		enable: false
+		icon: TwitchIcon,
+		enable: true
 	},
 	{
 		username: "",
 		url: "reddit.com/u/",
 		title: "Reddit",
-		icon: "fa brands fa-reddit",
+		icon: RedditIcon,
 		enable: false
 	},
 	{
 		username: "multarix",
 		url: "steamcommunity.com/id/",
 		title: "Steam",
-		icon: "fa brands fa-steam",
-		enable: true
+		icon: SteamIcon,
+		enable: false
 	},
 	{
 		username: "multarix",
 		url: "github.com/",
 		title: "Github",
-		icon: "fa brands fa-github",
+		icon: GithubIcon,
 		enable: true
 	}
 

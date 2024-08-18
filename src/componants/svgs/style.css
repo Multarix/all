@@ -1,0 +1,52 @@
+.ico-twitter:hover {
+	color: #1DA1F2;
+}
+
+.ico-facebook:hover {
+	color: 	#1877F2;
+}
+
+.ico-reddit:hover {
+	color: #FF5700;
+}
+
+.ico-discord:hover {
+	color: #5865F2;
+}
+
+.ico-youtube:hover {
+	color: #FF0000;
+}
+
+.ico-twitch:hover {
+	color: #6441A5;
+}
+
+.ico-steam:hover {
+	color: #2A475E;
+}
+
+.ico-github:hover {
+	color: #FFFFFF;
+}
+
+.ico-git:hover {
+	color: #F1502F;
+}
+
+.ico-javascript:hover {
+	color: #F7DF1E;
+}
+
+.ico-typescript:hover {
+	color: #007ACC;
+}
+
+/* Python Icon is 2 colors */
+.ico-python:hover > path:first-child {
+	fill: #4584B6;
+}
+.ico-python:hover > path:last-child{
+	fill: #FFDE57;
+}
+

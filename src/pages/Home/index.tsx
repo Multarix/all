@@ -1,10 +1,10 @@
 import React from "react";
 
-import ProjectTile from "../../componants/projectTile/index.js";
-import Carousel from "../../componants/carousel/index.js";
-import TitleAndLogo from "../../componants/logo/index.js";
+import ProjectTile from "../../componants/projectTile";
+import Carousel from "../../componants/carousel";
+import TitleAndLogo from "../../componants/logo";
 
-import { projectsData } from "../../modules/constants.js";
+import { projectsData } from "../../modules/script.js";
 
 
 export default function App() {

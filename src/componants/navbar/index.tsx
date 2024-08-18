@@ -3,19 +3,13 @@ import { Link } from "react-router-dom";
 
 import './style.css';
 
-import { SocialData, ProjectData, TABLET_WIDTH } from "../../modules/constants.js";
-import { useWindowDimensions } from "../../modules/functions.js";
+import { MenuLeftIcon, MenuRightIcon } from "../svgs";
 
-
+import { useWindowDimensions, SocialData, ProjectData, TABLET_WIDTH } from "../../modules/script.js";
 
 // Componants
 function ProjectsSection(props: { projects: ProjectData[] }): JSX.Element {
 	const { width } = useWindowDimensions();
-
-	// const projects = [];
-	// for(const project of props.projects){
-	// 	projects.push(<Link to="boids">{project.name.toUpperCase()}</Link>);
-	// }
 
 	const projects = props.projects.map(project => {
 		return (
@@ -27,7 +21,7 @@ function ProjectsSection(props: { projects: ProjectData[] }): JSX.Element {
 		return (
 			<div id="nav-projects" className="nav-section nav-dropdown">
 				<a href={void (0)}>
-					<i className="fa-solid fa-folder-open"></i>
+					<MenuLeftIcon />
 				</a>
 				<div id="nav-projects-dropdown" className="nav-dropdown-content">
 					{projects}
@@ -40,7 +34,7 @@ function ProjectsSection(props: { projects: ProjectData[] }): JSX.Element {
 	return (
 		<div id="nav-projects" className="nav-section nav-dropdown supress-hover">
 			<a href={void (0)}>
-				<i className="fa-solid fa-folder-open"></i>
+				<MenuLeftIcon />
 			</a>
 			<div id="nav-projects-dropdown" className="nav-dropdown-content">
 				{projects}
@@ -63,7 +57,7 @@ function SocialMobileBars(): JSX.Element {
 	return (
 		<div id="mobile-bars" className="nav-section">
 			<a href={void (0)}>
-				<i className="fa-solid fa-bars"></i>
+				<MenuRightIcon />
 			</a>
 		</div>
 	);
@@ -72,10 +66,11 @@ function SocialMobileBars(): JSX.Element {
 
 
 function SocialLinks(props: { socials: SocialData[] }): JSX.Element {
+
 	const socials = props.socials.filter(social => social.enable).map(social => {
 		return (
 			<a key={ social.title } href={ "http://" + social.url + social.username } target="_blank" rel="noreferrer">
-				<i className={ social.icon }></i>
+				{social.icon()}
 			</a>
 		);
 	});
