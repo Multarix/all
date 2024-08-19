@@ -1,0 +1,99 @@
+.checklist-container {	
+	display: grid;
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+	max-width: 990px;
+	margin: 0 auto;
+}
+
+.checklist-tile {
+	--checklist-bg: rgb(from var(--secondary-color) g r b);
+	box-sizing: border-box;
+	
+	font-size: 0.9em;
+	
+	backdrop-filter: blur(0px);
+	background-color: rgb(from var(--checklist-bg) r g b / 0.5);
+	border: 2px solid var(--checklist-bg);
+	border-radius: 10px;
+	
+	padding: 1rem;
+	
+	min-height: 300px;
+	height: 300px;
+	max-height: 300px;
+	
+	min-width: 300px;
+	width: 300px;
+	max-width: 300px;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.checklist-title {
+	display: block;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.checklist-checks {
+	display: flex;
+	height: 70%;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+/* Unchecked Checkbox Style */
+.checkbox-wrapper {
+	display: flex;
+	border-radius: 5px;
+	user-select: none;
+	
+	&:hover {
+		background-color: rgb(from var(--checklist-bg) calc(r + 10) calc(g + 10) calc(b + 10) / 0.5);
+		cursor: pointer;
+	}
+}
+
+.checkbox-wrapper > input[type="checkbox"] {
+	display: none;
+	visibility: hidden;
+}
+
+.checkbox-wrapper > input[type="checkbox"] + label {
+	position: relative;
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.checkbox-wrapper:hover > input[type="checkbox"] + label {
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+}
+
+.checklist-tile > .button-container {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+}
+
+.checklist-tile > .button-container > button {
+	width: 100px;
+	height: 1.75em;
+}
+
+/* Checked Checkbox Style */
+.checkbox-wrapper > input[type="checkbox"]:checked  + label::after {
+	position: absolute;
+	right: 0;
+	padding-right: 10px;
+	
+	content: "✓";
+	font-weight: bolder;
+	color: var(--primary-color);
+}

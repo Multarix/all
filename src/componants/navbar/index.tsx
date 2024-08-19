@@ -7,6 +7,12 @@ import { MenuLeftIcon, MenuRightIcon } from "../svgs";
 
 import { useWindowDimensions, SocialData, ProjectData, TABLET_WIDTH } from "../../modules/script.js";
 
+/*
+if ("ontouchstart" in document.documentElement){
+	// touch device
+}
+*/
+
 // Componants
 function ProjectsSection(props: { projects: ProjectData[] }): JSX.Element {
 	const { width } = useWindowDimensions();

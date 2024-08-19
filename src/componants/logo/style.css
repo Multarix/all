@@ -5,14 +5,13 @@
 	gap: 3rem;
 	align-items: center;
 	justify-content: center;
-	margin-top: 3em;
+	/* margin-top: 3em; */
 	margin-bottom: 3em;
 }
 
 
 .really-big-text {
 	font-size: 70px;
-	margin: 0;
 }
 
 
