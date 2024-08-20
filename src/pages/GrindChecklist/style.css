@@ -1,4 +1,4 @@
-.checklist-container {	
+.checklist-container {
 	display: grid;
 	gap: 1rem;
 	align-items: center;
@@ -6,10 +6,11 @@
 	grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
 	max-width: 990px;
 	margin: 0 auto;
+	padding: 0 1em;
 }
 
 .checklist-tile {
-	--checklist-bg: rgb(from var(--secondary-color) g r b);
+	--checklist-bg: var(--secondary-color);
 	box-sizing: border-box;
 	
 	font-size: 0.9em;
@@ -31,6 +32,7 @@
 	
 	display: flex;
 	flex-direction: column;
+	transition: 0.3s;
 }
 
 .checklist-title {
@@ -45,6 +47,44 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 }
+
+.checklist-button {
+	width: 100px;
+	padding: 5px;
+	
+	border: 1px solid;
+	border-radius: 5px;
+	
+	color: var(--text-color);
+	font-weight: bolder;
+	background-color: var(--background-color);
+	
+	&:hover {
+		background-color: rgb(from var(--background-color) calc(r + 15) calc(g + 15) calc(b + 15));
+		color: rgb(255, 255, 255);
+	}
+	
+	&:active {
+		transform: scale(0.96);
+	}
+}
+
+#select-all {
+	border-color: rgb(7, 162, 24);
+	box-shadow: 0px 0px 5px -10px rgb(7, 162, 24);
+	&:hover {
+		box-shadow: 0px 0px 5px 3px rgb(7, 162, 24);
+	}
+}
+
+#deselect-all {
+	border-color: rgb(162, 7, 24);
+	box-shadow: 0px 0px 5px -10px rgb(162, 7, 24);
+	&:hover {
+		box-shadow: 0px 0px 5px 3px rgb(162, 7, 24);
+	}
+}
+
 
 /* Unchecked Checkbox Style */
 .checkbox-wrapper {
@@ -75,25 +115,48 @@
 	cursor: pointer;
 }
 
+.checkbox-wrapper > input[type="checkbox"]  + label::after {
+	position: absolute;
+	right: 0;
+	top: 8px;
+	padding-right: 10px;
+	
+	
+	
+	content: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='20' y1='20' x2='80' y2='80' stroke='red' stroke-width='17' /%3E%3Cline x1='20' y1='80' x2='80' y2='20' stroke='red' stroke-width='17' /%3E%3C/svg%3E");
+	font-weight: bolder;
+	color: rgb(255, 0, 0);
+}
+
 .checklist-tile > .button-container {
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: end;
+	gap: 1rem;
 }
 
-.checklist-tile > .button-container > button {
-	width: 100px;
-	height: 1.75em;
-}
 
 /* Checked Checkbox Style */
 .checkbox-wrapper > input[type="checkbox"]:checked  + label::after {
-	position: absolute;
-	right: 0;
-	padding-right: 10px;
-	
-	content: "✓";
-	font-weight: bolder;
-	color: var(--primary-color);
+	top: 6px;
+	content: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20,50 40,70 80,30' stroke='green' stroke-width='17' fill='none'/%3E%3C/svg%3E");
+	color: rgb(0, 255, 0);
+}
+
+.checklist-tile:has(.checklist-checks > .checkbox-wrapper> input[type="checkbox"]:not(:checked)){
+	--checklist-bg: rgb(from var(--secondary-color) g r b);
+}
+
+
+@container q-cont (width < 981px) {
+	#width-limit:has(> .checklist) {
+		display: block;
+	}
+}
+
+@media screen and (max-height: 775px) {
+	#width-limit:has(> .checklist) {
+		display: block;
+	}
 }

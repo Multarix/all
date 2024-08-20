@@ -93,9 +93,19 @@ function ChecklistInput(props: { id: string, labelName: string }) {
 
 
 function ChecklistTile(props: { checkers: CheckData[], title: string}) {
+	const checklistForTile: string[] = [];
+
 	const checklists = props.checkers.map(check => {
+		checklistForTile.push(check.id);
 		return <ChecklistInput key={check.id} id={check.id} labelName={check.labelName} />;
 	});
+
+	const selector = (checklist: string[], checked: boolean) => {
+		for(const check of checklist){
+			const element = document.getElementById(check) as HTMLInputElement;
+			element.checked = checked;
+		}
+	};
 
 	return (
 		<div className="checklist-tile">
@@ -104,7 +114,8 @@ function ChecklistTile(props: { checkers: CheckData[], title: string}) {
 				{checklists}
 			</div>
 			<div className="button-container">
-				<button className="check-all">Check All</button>
+				<button onClick={selector.bind(null, checklistForTile, true)} className="checklist-button" id="select-all">Check All</button>
+				<button onClick={selector.bind(null, checklistForTile, false)} className="checklist-button" id="deselect-all">Uncheck All</button>
 			</div>
 		</div>
 	);
@@ -118,13 +129,13 @@ export default function GrindChecklist() {
 	});
 
 	return (
-		<>
+		<div className="content checklist">
 			<h1 className="centered page-title">
 				Grind Checklist
 			</h1>
 			<div className="checklist-container">
 				{checklistTiles}
 			</div>
-		</>
+		</div>
 	);
 }

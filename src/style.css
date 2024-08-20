@@ -83,13 +83,11 @@ body {
 	height: 100%;
 	width: 100%;
 	max-height: calc(100% - var(--navbar-height));
-	overflow: auto;
-	scrollbar-gutter: stable;
 	
 	min-height: fit-content;
 }
 
-.width-limit {
+#width-limit {
 	height: 100%;
 	
 	width: 100%;
@@ -101,11 +99,11 @@ body {
 	align-items: center;
 }
 
-#content {
+.content {
 	display: block;
 	padding-top: 1em;
+	padding-bottom: 1em;
 	width: 100%;
-	
 }
 
 
@@ -124,18 +122,23 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 2rem;
 }
 
+#query-container {
+	display: block;
+	height: 100%;
+	
+	overflow: auto;
+	scrollbar-gutter: stable;
+	
+	container-type: size;
+	container-name: q-cont;
+}
+
 @media screen and (max-width: 767px) {
 	#content {
 		padding-top: 0;
 	}
 	
-	.width-limit {
-		display: block;
-	}
-}
-
-@media screen and (max-height: 768px) {
-	.width-limit {
+	#width-limit {
 		display: block;
 	}
 }

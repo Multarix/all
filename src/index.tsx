@@ -1,5 +1,4 @@
 import React from 'react';
-// import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ReactDOM from 'react-dom/client';
@@ -28,8 +27,8 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<Navbar projects={projectsData} socials={socialsData} />
-			<div className="width-limit">
-				<div id="content">
+			<div id="query-container">
+				<div id="width-limit">
 					<Routes>
 						<Route path="/" element={<Home />}/>
 						<Route path="/about" element={<Home />}/>
