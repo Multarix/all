@@ -1,12 +1,98 @@
 import React from "react";
 import "./style.css";
 
-export default function ProjectsPage() {
+import { Link } from "react-router-dom";
+import { ProjectData } from "../../modules/script.js";
+
+
+function ProjectNPM(props: { npm?: string }): JSX.Element {
+	if(!props.npm) return (<></>);
+
 	return (
-		<>
-			<h1 className="centered">
-				Not Yet Implimented
-			</h1>
-		</>
+		<div className="project-npm">
+			<a href={`https://npmjs.com/package/${props.npm}`}>
+				<img alt="npm stats" src={`https://nodei.co/npm/${props.npm}.png?compact=true`} loading="eager"></img>
+			</a>
+		</div>
+	);
+}
+
+function ProjectButtons(props: { github: string, docs: boolean, blog: boolean }): JSX.Element {
+	const buttonLinks: JSX.Element[] = [];
+	if(props.blog) buttonLinks.push(<Link key="blog" to="./blog" className="project-button blog-button" >Blog</Link>);
+	if(props.docs) buttonLinks.push(<Link key="docs" to="./docs" className="project-button docs-button">Docs</Link>);
+	buttonLinks.push(<a key="github" className="project-button github-button open-in-new" href={props.github}>GitHub</a>);
+
+	return (
+		<div id="project-buttons">
+			{buttonLinks}
+		</div>
+	);
+}
+
+function ProjectLogoLinks(props: { name: string, img: string, github: string, docs: boolean, blog: boolean, npm?: string, }): JSX.Element {
+	return (
+		<section id="project-links">
+			<img className="project-logo" alt={`${props.name} logo`} loading="eager" src={props.img}></img>
+			<ProjectNPM npm={props.npm}/>
+			<ProjectButtons github={props.github} docs={props.docs} blog={props.blog} />
+		</section>
+	);
+}
+
+
+
+function ExampleCode(props: { exampleCode?: string }): JSX.Element {
+	if(props.exampleCode) return (<></>);
+
+	return (
+		<pre className="hljs"><code className="language-javascript">{props.exampleCode}</code></pre>
+	);
+}
+
+function ProjectTitle(props: { name: string, fullDesc: string, exampleCode?: string }): JSX.Element {
+	return (
+		<section id="project-info">
+			<h1 className="project-title">{props.name}</h1>
+			<p className="project-desc">{props.fullDesc}</p>
+			<ExampleCode />
+		</section>
+	);
+}
+
+
+
+function ProjectAbout(props: { about: JSX.Element }): JSX.Element {
+	return (
+		<section id="project-about">
+			<h2 className="project-extra-title">About</h2>
+			<div className="p-container">{props.about}</div>
+		</section>
+	);
+}
+
+
+
+function ProjectWhy(props: { why: JSX.Element }): JSX.Element {
+	return (
+		<section id="project-why">
+			<h2 className="project-extra-title">Why?</h2>
+			<div className="p-container">{props.why}</div>
+		</section>
+	);
+}
+
+
+
+export default function ProjectsPage(props: ProjectData): JSX.Element {
+	return (
+		<div className="content project">
+			<div className="project-page">
+				<ProjectTitle name={props.displayName} fullDesc={props.fullDesc} />
+				<ProjectLogoLinks name={props.displayName} img={props.img} github={props.github} blog={false} docs={false} npm={props.npm}/>
+				<ProjectWhy why={props.why} />
+				<ProjectAbout about={props.about} />
+			</div>
+		</div>
 	);
 }

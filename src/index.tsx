@@ -18,7 +18,7 @@ import { projectsData, socialsData } from "./modules/script.js";
 const projectPages = projectsData.filter(p => p.isProject).map(project => {
 	if(project.id === "BDOChecklist") return <Route key={project.id} path={project.url} element={<GrindChecklist />} />;
 
-	return <Route key={project.id} path={project.url} element={<ProjectsPage />} />;
+	return <Route key={project.id} path={project.url} element={<ProjectsPage {...project} />} />;
 });
 
 

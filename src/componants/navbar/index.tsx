@@ -72,11 +72,10 @@ function SocialMobileBars(): JSX.Element {
 
 
 function SocialLinks(props: { socials: SocialData[] }): JSX.Element {
-
 	const socials = props.socials.filter(social => social.enable).map(social => {
 		return (
 			<a key={ social.title } href={ "http://" + social.url + social.username } target="_blank" rel="noreferrer">
-				{social.icon()}
+				{social.icon}
 			</a>
 		);
 	});
