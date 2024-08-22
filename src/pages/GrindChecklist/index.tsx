@@ -130,7 +130,7 @@ export default function GrindChecklist() {
 
 	return (
 		<div className="content checklist">
-			<h1 className="centered page-title">
+			<h1 className="centered project-title">
 				Grind Checklist
 			</h1>
 			<div className="checklist-container">

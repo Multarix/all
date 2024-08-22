@@ -1,7 +1,10 @@
 import React from "react";
+
 import "./style.css";
 
 import { Link } from "react-router-dom";
+
+import CodeBlock from "../../componants/codeBlock";
 import { ProjectData } from "../../modules/script.js";
 
 
@@ -21,7 +24,7 @@ function ProjectButtons(props: { github: string, docs: boolean, blog: boolean })
 	const buttonLinks: JSX.Element[] = [];
 	if(props.blog) buttonLinks.push(<Link key="blog" to="./blog" className="project-button blog-button" >Blog</Link>);
 	if(props.docs) buttonLinks.push(<Link key="docs" to="./docs" className="project-button docs-button">Docs</Link>);
-	buttonLinks.push(<a key="github" className="project-button github-button open-in-new" href={props.github}>GitHub</a>);
+	buttonLinks.push(<a key="github" className="project-button github-button" href={props.github} target="_blank" rel="noreferrer">GitHub</a>);
 
 	return (
 		<div id="project-buttons">
@@ -43,11 +46,8 @@ function ProjectLogoLinks(props: { name: string, img: string, github: string, do
 
 
 function ExampleCode(props: { exampleCode?: string }): JSX.Element {
-	if(props.exampleCode) return (<></>);
-
-	return (
-		<pre className="hljs"><code className="language-javascript">{props.exampleCode}</code></pre>
-	);
+	if(!props.exampleCode) return (<></>);
+	return <CodeBlock value={props.exampleCode} />;
 }
 
 function ProjectTitle(props: { name: string, fullDesc: string, exampleCode?: string }): JSX.Element {
@@ -55,7 +55,7 @@ function ProjectTitle(props: { name: string, fullDesc: string, exampleCode?: str
 		<section id="project-info">
 			<h1 className="project-title">{props.name}</h1>
 			<p className="project-desc">{props.fullDesc}</p>
-			<ExampleCode />
+			<ExampleCode exampleCode={props.exampleCode} />
 		</section>
 	);
 }
@@ -88,7 +88,7 @@ export default function ProjectsPage(props: ProjectData): JSX.Element {
 	return (
 		<div className="content project">
 			<div className="project-page">
-				<ProjectTitle name={props.displayName} fullDesc={props.fullDesc} />
+				<ProjectTitle name={props.displayName} fullDesc={props.fullDesc} exampleCode={props.exampleCode} />
 				<ProjectLogoLinks name={props.displayName} img={props.img} github={props.github} blog={false} docs={false} npm={props.npm}/>
 				<ProjectWhy why={props.why} />
 				<ProjectAbout about={props.about} />

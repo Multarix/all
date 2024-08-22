@@ -103,6 +103,7 @@ export interface ProjectData {
 	docs: boolean
 	blog: boolean
 	npm?: string
+	exampleCode?: string
 }
 
 
@@ -200,7 +201,7 @@ export const projects: ProjectData[] = [
 	},
 	{
 		name: "bdo: hp gauge",
-		displayName: "Boss HP Gauge",
+		displayName: "Black Desert:\nBoss HP Gauge",
 		id: "BDOHP",
 		activeGroup: "boss-hp",
 		url: "/boss-hp",
@@ -307,7 +308,7 @@ export const projects: ProjectData[] = [
 	},
 	{
 		name: "discord: block messages",
-		displayName: "Discord: Hide Blocked Messages",
+		displayName: "Discord:\nHide Blocked Messages",
 		id: "DiscordBlockMessages",
 		activeGroup: "discord-block",
 		url: "/discord-blocked",
@@ -366,14 +367,15 @@ export const projects: ProjectData[] = [
 					<li>Weapons/ Armor/ Gear they&apos;re carrying</li>
 				</ul>
 				<p>
-					Using an RTX 2080, I was able to simulate around 100,000 boids while keeping a steady frame rate of 60fps, your milage may vary.
+					You can even select the NPC&apos;s race and class before generation, making them more specific to your purpose!
 				</p>
 			</>
 		),
 		github: "https://github.com/Multarix/dnd-npc",
 		docs: true,
 		blog: false,
-		npm: "dnd-npc"
+		npm: "dnd-npc",
+		exampleCode: "import NPC from 'dnd-npc';\nconst npc = new NPC()\n    .setRace('warforged', 'juggernaut')\n    .setClass('fighter');\n\nconst char = await npc.generate();"
 	},
 	{
 		name: "lights out",
@@ -503,7 +505,8 @@ export const projectsData: ProjectData[] = projects.map(project => {
 		github: project.github,
 		docs: project.docs,
 		blog: project.blog,
-		npm: project.npm
+		npm: project.npm,
+		exampleCode: project.exampleCode
 	};
 });
 
@@ -515,7 +518,7 @@ export const socialsData: SocialData[] = [
 		url: "twitter.com/",
 		title: "Twitter",
 		icon: <TwitterIcon />,
-		enable: false
+		enable: true
 	},
 	{
 		username: "",
