@@ -10,18 +10,41 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon/favicon-16x16.png">
 		
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-		<!-- <meta property="og:title" content="Multarix | All Projects"> -->
-		<!-- <meta property="og:description" content="A list of all projects by Multarix"> -->
-		<!-- <meta property="og:type" content="website"> -->
-		<!-- <meta property="og:site_name" content="{{ site.url | split: '//' | last | split: '/' | first }}"> -->
-		<!-- <meta property="og:url" content="{{ site.url }}{{ page.url }}"> -->
-		<!-- <meta property="og:image" content="/src/img/site-logo.png"> -->
-		<!-- <meta content="#764740" data-react-helmet="true" name="theme-color"> -->
+		<meta property="og:title" content="Multarix.com">
+		<meta property="og:description" content="A list of all projects by Multarix">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Multarix.com">
+		<!-- <meta property="og:url" content="Multarix.com"> -->
+		<meta property="og:image" content="/src/img/site-logo.png">
+		<meta content="#764740" data-react-helmet="true" name="theme-color">
 		
-		<!-- <script defer src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> -->
 		<!-- Icons by BoxIcons: https://boxicons.com/ -->
 		
 		<title>Multarix's Projects</title>
+		
+		<script type="text/javascript">
+			// Single Page Apps for GitHub Pages
+			// MIT License
+			// https://github.com/rafgraph/spa-github-pages
+			// This script checks to see if a redirect is present in the query string,
+			// converts it back into the correct url and adds it to the
+			// browser's history using window.history.replaceState(...),
+			// which won't cause the browser to attempt to load the new url.
+			// When the single page app is loaded further down in this file,
+			// the correct url will be waiting in the browser's history for
+			// the single page app to route accordingly.
+			(function(l) {
+			  if (l.search[1] === '/' ) {
+				var decoded = l.search.slice(1).split('&').map(function(s) { 
+				  return s.replace(/~and~/g, '&')
+				}).join('?');
+				window.history.replaceState(null, null,
+					l.pathname.slice(0, -1) + decoded + l.hash
+				);
+			  }
+			}(window.location))
+		  </script>
+		  
 	</head>
 	<body>
 		<div id="root"></div>
