@@ -1,0 +1,31 @@
+.error-logo {
+	display: block;
+	max-height: 450px;
+	fill: transparent;
+	stroke: gray;
+	stroke-width: 2;
+}
+
+.error-logo #logoPath {
+	stroke: black;
+	stroke-width: 2;
+		
+	fill: black;
+	fill-opacity: 1;
+}
+
+.error-logo #circlePath {
+	stroke: var(--secondary-color);
+	stroke-width: 2;
+		
+	fill: #93b693;
+	fill-opacity: 1;
+}
+
+.error-desc {
+	margin-top: 1rem;
+}
+
+.error-title {
+	margin-top: 1em;
+}
