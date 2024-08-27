@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.35547771.css",
+    "main.js": "/static/js/main.e365dfec.js",
+    "static/js/453.e425deca.chunk.js": "/static/js/453.e425deca.chunk.js",
+    "static/media/dnd.png": "/static/media/dnd.94e0366539a51f8c8cbc.png",
+    "static/media/discord-bot.png": "/static/media/discord-bot.81de9c8665a46e006724.png",
+    "static/media/tables.png": "/static/media/tables.f149fdb05bca8aa3663c.png",
+    "static/media/conversion.png": "/static/media/conversion.4ca720553b11b6ef9f2d.png",
+    "static/media/python.png": "/static/media/python.a27a633953ff3a78b5fe.png",
+    "static/media/boss-hp.png": "/static/media/boss-hp.38c4f5d7c8b22f34e3fd.png",
+    "static/media/bdo.png": "/static/media/bdo.93e72444b688889b9768.png",
+    "static/media/OpenSans-ExtraBold.woff": "/static/media/OpenSans-ExtraBold.818e54d25c8d8b0634a9.woff",
+    "static/media/OpenSans-Regular.woff": "/static/media/OpenSans-Regular.ab6e9d5d7db5dfffc24d.woff",
+    "static/media/OpenSans-Bold.woff": "/static/media/OpenSans-Bold.80e9b54f4fd336ac7ea6.woff",
+    "static/media/book.png": "/static/media/book.594d91bf3092f12099fa.png",
+    "static/media/boids.png": "/static/media/boids.9a8efc1aa527d4b345d3.png",
+    "static/media/character-tracker.png": "/static/media/character-tracker.c275d7a91ee01e23d834.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.35547771.css.map": "/static/css/main.35547771.css.map",
+    "main.e365dfec.js.map": "/static/js/main.e365dfec.js.map",
+    "453.e425deca.chunk.js.map": "/static/js/453.e425deca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35547771.css",
+    "static/js/main.e365dfec.js"
+  ]
+}
