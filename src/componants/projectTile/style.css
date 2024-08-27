@@ -1,5 +1,9 @@
 .tile-link {
 	all: unset;
+	color: inherit;
+	&:hover {
+		color: rgb(235, 255, 235);
+	}
 }
 
 /* Project Tiles */
@@ -99,4 +103,3 @@
 .projects-container.mobile {
 	margin-top: 52px;
 }
-
