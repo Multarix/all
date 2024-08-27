@@ -5,7 +5,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 import CodeBlock from "../../componants/codeBlock";
-import { ProjectData } from "../../modules/script.js";
+import { ProjectData, useWindowDimensions } from "../../modules/script.js";
 
 
 function ProjectNPM(props: { npm?: string }): JSX.Element {
@@ -85,13 +85,29 @@ function ProjectWhy(props: { why: JSX.Element }): JSX.Element {
 
 
 export default function ProjectsPage(props: ProjectData): JSX.Element {
+	const { width } = useWindowDimensions();
+
+	if(width > 950){
+		return (
+			<div className="content project">
+				<div className="project-page">
+					<ProjectTitle name={props.displayName} fullDesc={props.fullDesc} exampleCode={props.exampleCode} />
+					<ProjectLogoLinks name={props.displayName} img={props.img} github={props.github} blog={false} docs={false} npm={props.npm}/>
+					<ProjectWhy why={props.why} />
+					<ProjectAbout about={props.about} />
+				</div>
+			</div>
+		);
+	}
+
+	// Mobile Look
 	return (
 		<div className="content project">
 			<div className="project-page">
-				<ProjectTitle name={props.displayName} fullDesc={props.fullDesc} exampleCode={props.exampleCode} />
 				<ProjectLogoLinks name={props.displayName} img={props.img} github={props.github} blog={false} docs={false} npm={props.npm}/>
-				<ProjectWhy why={props.why} />
+				<ProjectTitle name={props.displayName} fullDesc={props.fullDesc} exampleCode={props.exampleCode} />
 				<ProjectAbout about={props.about} />
+				<ProjectWhy why={props.why} />
 			</div>
 		</div>
 	);

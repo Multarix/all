@@ -86,12 +86,15 @@
 	margin-bottom: 0.5em;;
 }
 
-
-/* @container q-cont (width < 981px) {
+@media screen and (max-width: 950px) {
 	#width-limit:has(> .project) {
 		display: block;
 	}
-} */
+	
+	.project-page {
+		display: block;
+	}
+  }
 
 @media screen and (max-height: 2000px) {
 	#width-limit:has(> .project) {
