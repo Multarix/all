@@ -22,10 +22,10 @@
 	fill-opacity: 1;
 }
 
-.error-desc {
-	margin-top: 1rem;
-}
-
 .error-title {
 	margin-top: 1em;
+}
+
+.error-desc {
+	margin-top: 1rem;
 }
