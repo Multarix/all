@@ -1,110 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	<style>
-		/* Using :root/ setting variables breaks these? */
-		::-webkit-scrollbar {
-			-webkit-appearance: none;
-			width: 7px;
-			height: 7px;
-		}
-		::-webkit-scrollbar-track {
-			background: #222;
-		}
-		::-webkit-scrollbar-thumb {
-			background: #888;
-			border-radius: 10px;
-		}
-		::-webkit-scrollbar-thumb:hover {
-			background: #555;
-		}
+	<head>
+		<style>
+			/* Using :root/ setting variables breaks these? */
+			::-webkit-scrollbar {
+				-webkit-appearance: none;
+				width: 7px;
+				height: 7px;
+			}
+			::-webkit-scrollbar-track {
+				background: #222;
+			}
+			::-webkit-scrollbar-thumb {
+				background: #888;
+				border-radius: 10px;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background: #555;
+			}
 
-		:root {
-			--text-color: rgb(235, 235, 235);
-			--background-color: rgb(15, 20, 15);
-			--primary-color: rgb(7, 162, 24);
-			--secondary-color: rgb(40, 100, 55);
-			--accent-color: rgb(23, 182, 182);
-			--navbar-height: 51px;
-		}
+			:root {
+				--text-color: rgb(235, 235, 235);
+				--background-color: rgb(15, 20, 15);
+				--primary-color: rgb(7, 162, 24);
+				--secondary-color: rgb(40, 100, 55);
+				--accent-color: rgb(23, 182, 182);
+				--navbar-height: 51px;
+			}
 
-		* {
-			margin: 0;
-			padding: 0;
-		}
+			* {
+				margin: 0;
+				padding: 0;
+			}
 
-		html {
-			height: 100vh;
-			width: 100vw;
-		}
+			html {
+				height: 100vh;
+				width: 100vw;
+			}
 
-		body {
-			position: absolute;
-			left: 0;
-			top: 0;
-			
-			background: var(--background-color);
-			
-			height: 100%;
-			width: 100%;
-			
-			overflow: auto;
-			
-			font-family: "OpenSansRegular", Arial, sans-serif;
-			color: var(--text-color);
-			overflow: hidden;
-		}
-	</style>
-    <meta charset="utf-8" />
-	<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-	
-	<link rel="icon" href="%PUBLIC_URL%/favicon/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon/favicon-16x16.png">
-	
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-	<meta property="og:title" content="Project's by Multarix">
-	<meta property="og:description" content="All of the projects, in one handy place">
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="multarix.com">
-	<meta property="og:url" content="Multarix.com">
-	<meta property="og:image" content="./MX_Logo.png">
-	<meta content="#764740" data-react-helmet="true" name="theme-color">
-	
-	<title>Multarix's Projects</title>
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script takes the current url and converts the path and query
-      // string into just a query string, and then redirects the browser
-      // to the new url with only a query string and hash fragment,
-      // e.g. https://www.foo.tld/one/two?a=b&c=d#qwe, becomes
-      // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
-      // Note: this 404.html file must be at least 512 bytes for it to work
-      // with Internet Explorer (it is currently > 512 bytes)
+			body {
+				position: absolute;
+				left: 0;
+				top: 0;
+				
+				background: var(--background-color);
+				
+				height: 100%;
+				width: 100%;
+				
+				overflow: auto;
+				
+				font-family: "OpenSansRegular", Arial, sans-serif;
+				color: var(--text-color);
+				overflow: hidden;
+			}
+		</style>
+		<meta charset="utf-8" />
+		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		
+		<link rel="icon" href="/favicon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+		<meta property="og:title" content="Projects by Multarix">
+		<meta property="og:description" content="All of the projects, in one handy place">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="multarix.com">
+		<meta property="og:url" content="Multarix.com">
+		<meta property="og:image" content="/MX_Logo.png">
+		<meta content="#764740" data-react-helmet="true" name="theme-color">
+		
+		<title>Multarix's Projects</title>
+		
+		<script type="text/javascript">
+			var pathSegmentsToKeep = 0;
 
-      // If you're creating a Project Pages site and NOT using a custom domain,
-      // then set pathSegmentsToKeep to 1 (enterprise users may need to set it to > 1).
-      // This way the code will only replace the route part of the path, and not
-      // the real directory in which the app resides, for example:
-      // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
-      // https://username.github.io/repo-name/?/one/two&a=b~and~c=d#qwe
-      // Otherwise, leave pathSegmentsToKeep as 0.
-      var pathSegmentsToKeep = 0;
-
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
-
-    </script>
-  </head>
-  <body>
-  </body>
+			var l = window.location;
+			l.replace(
+				l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+				l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+				l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+				(l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+				l.hash
+			);
+		</script>
+	</head>
+	<body>
+	</body>
 </html>
