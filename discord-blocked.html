@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			/* Using :root/ setting variables breaks these? */
+			::-webkit-scrollbar {
+				-webkit-appearance: none;
+				width: 7px;
+				height: 7px;
+			}
+			::-webkit-scrollbar-track {
+				background: #222;
+			}
+			::-webkit-scrollbar-thumb {
+				background: #888;
+				border-radius: 10px;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background: #555;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			html {
+				height: 100vh;
+				width: 100vw;
+			}
+
+			body {
+				position: absolute;
+				left: 0;
+				top: 0;
+				
+				background: rgb(15, 20, 15);
+				
+				height: 100%;
+				width: 100%;
+				
+				overflow: auto;
+				
+				font-family: "OpenSansRegular", Arial, sans-serif;
+				color: rgb(235, 235, 235);
+				overflow: hidden;
+			}
+		</style>
+		<meta charset="utf-8" />
+		<link rel="manifest" href="/manifest.json" />
+		
+		<link rel="icon" href="/favicon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+		<meta property="og:title" content="Discord: Hide Blocked Messages">
+		<meta property="og:description" content="Project: A script written in Javascript to be used with Discord.">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="multarix.com">
+		<meta property="og:url" content="Multarix.com">
+		<meta property="og:image" content="/MX_Logo.png">
+		<meta content="#32A852" data-react-helmet="true" name="theme-color">
+		
+		<title>Multarix's Projects</title>
+		
+		<script type="text/javascript">
+			var pathSegmentsToKeep = 0;
+
+			var l = window.location;
+			l.replace(
+				l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+				l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+				l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+				(l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+				l.hash
+			);
+		</script>
+		
+		<meta http-equiv="Refresh" content="3; url=multarix.com">
+	</head>
+	<body>
+		<p>Something went seriously wrong, <a href='http://multarix.com'>click here</a> to get back on track.</p>
+	</body>
+</html>
