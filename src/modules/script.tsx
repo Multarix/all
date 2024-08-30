@@ -124,7 +124,7 @@ export const MOBILE_WIDTH = 360;
 
 
 
-export const projects: ProjectData[] = [
+const projects: ProjectData[] = [
 	{
 		name: "Home",
 		displayName: "Home",

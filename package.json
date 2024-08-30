@@ -24,7 +24,8 @@
   },
   "scripts": {
 	"predeploy": "npm run build",
-	"deploy": "gh-pages -d build --cname multarix.com",
+	"deploy": "node ./tools/build.cjs",
+	"postdeploy": "gh-pages -d build --cname multarix.com",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
