@@ -1,4 +1,22 @@
-[
+export interface BaseProjectData {
+	name: string
+	displayName: string,
+	id: string
+	activeGroup: string
+	url: string
+	img: string
+	shortDesc: string
+	longDesc: string
+	isProject: boolean
+	fullDesc: string
+	github: string
+	docs: boolean
+	blog: boolean
+	npm?: string
+	exampleCode?: string
+}
+
+const Projects: BaseProjectData[] = [
 	{
 		"name": "Home",
 		"displayName": "Home",
@@ -166,4 +184,6 @@
 		"docs": false,
 		"blog": false
 	}
-]
+];
+
+export default Projects;

@@ -20,8 +20,8 @@ const projectPages = projectsData.filter(p => p.isProject).map(project => {
 
 	const extras: JSX.Element[] = [];
 
-	// if(project.blog) extras.push(<Route key={project.id + "1"} path={project.url + "/blog"} element={<BlogTemplate />} />);
-	// if(project.docs) extras.push(<Route key={project.id + "2"} path={project.url + "/docs"} element={<DocsTemplate />} />);
+	// if(project.blog) extras.push(<Route key={project.id + "_blog"} path={project.url + "/blog"} element={<BlogTemplate />} />);
+	// if(project.docs) extras.push(<Route key={project.id + "_docs"} path={project.url + "/docs"} element={<DocsTemplate />} />);
 
 	return (
 		<Route key={project.id} path={project.url} element={<ProjectsPage {...project} />} >

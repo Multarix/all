@@ -1,9 +1,9 @@
-const fs = require("fs"); // eslint-disable-line
-const projects = require("../src/modules/projects.json"); // eslint-disable-line
+import { readFileSync, existsSync, mkdirSync, writeFileSync } from "fs";
+import projects from "../src/modules/projects.mjs";
 
 const baseFile = "./public/404.html";
 const baseOutPath = "./build";
-const fileData = fs.readFileSync(baseFile, { encoding: "utf8" });
+const fileData = readFileSync(baseFile, { encoding: "utf8" });
 
 for(const project of projects){
 	if(!project.isProject) continue;
@@ -15,24 +15,24 @@ for(const project of projects){
 	if(project.blog || project.docs){
 		const directoryPath = baseOutPath + project.url;
 
-		if(!fs.existsSync(directoryPath)) fs.mkdirSync(directoryPath);
+		if(!existsSync(directoryPath)) mkdirSync(directoryPath);
 
-		fs.writeFileSync(directoryPath + "/index.html", baseProjectData, { encoding: "utf8" });
+		writeFileSync(directoryPath + "/index.html", baseProjectData, { encoding: "utf8" });
 		console.log(`Copied '${project.url}' to build...`);
 
 		if(project.docs){
-			fs.writeFileSync(directoryPath + "/docs.html", baseProjectData, { encoding: "utf8" });
+			writeFileSync(directoryPath + "/docs.html", baseProjectData, { encoding: "utf8" });
 			console.log(`Copied '${project.url}/docs' to build...`);
 		}
 
 		if(project.blog){
-			fs.writeFileSync(directoryPath + "/blog.html", baseProjectData, { encoding: "utf8" });
-			console.log(`Copied '${project.url}/docs' to build...`);
+			writeFileSync(directoryPath + "/blog.html", baseProjectData, { encoding: "utf8" });
+			console.log(`Copied '${project.url}/blog' to build...`);
 		}
 
 		continue;
 	}
 
-	fs.writeFileSync(baseOutPath + project.url + ".html", baseProjectData, { encoding: "utf8" });
+	writeFileSync(baseOutPath + project.url + ".html", baseProjectData, { encoding: "utf8" });
 	console.log(`Copied '${project.url}' to build...`);
 }
