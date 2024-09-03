@@ -1,5 +1,5 @@
-const Projects = [
-    {
+const BaseProjects = {
+    "Home": {
         "name": "Home",
         "displayName": "Home",
         "id": "Home",
@@ -14,7 +14,7 @@ const Projects = [
         "docs": false,
         "blog": false
     },
-    {
+    "BaseConversion": {
         "name": "base conversions",
         "displayName": "Base Conversions",
         "id": "BaseConversion",
@@ -29,7 +29,7 @@ const Projects = [
         "docs": false,
         "blog": false
     },
-    {
+    "BDOChecklist": {
         "name": "bdo: grind checklist",
         "displayName": "Grind Checklist",
         "id": "BDOChecklist",
@@ -44,7 +44,7 @@ const Projects = [
         "docs": false,
         "blog": false
     },
-    {
+    "BDOHP": {
         "name": "bdo: hp gauge",
         "displayName": "Black Desert:\nBoss HP Gauge",
         "id": "BDOHP",
@@ -59,7 +59,7 @@ const Projects = [
         "docs": false,
         "blog": false
     },
-    {
+    "BoidSimulation": {
         "name": "boid simulation",
         "displayName": "Boid Simulation",
         "id": "BoidSimulation",
@@ -74,7 +74,7 @@ const Projects = [
         "docs": false,
         "blog": true
     },
-    {
+    "CharacterTracker": {
         "name": "character tracker",
         "displayName": "Character Tracker",
         "id": "CharacterTracker",
@@ -89,7 +89,7 @@ const Projects = [
         "docs": false,
         "blog": false
     },
-    {
+    "DiscordBlockMessages": {
         "name": "discord: block messages",
         "displayName": "Discord:\nHide Blocked Messages",
         "id": "DiscordBlockMessages",
@@ -104,7 +104,7 @@ const Projects = [
         "docs": false,
         "blog": false
     },
-    {
+    "DnDNPC": {
         "name": "dnd-npc",
         "displayName": "D&D-NPC",
         "id": "DnDNPC",
@@ -121,7 +121,7 @@ const Projects = [
         "npm": "dnd-npc",
         "exampleCode": "import NPC from 'dnd-npc';\nconst npc = new NPC()\n    .setRace('warforged', 'juggernaut')\n    .setClass('fighter');\n\nconst char = await npc.generate();"
     },
-    {
+    "LightsOut": {
         "name": "lights out",
         "displayName": "Lights Out",
         "id": "LightsOut",
@@ -136,7 +136,7 @@ const Projects = [
         "docs": false,
         "blog": false
     },
-    {
+    "TeraGuide": {
         "name": "tera guide",
         "displayName": "Tera Guide",
         "id": "TeraGuide",
@@ -151,7 +151,7 @@ const Projects = [
         "docs": false,
         "blog": false
     },
-    {
+    "TruthTable": {
         "name": "truth table",
         "displayName": "Truth Table",
         "id": "TruthTable",
@@ -166,5 +166,5 @@ const Projects = [
         "docs": false,
         "blog": false
     }
-];
-export default Projects;
+};
+export default BaseProjects;

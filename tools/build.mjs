@@ -1,11 +1,12 @@
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from "fs";
-import projects from "../src/modules/projects.mjs";
+import BaseProjects from "../src/modules/projects.mjs";
 
 const baseFile = "./public/404.html";
 const baseOutPath = "./build";
 const fileData = readFileSync(baseFile, { encoding: "utf8" });
 
-for(const project of projects){
+for(const key of Object.keys(BaseProjects)){
+	const project = BaseProjects[key];
 	if(!project.isProject) continue;
 
 	const baseProjectData = fileData

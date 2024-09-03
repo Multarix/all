@@ -9,7 +9,11 @@ import {
 	GithubIcon
 } from '../componants/svgs';
 
-import Projects, { BaseProjectData } from "./projects.mjs";
+
+
+import BaseProjects, { BaseProjectData } from "./projects.mjs";
+
+
 
 interface ExtraProjectData {
 	id: string
@@ -17,7 +21,10 @@ interface ExtraProjectData {
 	about: JSX.Element
 }
 
+
+
 export interface ProjectData extends ExtraProjectData, BaseProjectData {}
+
 
 
 export interface SocialData {
@@ -27,6 +34,7 @@ export interface SocialData {
 	icon: JSX.Element
 	enable: boolean
 }
+
 
 
 export function toProperCase(text: string): string {
@@ -103,13 +111,14 @@ export const useContainerDimensions = (reference: React.RefObject<HTMLElement>) 
 };
 
 
+
 export const DESKTOP_WIDTH = 1280;
 export const TABLET_WIDTH = 768;
 export const MOBILE_WIDTH = 360;
 
 
 
-const projects: ExtraProjectData[] = [
+const projectsExtra: ExtraProjectData[] = [
 	{
 
 		id: "Home",
@@ -343,30 +352,15 @@ images.keys().forEach(image => {
 
 
 
-export const projectsData: ProjectData[] = projects.map(project => {
-	for(const baseData of Projects){
-		if(baseData.id !== project.id) continue;
-		return {
-			name: baseData.name,
-			displayName: baseData.displayName,
-			id: baseData.id,
-			activeGroup: baseData.activeGroup,
-			url: baseData.url,
-			img: imageList[`./${baseData.img}`],
-			shortDesc: baseData.shortDesc,
-			longDesc: baseData.longDesc,
-			isProject: baseData.isProject,
-			fullDesc: baseData.fullDesc,
-			why: project.why,
-			about: project.about,
-			github: baseData.github,
-			docs: baseData.docs,
-			blog: baseData.blog,
-			npm: baseData.npm,
-			exampleCode: baseData.exampleCode
-		};
-	}
-}).flatMap(i => (i ? [i] : []));
+export const projectsData: ProjectData[] = projectsExtra.map(project => {
+	const baseProjectData = BaseProjects[project.id];
+
+	const projectData: ProjectData = Object.assign({}, baseProjectData, project);
+	projectData.img = imageList[`./${baseProjectData.img}`];
+
+	return projectData;
+});
+
 
 
 export const socialsData: SocialData[] = [
