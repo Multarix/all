@@ -1,12 +1,10 @@
 import React from "react";
-
-import "./style.css";
-
 import { Link } from "react-router-dom";
 
 import CodeBlock from "../../componants/codeBlock";
 import { ProjectData, useWindowDimensions } from "../../modules/script.js";
 
+import "./style.css";
 
 function ProjectNPM(props: { npm?: string }): JSX.Element {
 	if(!props.npm) return (<></>);
@@ -92,7 +90,7 @@ export default function ProjectsPage(props: ProjectData): JSX.Element {
 			<div className="content project">
 				<div className="project-page">
 					<ProjectTitle name={props.displayName} fullDesc={props.fullDesc} exampleCode={props.exampleCode} />
-					<ProjectLogoLinks name={props.displayName} img={props.img} github={props.github} blog={false} docs={false} npm={props.npm}/>
+					<ProjectLogoLinks name={props.displayName} img={props.img} github={props.github} blog={props.blog} docs={props.docs} npm={props.npm}/>
 					<ProjectWhy why={props.why} />
 					<ProjectAbout about={props.about} />
 				</div>
@@ -104,7 +102,7 @@ export default function ProjectsPage(props: ProjectData): JSX.Element {
 	return (
 		<div className="content project">
 			<div className="project-page">
-				<ProjectLogoLinks name={props.displayName} img={props.img} github={props.github} blog={false} docs={false} npm={props.npm}/>
+				<ProjectLogoLinks name={props.displayName} img={props.img} github={props.github} blog={props.blog} docs={props.docs} npm={props.npm}/>
 				<ProjectTitle name={props.displayName} fullDesc={props.fullDesc} exampleCode={props.exampleCode} />
 				<ProjectAbout about={props.about} />
 				<ProjectWhy why={props.why} />

@@ -9,6 +9,8 @@ import "./style.css";
 import Navbar from './componants/navbar';
 import Home from "./pages/Home";
 import ProjectsPage from "./pages/Projects";
+import BlogPage from './pages/BlogTemplate';
+
 import GrindChecklist from "./pages/GrindChecklist";
 import ErrorPage from "./pages/ErrorPage";
 
@@ -17,17 +19,13 @@ import { projectsData, socialsData } from "./modules/script.js";
 
 const projectPages = projectsData.filter(p => p.isProject).map(project => {
 	if(project.id === "BDOChecklist") return <Route key={project.id} path={project.url} element={<GrindChecklist />} />;
+	const routeArray: JSX.Element[] = [];
 
-	const extras: JSX.Element[] = [];
+	routeArray.push(<Route key={project.id} path={project.url} element={<ProjectsPage {...project} />} />);
+	if(project.blog && project.blogMarkdown) routeArray.push(<Route key={project.id + "_blog"} path={project.url + "/blog"} element={<BlogPage markdown={project.blogMarkdown} />} />);
+	// if(project.docs) routeArray.push(<Route key={project.id + "_docs"} path={project.url + "/docs"} element={<DocsPage markdown={project.blogMarkdown} />} />);
 
-	// if(project.blog) extras.push(<Route key={project.id + "_blog"} path={project.url + "/blog"} element={<BlogTemplate />} />);
-	// if(project.docs) extras.push(<Route key={project.id + "_docs"} path={project.url + "/docs"} element={<DocsTemplate />} />);
-
-	return (
-		<Route key={project.id} path={project.url} element={<ProjectsPage {...project} />} >
-			{extras}
-		</Route>
-	);
+	return routeArray;
 });
 
 
@@ -40,9 +38,8 @@ root.render(
 				<div id="width-limit">
 					<Routes>
 						<Route path="/" element={<Home />}/>
-						<Route path="/about" element={<Home />}/>
 
-						{projectPages}
+						{projectPages.flat()}
 
 						<Route path="*" element={<ErrorPage />}/>
 					</Routes>

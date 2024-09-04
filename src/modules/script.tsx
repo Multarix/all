@@ -12,7 +12,7 @@ import {
 
 
 import BaseProjects, { BaseProjectData } from "./projects.mjs";
-
+import Blogs from './blogs.mjs';
 
 
 interface ExtraProjectData {
@@ -23,7 +23,9 @@ interface ExtraProjectData {
 
 
 
-export interface ProjectData extends ExtraProjectData, BaseProjectData {}
+export interface ProjectData extends ExtraProjectData, BaseProjectData {
+	blogMarkdown?: string
+}
 
 
 
@@ -357,6 +359,10 @@ export const projectsData: ProjectData[] = projectsExtra.map(project => {
 
 	const projectData: ProjectData = Object.assign({}, baseProjectData, project);
 	projectData.img = imageList[`./${baseProjectData.img}`];
+
+	if(projectData.blog){
+		projectData.blogMarkdown = Blogs[projectData.id];
+	}
 
 	return projectData;
 });

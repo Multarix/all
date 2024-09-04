@@ -4,10 +4,9 @@ import ProjectTile from "../../componants/projectTile";
 import Carousel from "../../componants/carousel";
 import TitleAndLogo from "../../componants/logo";
 
-import "./style.css";
-
 import { projectsData } from "../../modules/script.js";
 
+import "./style.css";
 
 export default function App() {
 	const projectTileData = projectsData.filter(item => item.isProject);

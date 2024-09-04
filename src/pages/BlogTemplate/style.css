@@ -1,0 +1,55 @@
+#width-limit:has(> .blog) {
+	display: block;
+}
+
+.blog > div {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.blog-h1 {
+	text-align: center;
+	font-size: 65px;
+}
+
+.blog-h2 {
+	margin-top: 1rem;
+	margin-bottom: 0.25rem;
+	font-size: 35px;
+}
+
+.blog-h3 {
+	margin-bottom: 0.25rem;
+	font-size: 25px;
+}
+
+.blog-ol, .blog-ul {
+	margin-left: 2rem;
+	margin-bottom: 0.75rem;
+}
+
+.blog-ol > li, .blog-ul > ul {
+	padding-left: 0.5rem;
+}
+
+p {
+	margin-bottom: 0.75rem;
+	text-align: justify;
+}
+
+.blog-iframe {
+	display: block;
+	margin: 1.5rem auto 1.5rem auto;
+	max-width: 100%;
+}
+
+@media screen and (max-width: 600px){
+	.blog > div {
+		padding: 0 1rem;
+	}
+	
+	p {
+		text-align: left;
+	}
+}

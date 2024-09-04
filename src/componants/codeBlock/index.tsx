@@ -8,7 +8,6 @@ import javascript from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('javascript', javascript);
 
 
-
 export default class CodeBlock extends React.Component<{ value: string }, { value: string }> {
 	static propTypes = {
 		value: PropTypes.string
