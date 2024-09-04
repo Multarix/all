@@ -17,61 +17,61 @@ const blogOptions: MarkdownToJSX.Overrides = {
 	h1: {
 		component: ({ children, ...props }) => <h1 {...props}>{children}</h1>,
 		props: {
-			className: "blog-h1"
+			className: "md-h1"
 		}
 	},
 	h2: {
 		component: ({ children, ...props }) => <h2 {...props}>{children}</h2>,
 		props: {
-			className: "blog-h2"
+			className: "blmdog-h2"
 		}
 	},
 	h3: {
 		component: ({ children, ...props }) => <h3 {...props}>{children}</h3>,
 		props: {
-			className: "blog-h3"
+			className: "md-h3"
 		}
 	},
 	h4: {
 		component: ({ children, ...props }) => <h4 {...props}>{children}</h4>,
 		props: {
-			className: "blog-h4"
+			className: "md-h4"
 		}
 	},
 	h5: {
 		component: ({ children, ...props }) => <h5 {...props}>{children}</h5>,
 		props: {
-			className: "blog-h5"
+			className: "md-h5"
 		}
 	},
 	p: {
 		component: ({ children, ...props }) => <p {...props}>{children}</p>,
 		props: {
-			className: "blog-paragraph"
+			className: "md-p"
 		}
 	},
 	ol: {
 		component: ({ children, ...props }) => <ol {...props}>{children}</ol>,
 		props: {
-			className: "blog-ol"
+			className: "md-ol"
 		}
 	},
 	ul: {
 		component: ({ children, ...props }) => <ul {...props}>{children}</ul>,
 		props: {
-			className: "blog-ol"
+			className: "md-ol"
 		}
 	},
 	code: {
 		component: ({ children, ...props }) => <code {...props}>{children}</code>,
 		props: {
-			className: "blog-code"
+			className: "md-code"
 		}
 	},
 	iframe: {
 		component: ({ children, ...props }) => <iframe {...props}>{children}</iframe>,
 		props: {
-			className: "blog-iframe"
+			className: "md-iframe"
 		}
 	},
 	pre: {
