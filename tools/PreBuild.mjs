@@ -1,4 +1,5 @@
 import { readFileSync, readdirSync, writeFileSync } from "fs";
+console.warn("Starting Pre-Build!");
 
 const BlogData = `const Blogs: {[key: string]: string} = THIS;
 
@@ -11,6 +12,8 @@ const blogs = {};
 for(const blog of blogNames){
 	const markdown = readFileSync(`./src/blogs/${blog}.md`, { encoding: "utf8" });
 	blogs[blog] = markdown;
+
+	console.log(`Copied '${blog}' blog data...`);
 }
 
 const blogsAsJSON = JSON.stringify(blogs, null, "\t");
