@@ -6,6 +6,7 @@
 .pnp.js
 *.js
 *.zip
+guild-applications.html
 
 # testing
 /coverage
