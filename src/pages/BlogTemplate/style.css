@@ -8,32 +8,32 @@
 	padding: 0 2rem;
 }
 
-.md-h1 {
+.mdb-h1 {
 	text-align: center;
 	font-size: 65px;
 }
 
-.md-h2 {
+.mdb-h2 {
 	margin-top: 1rem;
 	margin-bottom: 0.25rem;
 	font-size: 35px;
 }
 
-.md-h3 {
+.mdb-h3 {
 	margin-bottom: 0.25rem;
 	font-size: 25px;
 }
 
-.md-ol, .md-ul {
+.mdb-ol, .mdb-ul {
 	margin-left: 2rem;
 	margin-bottom: 0.75rem;
 }
 
-.md-ol > li, .md-ul > ul {
+.mdb-ol > li, .mdb-ul > ul {
 	padding-left: 0.5rem;
 }
 
-.md-p {
+.mdb-p {
 	margin-bottom: 0.75rem;
 	text-align: justify;
 }
@@ -60,7 +60,7 @@
 		padding: 0 1rem;
 	}
 	
-	.md-p {
+	.mdb-p {
 		text-align: left;
 	}
 }

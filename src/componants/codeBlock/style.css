@@ -64,7 +64,7 @@ Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
 
 .code-overflow {
 	overflow-x: auto;
-	margin: 0 5px;
+	margin: 0;
 	width: 100%;
 }
 
@@ -76,9 +76,10 @@ Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
 	border: 2px solid black;
 	margin: 0;
 	padding: 1rem;
-	max-width: 90%;
+	max-width: 100%;
 	overflow-x: auto;
 	width: 100%;
+	box-sizing: border-box;
 }
 
 .hljs-pre-codeblock > .hljs-codeblock {

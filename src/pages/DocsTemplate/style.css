@@ -1,0 +1,53 @@
+.docs-container {
+	display: flex;
+	overflow: none;
+	width: 100%;
+	scrollbar-gutter: none;
+	max-height: calc(100vh - var(--navbar-height));
+}
+
+.docs {
+	display: inline-block;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+.docs > div {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 2rem;
+	
+	overflow-y: auto;
+}
+
+.mdd-h1 {
+	text-align: center;
+	font-size: 5em;
+	margin-bottom: 0.5em;
+}
+
+.mdd-h2 {
+	margin-bottom: 0.25em;
+	margin-left: 3px;
+}
+
+.mdd-p {
+	margin-left: 5px;
+	margin-bottom: 0.75rem;
+	text-align: justify;
+}
+
+.mdd-ul {
+	margin: 0 0 1rem;
+}
+
+
+@media screen and (max-width: 600px){
+	.docs > div {
+		padding: 0 1rem;
+	}
+	
+	.mdd-p {
+		text-align: left;
+	}
+}
