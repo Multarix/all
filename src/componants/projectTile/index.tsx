@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./style.css";
 
-import { ProjectData } from "../../modules/script.js";
+import { ProjectData } from "../../_modules/script.js";
 
 
 

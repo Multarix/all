@@ -1,39 +1,45 @@
-#width-limit:has(> .blog) {
+.md-container {
 	display: block;
+	scrollbar-gutter: stable;
+	overflow: auto;
+	
+	max-height: calc(100vh - var(--navbar-height));
 }
 
-.blog > div {
+.md-content {
+	display: block;
 	max-width: 900px;
+	
 	margin: 0 auto;
 	padding: 0 2rem;
 }
 
-.mdb-h1 {
+.md-h1 {
 	text-align: center;
 	font-size: 65px;
 }
 
-.mdb-h2 {
+.md-h2 {
 	margin-top: 1rem;
 	margin-bottom: 0.25rem;
 	font-size: 35px;
 }
 
-.mdb-h3 {
+.md-h3 {
 	margin-bottom: 0.25rem;
 	font-size: 25px;
 }
 
-.mdb-ol, .mdb-ul {
+.md-ol, .md-ul {
 	margin-left: 2rem;
 	margin-bottom: 0.75rem;
 }
 
-.mdb-ol > li, .mdb-ul > ul {
+.md-ol > li, .md-ul > ul {
 	padding-left: 0.5rem;
 }
 
-.mdb-p {
+.md-p {
 	margin-bottom: 0.75rem;
 	text-align: justify;
 }
@@ -56,11 +62,11 @@
 }
 
 @media screen and (max-width: 600px){
-	.blog > div {
-		padding: 0 1rem;
+	.md-content {
+		padding: 0 1em;
 	}
 	
-	.mdb-p {
+	.md-p {
 		text-align: left;
 	}
 }

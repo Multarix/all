@@ -1,10 +1,10 @@
 import React from "react";
 
-import ProjectTile from "../../componants/projectTile";
-import Carousel from "../../componants/carousel";
-import TitleAndLogo from "../../componants/logo";
+import ProjectTile from "../../projectTile";
+import Carousel from "../../carousel";
+import TitleAndLogo from "../../logo";
 
-import { projectsData } from "../../modules/script.js";
+import { projectsData } from "../../../_modules/script.js";
 
 import "./style.css";
 

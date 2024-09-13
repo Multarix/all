@@ -2,23 +2,22 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
 
 import "./style.css";
 
 import Navbar from './componants/navbar';
-import Home from "./pages/Home";
-import ProjectsPage from "./pages/Projects";
-import BlogPage from "./pages/BlogTemplate";
-import DocsPage from "./pages/DocsTemplate";
+import Home from "./componants/pages/Home";
+import ProjectsPage from "./componants/pages/Projects";
+import MarkdownPage from "./componants/pages/MarkdownPageTemplate";
 
-import GrindChecklist from "./pages/GrindChecklist";
-import ErrorPage from "./pages/ErrorPage";
+import GrindChecklist from "./componants/pages/GrindChecklist";
+import ErrorPage from "./componants/pages/ErrorPage";
 
 import Container from './componants/container';
 
-import { projectsData, socialsData } from "./modules/script.js";
-import DocsData from "./modules/docs.mjs";
+import { projectsData, socialsData } from "./_modules/script.js";
+import DocsData from "./_modules/docs.mjs";
+import BlogData from "./_modules/blogs.mjs";
 
 const HomeElement = (
 	<Container>
@@ -53,14 +52,23 @@ const projectPages = projectsData.filter(p => p.isProject).map(project => {
 	routeArray.push(<Route key={project.id} path={project.url} element={ProjectElement} />);
 
 	// Blog Page
-	if(project.blog && project.blogMarkdown){
-		const BlogElement = (
-			<Container>
-				<BlogPage markdown={project.blogMarkdown} />
-			</Container>
-		);
+	if(project.blog){
+		for(const key of Object.keys(BlogData)){
+			if(!key.startsWith(project.id)) continue;
+			const value = BlogData[key];
 
-		routeArray.push(<Route key={project.id + "_blog"} path={project.url + "/blog"} element={BlogElement} />);
+			const pageLocation = key.slice(project.id.length + 1);								// ==> "role-types/index"				| "constructor"
+			const directoryMap = pageLocation.split("/");										// ==> ["role-types", "index"]			| ["constructor"]
+			const fileName = directoryMap.pop();												// ==> ["role-types"], "index"			| [], "constructor"
+
+			const pageURL = `/${pageLocation}`;
+			const fileURL = (fileName === "index") ? pageURL.slice(0, -6) : pageURL;			// ==> "role-types"						| "constructor"
+
+			const routeKey = `${project.id}_blog${fileURL.replace(/\//g, "_").replace(/-/g, "")}`;
+			const routePath = `${project.url}/blog${fileURL}`;
+
+			routeArray.push(<Route key={routeKey} path={`/${routePath}`} element={<MarkdownPage markdown={value} baseUrl={project.url + "/blog"} />} />);
+		}
 	}
 
 	// Documentation Pages
@@ -79,7 +87,7 @@ const projectPages = projectsData.filter(p => p.isProject).map(project => {
 			const routeKey = `${project.id}_docs${fileURL.replace(/\//g, "_").replace(/-/g, "")}`;
 			const routePath = `${project.url}/docs${fileURL}`;
 
-			routeArray.push(<Route key={routeKey} path={`/${routePath}`} element={<DocsPage markdown={value} url={project.url} />} />);
+			routeArray.push(<Route key={routeKey} path={`/${routePath}`} element={<MarkdownPage markdown={value} baseUrl={project.url + "/docs"} />} />);
 		}
 	}
 
@@ -102,5 +110,3 @@ root.render(
 		</BrowserRouter>
 	</React.StrictMode>
 );
-
-reportWebVitals();

@@ -6,6 +6,7 @@ const baseFile = "./public/404.html";
 const baseOutPath = "./build";
 const fileData = readFileSync(baseFile, { encoding: "utf8" });
 
+// Copies files to the build folder
 for(const key of Object.keys(BaseProjects)){
 	const project = BaseProjects[key];
 	if(!project.isProject) continue;

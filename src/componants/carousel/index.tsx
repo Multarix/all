@@ -5,8 +5,8 @@ import './style.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-// import { DESKTOP_WIDTH, TABLET_WIDTH, MOBILE_WIDTH } from '../../modules/constants';
-import { useContainerDimensions } from '../../modules/script.js';
+
+import { useContainerDimensions } from '../../_modules/script.js';
 
 // const TILE_SIZE = 300;
 // const GAP_BETWEEN_TILES = 25;

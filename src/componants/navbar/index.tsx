@@ -5,7 +5,7 @@ import './style.css';
 
 import { MenuLeftIcon, MenuRightIcon } from "../svgs";
 
-import { useWindowDimensions, SocialData, ProjectData, TABLET_WIDTH } from "../../modules/script.js";
+import { useWindowDimensions, SocialData, ProjectData, TABLET_WIDTH } from "../../_modules/script.js";
 
 /*
 if ("ontouchstart" in document.documentElement){
