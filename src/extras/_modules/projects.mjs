@@ -119,7 +119,8 @@ const BaseProjects = {
         "docs": true,
         "blog": false,
         "npm": "dnd-npc",
-        "exampleCode": "import NPC from 'dnd-npc';\nconst npc = new NPC()\n    .setRace('warforged', 'juggernaut')\n    .setClass('fighter');\n\nconst char = await npc.generate();"
+        "exampleCode": "import NPC from 'dnd-npc';\nconst npc = new NPC()\n    .setRace('warforged', 'juggernaut')\n    .setClass('fighter');\n\nconst char = await npc.generate();",
+        "codeLang": "javascript"
     },
     "LightsOut": {
         "name": "lights out",

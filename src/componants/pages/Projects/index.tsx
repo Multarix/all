@@ -31,10 +31,10 @@ function ProjectButtons(props: { github: string, docs: boolean, blog: boolean })
 	);
 }
 
-function ProjectLogoLinks(props: { name: string, img: string, github: string, docs: boolean, blog: boolean, npm?: string, }): JSX.Element {
+function ProjectLogoLinks(props: ProjectData): JSX.Element {
 	return (
 		<section id="project-links">
-			<img className="project-logo" alt={`${props.name} logo`} loading="eager" src={props.img}></img>
+			<img className="project-logo" alt={`${props.displayName} logo`} loading="eager" src={props.img}></img>
 			<ProjectNPM npm={props.npm}/>
 			<ProjectButtons github={props.github} docs={props.docs} blog={props.blog} />
 		</section>
@@ -43,8 +43,8 @@ function ProjectLogoLinks(props: { name: string, img: string, github: string, do
 
 
 
-function ExampleCode(props: { exampleCode?: string }): JSX.Element {
-	if(!props.exampleCode) return (<></>);
+function ExampleCode(props: { exampleCode?: string, codeLang?: string }): JSX.Element {
+	if(!props.exampleCode || !props.codeLang) return (<></>);
 	return (
 		<CodeBlock language="javascript">
 			{props.exampleCode}
@@ -53,19 +53,19 @@ function ExampleCode(props: { exampleCode?: string }): JSX.Element {
 	;
 }
 
-function ProjectTitle(props: { name: string, fullDesc: string, exampleCode?: string }): JSX.Element {
+function ProjectTitle(props: ProjectData): JSX.Element {
 	return (
 		<section id="project-info">
-			<h1 className="project-title">{props.name}</h1>
+			<h1 className="project-title">{props.displayName}</h1>
 			<p className="project-desc">{props.fullDesc}</p>
-			<ExampleCode exampleCode={props.exampleCode} />
+			<ExampleCode exampleCode={props.exampleCode} codeLang={props.codeLang} />
 		</section>
 	);
 }
 
 
 
-function ProjectAbout(props: { about: JSX.Element }): JSX.Element {
+function ProjectAbout(props: ProjectData): JSX.Element {
 	return (
 		<section id="project-about">
 			<h2 className="project-extra-title">About</h2>
@@ -76,7 +76,7 @@ function ProjectAbout(props: { about: JSX.Element }): JSX.Element {
 
 
 
-function ProjectWhy(props: { why: JSX.Element }): JSX.Element {
+function ProjectWhy(props: ProjectData): JSX.Element {
 	return (
 		<section id="project-why">
 			<h2 className="project-extra-title">Why?</h2>
@@ -94,10 +94,10 @@ export default function ProjectsPage(props: ProjectData): JSX.Element {
 		return (
 			<div className="content project">
 				<div className="project-page">
-					<ProjectTitle name={props.displayName} fullDesc={props.fullDesc} exampleCode={props.exampleCode} />
-					<ProjectLogoLinks name={props.displayName} img={props.img} github={props.github} blog={props.blog} docs={props.docs} npm={props.npm}/>
-					<ProjectWhy why={props.why} />
-					<ProjectAbout about={props.about} />
+					<ProjectTitle {...props} />
+					<ProjectLogoLinks {...props}/>
+					<ProjectWhy {...props} />
+					<ProjectAbout {...props} />
 				</div>
 			</div>
 		);
@@ -107,10 +107,10 @@ export default function ProjectsPage(props: ProjectData): JSX.Element {
 	return (
 		<div className="content project">
 			<div className="project-page">
-				<ProjectLogoLinks name={props.displayName} img={props.img} github={props.github} blog={props.blog} docs={props.docs} npm={props.npm}/>
-				<ProjectTitle name={props.displayName} fullDesc={props.fullDesc} exampleCode={props.exampleCode} />
-				<ProjectAbout about={props.about} />
-				<ProjectWhy why={props.why} />
+				<ProjectLogoLinks {...props}/>
+				<ProjectTitle {...props} />
+				<ProjectAbout {...props} />
+				<ProjectWhy {...props} />
 			</div>
 		</div>
 	);
