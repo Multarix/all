@@ -1,5 +1,5 @@
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from "fs";
-import BaseProjects from "../src/modules/projects.mjs";
+import BaseProjects from "../src/extras/_modules/projects.mjs";
 console.warn("Starting Post-Build!");
 
 const baseFile = "./public/404.html";

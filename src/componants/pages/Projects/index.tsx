@@ -46,7 +46,7 @@ function ProjectLogoLinks(props: { name: string, img: string, github: string, do
 function ExampleCode(props: { exampleCode?: string }): JSX.Element {
 	if(!props.exampleCode) return (<></>);
 	return (
-		<CodeBlock>
+		<CodeBlock language="javascript">
 			{props.exampleCode}
 		</CodeBlock>
 	);
