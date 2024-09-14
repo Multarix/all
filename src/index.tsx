@@ -9,15 +9,13 @@ import Navbar from './componants/navbar';
 import Home from "./componants/pages/Home";
 import ProjectsPage from "./componants/pages/Projects";
 import MarkdownPage from "./componants/pages/MarkdownPageTemplate";
-
 import GrindChecklist from "./componants/pages/GrindChecklist";
 import ErrorPage from "./componants/pages/ErrorPage";
-
 import Container from './componants/container';
 
-import { projectsData, socialsData } from "./_modules/script.js";
-import DocsData from "./_modules/docs.mjs";
-import BlogData from "./_modules/blogs.mjs";
+import { projectsData, socialsData } from "./extras/_modules/script.js";
+import DocsData from "./extras/_modules/docs.mjs";
+import BlogData from "./extras/_modules/blogs.mjs";
 
 const HomeElement = (
 	<Container>

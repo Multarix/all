@@ -34,6 +34,8 @@ const npc = new NPC(obj)
 const character = await npc.generate();
 ```
 
+<br>
+
 ```javascript
 import NPC from 'dnd-npc';
 const npc = new NPC()
@@ -44,7 +46,8 @@ const npc = new NPC()
 const character = await npc.generate();
 ```
 
-You can also overwrite settings that you have already input.
+<br>
+You can overwrite settings that you have already input.
 
 ```javascript
 import NPC from 'dnd-npc';
@@ -63,6 +66,7 @@ const npc = new NPC(obj)
 const character = await npc.generate();
 ```
 
+<br>
 You can also pass a sub-race as the classType and it will generate with the correct race and sub-race.
 
 ```javascript
@@ -73,6 +77,7 @@ const npc = new NPC({ classType: "juggernaut" });
 const character = await npc.generate();
 ```
 
+<br>
 Leaving the raceType or classType blank, or passing an invalid type to it, will result in that thing being randomly generated.
 
 ```javascript
@@ -83,6 +88,8 @@ const npc = new NPC({ raceType: "warforged" });
 const character = await npc.generate();
 ```
 
+<br>
+
 ```javascript
 import NPC from 'dnd-npc';
 const npc = new NPC({ classType: "fighter" });
@@ -91,6 +98,8 @@ const npc = new NPC({ classType: "fighter" });
 const character = await npc.generate();
 ```
 
+<br>
+
 ```javascript
 import NPC from 'dnd-npc';
 const npc = new NPC();
@@ -98,6 +107,8 @@ const npc = new NPC();
 // Generates a completely random character.
 const character = await npc.generate();
 ```
+
+<br>
 
 ---
 
@@ -114,6 +125,7 @@ After using the `#generate()` method, you'll receive an object like this with al
 };
 ```
 
+<br>
 The Object type definitions can be found below:
 
 ```javascript

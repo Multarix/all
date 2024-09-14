@@ -14,6 +14,10 @@
 	padding: 0 2rem;
 }
 
+.md-h1, .md-h2, .md-h3, .md-h4, .md-h5, .md-h6 {
+	margin-left: 0.1em;
+}
+
 .md-h1 {
 	text-align: center;
 	font-size: 65px;
@@ -35,13 +39,20 @@
 	margin-bottom: 0.75rem;
 }
 
-.md-ol > li, .md-ul > ul {
+.md-ol .md-ul {
 	padding-left: 0.5rem;
 }
+
+ul.md-ul > li > ul.md-ul {
+	margin: 0 0 0.2em 2em;
+	padding: 0;
+}
+
 
 .md-p {
 	margin-bottom: 0.75rem;
 	text-align: justify;
+	margin-left: 0.25em;
 }
 
 .md-code {

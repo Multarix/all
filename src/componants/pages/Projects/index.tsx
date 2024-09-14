@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import CodeBlock from "../../codeBlock";
-import { ProjectData, useWindowDimensions } from "../../../_modules/script.js";
+import { ProjectData, useWindowDimensions } from "../../../extras/_modules/script.js";
 
 import "./style.css";
 
@@ -45,7 +45,11 @@ function ProjectLogoLinks(props: { name: string, img: string, github: string, do
 
 function ExampleCode(props: { exampleCode?: string }): JSX.Element {
 	if(!props.exampleCode) return (<></>);
-	return <CodeBlock className="javascript">{props.exampleCode}</CodeBlock>;
+	return (
+		<CodeBlock>
+			{props.exampleCode}
+		</CodeBlock>
+	);
 	;
 }
 

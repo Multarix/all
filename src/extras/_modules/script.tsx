@@ -7,7 +7,7 @@ import {
 	TwitchIcon,
 	SteamIcon,
 	GithubIcon
-} from '../componants/svgs';
+} from "../../componants/svgs";
 
 
 
@@ -341,7 +341,7 @@ const projectsExtra: ExtraProjectData[] = [
 
 
 
-const images = require.context("../img/icons/", false);
+const images = require.context("../../img/icons/", false);
 const imageList: { [key: string]: string } = {};
 images.keys().forEach(image => {
 	imageList[image] = images(image);

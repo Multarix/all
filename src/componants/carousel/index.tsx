@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 
-import { useContainerDimensions } from '../../_modules/script.js';
+import { useContainerDimensions } from "../../extras/_modules/script.js";
 
 // const TILE_SIZE = 300;
 // const GAP_BETWEEN_TILES = 25;

@@ -8,9 +8,13 @@ import javascript from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('javascript', javascript);
 
 
-export default class CodeBlock extends React.Component<{ value: string }, { value: string }> {
+interface CodeBlockProps {
+	children: string
+}
+
+export default class CodeBlock extends React.Component<CodeBlockProps, CodeBlockProps> {
 	static propTypes = {
-		value: PropTypes.string
+		children: PropTypes.string
 	};
 
 	componentDidMount(): void {
@@ -31,7 +35,7 @@ export default class CodeBlock extends React.Component<{ value: string }, { valu
 			<div className="code-overflow">
 				<pre className="hljs-pre-codeblock">
 					<code className="hljs-codeblock">
-						{this.props.value}
+						{this.props.children}
 					</code>
 				</pre>
 			</div>
