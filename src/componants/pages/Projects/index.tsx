@@ -18,6 +18,7 @@ function ProjectNPM(props: { npm?: string }): JSX.Element {
 	);
 }
 
+
 function ProjectButtons(props: { github: string, docs: boolean, blog: boolean }): JSX.Element {
 	const buttonLinks: JSX.Element[] = [];
 	if(props.blog) buttonLinks.push(<Link key="blog" to="./blog" className="project-button blog-button" >Blog</Link>);
@@ -31,6 +32,7 @@ function ProjectButtons(props: { github: string, docs: boolean, blog: boolean })
 	);
 }
 
+
 function ProjectLogoLinks(props: ProjectData): JSX.Element {
 	return (
 		<section id="project-links">
@@ -40,7 +42,6 @@ function ProjectLogoLinks(props: ProjectData): JSX.Element {
 		</section>
 	);
 }
-
 
 
 function ExampleCode(props: { exampleCode?: string, codeLang?: string }): JSX.Element {
@@ -53,6 +54,7 @@ function ExampleCode(props: { exampleCode?: string, codeLang?: string }): JSX.El
 	;
 }
 
+
 function ProjectTitle(props: ProjectData): JSX.Element {
 	return (
 		<section id="project-info">
@@ -62,7 +64,6 @@ function ProjectTitle(props: ProjectData): JSX.Element {
 		</section>
 	);
 }
-
 
 
 function ProjectAbout(props: ProjectData): JSX.Element {
@@ -75,7 +76,6 @@ function ProjectAbout(props: ProjectData): JSX.Element {
 }
 
 
-
 function ProjectWhy(props: ProjectData): JSX.Element {
 	return (
 		<section id="project-why">
@@ -84,7 +84,6 @@ function ProjectWhy(props: ProjectData): JSX.Element {
 		</section>
 	);
 }
-
 
 
 export default function ProjectsPage(props: ProjectData): JSX.Element {
