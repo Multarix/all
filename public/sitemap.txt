@@ -1,12 +1,13 @@
 https://multarix.com/
-https://multarix.com/?/about/
 https://multarix.com/?/conversions/
 https://multarix.com/?/grind-checklist/
 https://multarix.com/?/boss-hp/
 https://multarix.com/?/boids/
+https://multarix.com/?/boids/blog
 https://multarix.com/?/character-tracker/
 https://multarix.com/?/discord-blocked/
 https://multarix.com/?/dnd-npc/
+https://multarix.com/?/dnd-npc/docs
 https://multarix.com/?/lights-out/
 https://multarix.com/?/tera-guide/
 https://multarix.com/?/truth-table/
