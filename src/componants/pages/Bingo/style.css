@@ -1,0 +1,51 @@
+.bingo-container {
+	display: block;
+	scrollbar-gutter: stable;
+	overflow: auto;
+	
+	max-height: calc(100vh - var(--navbar-height));
+	margin: 1em;
+}
+
+.bingo-play-area {
+	text-align: center;
+}
+
+.bingo-board {
+	margin: 1em auto;
+	user-select: none;
+}
+
+.bingo-board tr td {
+	--board-size: 110px;
+	
+	min-width: var(--board-size);
+	width: var(--board-size);
+	max-width: var(--board-size);
+	
+	min-height: var(--board-size);
+	height: var(--board-size);
+	max-height: var(--board-size);
+	
+	padding: 10px;
+	
+	text-wrap: wrap;
+	
+	background-color: gray;
+}
+
+.bingo-button {
+	background-color: var(--secondary-color);
+	&:hover {
+		background-color: rgb(from var(--secondary-color) calc(r + 15) calc(g + 15) calc(b + 15));
+	}
+}
+
+.bingo-rules {
+	max-width: fit-content;
+	margin: 0 auto;
+}
+
+.bingo-container ul li {
+	margin-left: 1em;
+}

@@ -39,3 +39,11 @@ for(const key of Object.keys(BaseProjects)){
 	writeFileSync(baseOutPath + project.url + ".html", baseProjectData, { encoding: "utf8" });
 	console.log(`Copied '${project.url}' to build...`);
 }
+
+// Blog
+const baseProjectData = fileData
+	.replace('property="og:title" content="Projects by Multarix"', `property="og:title" content="BDO Bingo"`)
+	.replace('property="og:description" content="All of the projects, in one handy place"', `property="og:description" content="It's Bingo, for laughing at Jae."`);
+
+writeFileSync(baseOutPath + "/blog.html", baseProjectData, { encoding: "utf8" });
+console.log("Copied 'bingo...'");

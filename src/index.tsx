@@ -10,12 +10,14 @@ import Home from "./componants/pages/Home";
 import ProjectsPage from "./componants/pages/Projects";
 import MarkdownPage from "./componants/pages/MarkdownPageTemplate";
 import GrindChecklist from "./componants/pages/GrindChecklist";
+import BingoPage from "./componants/pages/Bingo";
 import ErrorPage from "./componants/pages/ErrorPage";
 import Container from './componants/container';
 
 import { projectsData, socialsData } from "./extras/_modules/script.js";
 import DocsData from "./extras/_modules/docs.mjs";
 import BlogData from "./extras/_modules/blogs.mjs";
+
 
 const HomeElement = (
 	<Container>
@@ -28,6 +30,8 @@ const GrindElement = (
 		<GrindChecklist />
 	</Container>
 );
+
+const BingoElement = <BingoPage />;
 
 const ErrorElement = (
 	<Container>
@@ -100,6 +104,7 @@ root.render(
 			<Navbar projects={projectsData} socials={socialsData} />
 			<Routes>
 				<Route path="/" element={HomeElement}/>
+				<Route path="/bingo" element={BingoElement}/>
 
 				{projectPages.flat()}
 
