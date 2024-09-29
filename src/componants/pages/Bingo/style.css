@@ -32,6 +32,9 @@
 	text-wrap: wrap;
 	
 	background-color: gray;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .bingo-button {
