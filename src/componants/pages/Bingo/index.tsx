@@ -54,9 +54,11 @@ const playBingo = () => {
 
 
 function TableData(props: { rowNumber: number, columnLetter: string}): JSX.Element {
-	return <td onClick={changeColor.bind(null, props.columnLetter + props.rowNumber)} id={props.columnLetter + props.rowNumber}>
-		{props.columnLetter.toUpperCase() + props.rowNumber}
-	</td>;
+	return (
+		<td id={props.columnLetter + props.rowNumber} onClick={changeColor.bind(null, props.columnLetter + props.rowNumber)}>
+			{props.columnLetter.toUpperCase() + props.rowNumber}
+		</td>
+	);
 }
 
 
@@ -74,7 +76,7 @@ function TableRow(props: { rowNumber: number }): JSX.Element {
 
 export default function Bingo() {
 	return (
-		<div className="bingo-container">
+		<div className="content bingo">
 			<div className="bingo-play-area">
 				<table className="bingo-board">
 					<tbody>

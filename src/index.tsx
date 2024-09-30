@@ -31,7 +31,11 @@ const GrindElement = (
 	</Container>
 );
 
-const BingoElement = <BingoPage />;
+const BingoElement = (
+	<Container>
+		<BingoPage />
+	</Container>
+);
 
 const ErrorElement = (
 	<Container>
