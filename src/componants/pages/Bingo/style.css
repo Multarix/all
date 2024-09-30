@@ -55,9 +55,6 @@
 	margin-left: -0.6em;
 }
 
-.bingo-container ul li {
-	margin-left: 1em;
-}
 
 @container q-cont (width < 981px) {
 	.bingo-board tr td {

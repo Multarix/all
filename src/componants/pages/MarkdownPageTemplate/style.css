@@ -36,19 +36,8 @@
 }
 
 .md-ol, .md-ul {
-	margin-left: 3rem;
 	margin-bottom: 0.75rem;
 }
-
-.md-ol .md-ul {
-	padding-left: 0.5rem;
-}
-
-ul.md-ul > li > ul.md-ul {
-	margin: 0 0 0.2em 2em;
-	padding: 0;
-}
-
 
 .md-p {
 	margin-bottom: 0.75rem;
