@@ -22,11 +22,15 @@ const playBingo = () => {
 	btn.style.visibility = "hidden";
 
 	const bingoCellText = [
-		"New Treasure Item",		"PvP Changes",		"New Furiture Items",		"Coupon Code",			"DEC Armor",
-		"Lifeskill Changes",		"New Dehkia Spot",	"New Party Shrine Boss",	"'Coming Soon'",		"Hardcore server",
-		"Quality of Life",			"New Outfit",		"Sovereign Offhand",		"Free Handouts",		"Guild Manor stuff",
-		"Demon Realm Mentioned",	"Gunner Class",		"Eternal Winter Pt 2",		"Recycled Content",		"Class rebalancing",
-		"KR Gets Something First",	"Jae Apology",		"New Type of Mount",		"C8-10 Shrine Bosses",	"'Listening to your Feedback'"
+		"New Treasure Item",		"PvP Changes",			"New Furiture Items",		"Coupon Code",				"DEC Armor",
+		"Lifeskill Changes",		"New Dehkia Spot",		"New Party Shrine Boss",	"'Coming Soon'",			"Hardcore server",
+		"Quality of Life",			"New Outfit",			"Sovereign Offhand",		"Free Handouts",			"Guild Manor stuff",
+		"Demon Realm Mentioned",	"Gunner Class",			"Eternal Winter Pt 2",		"Recycled Content",			"Class rebalancing",
+		"KR Gets Something First",	"Jae Apology",			"New Type of Mount",		"C8-10 Shrine Bosses",		"'Listening to your Feedback'",
+		"No release date",			"New 'Manos' gear",		"Talks About China",		"Altar of Blood",			"Something gets delayed",
+		"Console Gets Shafted",		"Elvia Mediah",			"Time Travel Map",			"Atoraxxin Dungeon",		"Trade Becomes Land Bartering",
+		"Mainhand 'Heart' Item",	"New World Boss",		"PvE Servers"
+
 	];
 
 	const letters = ["a", "b", "c", "d", "e"];
