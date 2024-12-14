@@ -28,7 +28,7 @@ const playBingo = () => {
 		"Demon Realm Mentioned",	"Gunner Class",			"Eternal Winter Pt2",		"Recycled Content",			"Class rebalancing",
 		"KR Gets Something First",	"Jae Apology",			"New Type of Mount",		"C8-10 Shrine Bosses",		"'Listening To Your Feedback'",
 		"No Release Date",			"New 'Manos' gear",		"Talks About China",		"Altar of Blood",			"Something Gets Delayed",
-		"Console Gets Shafted",		"Elvia Mediah",			"Time Travel Map",			"Atoraxxin Dungeon",		"Trade Becomes Land Bartering",
+		"Console Gets Shafted",		"Elvia Mediah",			"Time Travel Map",			"Atoraxxion Dungeon",		"Trade Becomes Land Bartering",
 		"Mainhand 'Heart' Item",	"New World Boss",		"PvE Servers"
 
 	];
