@@ -85,6 +85,12 @@ body {
 	max-height: calc(100% - var(--navbar-height));
 	
 	min-height: fit-content;
+	
+	--primary-grid-rgb: 0 150 130;
+	--opacity: 0.1;
+	
+	background-image: linear-gradient(to right, rgb(var(--primary-grid-rgb) / var(--opacity)) 1px, transparent 1px),linear-gradient(to bottom, rgb(var(--primary-grid-rgb) / var(--opacity)) 1px, transparent 1px);
+	background-size: 6rem 4rem;
 }
 
 #width-limit {
