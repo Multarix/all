@@ -125,6 +125,13 @@ const projectsExtra: ExtraProjectData[] = [
 	},
 	{
 
+		id: "GeoGuesser",
+		why: (<></>),
+		about: (<></>)
+
+	},
+	{
+
 		id: "BaseConversion",
 		why: (
 			<p>
@@ -340,7 +347,7 @@ const projectsExtra: ExtraProjectData[] = [
 ];
 
 
-
+// This just loads the images
 const images = require.context("../../img/icons/", false);
 const imageList: { [key: string]: string } = {};
 images.keys().forEach(image => {
@@ -349,6 +356,7 @@ images.keys().forEach(image => {
 
 
 
+// This is just the above data combined with the data in projects.mts
 export const projectsData: ProjectData[] = projectsExtra.map(project => {
 	const baseProjectData = BaseProjects[project.id];
 
@@ -366,7 +374,7 @@ export const socialsData: SocialData[] = [
 		url: "twitter.com/",
 		title: "Twitter",
 		icon: <TwitterIcon />,
-		enable: true
+		enable: false
 	},
 	{
 		username: "",
@@ -387,7 +395,7 @@ export const socialsData: SocialData[] = [
 		url: "twitch.com/",
 		title: "Twitch",
 		icon: <TwitchIcon />,
-		enable: true
+		enable: false
 	},
 	{
 		username: "",
@@ -401,7 +409,7 @@ export const socialsData: SocialData[] = [
 		url: "steamcommunity.com/id/",
 		title: "Steam",
 		icon: <SteamIcon />,
-		enable: false
+		enable: true
 	},
 	{
 		username: "multarix",

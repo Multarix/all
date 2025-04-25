@@ -9,7 +9,7 @@ import { projectsData } from "../../../extras/_modules/script.js";
 import "./style.css";
 
 export default function App() {
-	const projectTileData = projectsData.filter(item => item.isProject);
+	const projectTileData = projectsData.filter(item => (item.isProject || item.id === "GeoGuesser"));
 	const projectTiles = projectTileData.map(project => <ProjectTile key={project.id} project={project} />);
 
 	return (

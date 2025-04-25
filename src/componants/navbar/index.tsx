@@ -19,7 +19,7 @@ function ProjectsSection(props: { projects: ProjectData[] }): JSX.Element {
 
 	const projects = props.projects.map(project => {
 		return (
-			<Link to={project.url} key={project.id}>{project.name.toUpperCase()}</Link>
+			<Link to={project.url} key={project.id}>{project.navbarName.toUpperCase()}</Link>
 		);
 	});
 

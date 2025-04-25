@@ -2,6 +2,7 @@ const BaseProjects = {
     "Home": {
         "name": "Home",
         "displayName": "Home",
+        "navbarName": "Home",
         "id": "Home",
         "activeGroup": "Home",
         "url": "/",
@@ -17,6 +18,7 @@ const BaseProjects = {
     "BaseConversion": {
         "name": "base conversions",
         "displayName": "Base Conversions",
+        "navbarName": "Base Conversions",
         "id": "BaseConversion",
         "activeGroup": "base-conversion",
         "url": "/conversions",
@@ -32,6 +34,7 @@ const BaseProjects = {
     "BDOChecklist": {
         "name": "bdo: grind checklist",
         "displayName": "Grind Checklist",
+        "navbarName": "BDO: Grind Checklist",
         "id": "BDOChecklist",
         "activeGroup": "home",
         "url": "/grind-checklist",
@@ -47,6 +50,7 @@ const BaseProjects = {
     "BDOHP": {
         "name": "bdo: hp gauge",
         "displayName": "Black Desert:\nBoss HP Gauge",
+        "navbarName": "BDO: HP Gauge",
         "id": "BDOHP",
         "activeGroup": "boss-hp",
         "url": "/boss-hp",
@@ -62,6 +66,7 @@ const BaseProjects = {
     "BoidSimulation": {
         "name": "boid simulation",
         "displayName": "Boid Simulation",
+        "navbarName": "Boid Simulation",
         "id": "BoidSimulation",
         "activeGroup": "boids",
         "url": "/boids",
@@ -77,6 +82,7 @@ const BaseProjects = {
     "CharacterTracker": {
         "name": "character tracker",
         "displayName": "Character Tracker",
+        "navbarName": "Character Tracker",
         "id": "CharacterTracker",
         "activeGroup": "character-tracker",
         "url": "/character-tracker",
@@ -92,6 +98,7 @@ const BaseProjects = {
     "DiscordBlockMessages": {
         "name": "discord: block messages",
         "displayName": "Discord:\nHide Blocked Messages",
+        "navbarName": "Discord: Block Messages",
         "id": "DiscordBlockMessages",
         "activeGroup": "discord-block",
         "url": "/discord-blocked",
@@ -107,6 +114,7 @@ const BaseProjects = {
     "DnDNPC": {
         "name": "dnd-npc",
         "displayName": "D&D-NPC",
+        "navbarName": "D&D NPC",
         "id": "DnDNPC",
         "activeGroup": "npc",
         "url": "/dnd-npc",
@@ -125,6 +133,7 @@ const BaseProjects = {
     "LightsOut": {
         "name": "lights out",
         "displayName": "Lights Out",
+        "navbarName": "Lights Out",
         "id": "LightsOut",
         "activeGroup": "lights-out",
         "url": "/lights-out",
@@ -140,6 +149,7 @@ const BaseProjects = {
     "TeraGuide": {
         "name": "tera guide",
         "displayName": "Tera Guide",
+        "navbarName": "Tera Guide",
         "id": "TeraGuide",
         "activeGroup": "tera-guide",
         "url": "/tera-guide",
@@ -155,6 +165,7 @@ const BaseProjects = {
     "TruthTable": {
         "name": "truth table",
         "displayName": "Truth Table",
+        "navbarName": "Truth Table",
         "id": "TruthTable",
         "activeGroup": "truth-table",
         "url": "/truth-table",
@@ -164,6 +175,22 @@ const BaseProjects = {
         "isProject": true,
         "fullDesc": "Creates a truth table from a Javascript boolean statement. Also converts relevant JS symbols into their mathematical counterparts.",
         "github": "https://github.com/Multarix/TruthTable",
+        "docs": false,
+        "blog": false
+    },
+    "GeoGuesser": {
+        "name": "black desert geoguesser",
+        "displayName": "BDO: GeoGuesser",
+        "navbarName": "BDO: GeoGuesser",
+        "id": "GeoGuesser",
+        "activeGroup": "bdo-geo-guesser",
+        "url": "https://bdoguessr.moe",
+        "img": "geoguesser.png",
+        "shortDesc": "Guess where you are! Velia? Altinova? A fun game for beginners and veterans alike.",
+        "longDesc": "Geo-Guesser, but in Black Desert, what more do I need to say? I helped assist Niyah in the development of the site.",
+        "isProject": false,
+        "fullDesc": "",
+        "github": "",
         "docs": false,
         "blog": false
     }
