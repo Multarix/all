@@ -23,11 +23,11 @@ const playBingo = () => {
 
 	const bingoCellText = [
 		"New Treasure Item",		"PvP Changes",			"New Furiture Items",		"Coupon Code",				"DEC Armor",
-		"Lifeskill Changes",		"New Dehkia Spot",		"New Party Shrine Boss",	"'Coming Soon'",			"Hardcore server",
-		"Quality of Life",			"New Outfit",			"Sovereign Offhand",		"Free Handouts",			"Guild Manor stuff",
-		"Demon Realm",				"New Class",			"Eternal Winter Pt2",		"Recycled Content",			"Class rebalancing",
+		"Lifeskill Changes",		"New Dehkia Spot",		"New Party Shrine Boss",	"'Coming Soon'",
+		"Quality of Life",			"New Outfit",			"Sovereign Offhand",		"Guild Manor Stuff",
+		"Demon Realm",				"New Class",			"Eternal Winter Pt2",		"Recycled Content",			"Class Rebalancing",
 		"KR Gets Something First",	"PA Apology",			"New Type/Tier of Mount",	"C8-10 Shrine Bosses",		"'Listening To Your Feedback'",
-		"No Release Date",			"New 'Manos' gear",		"Talks About China",		"Altar of Blood",			"Something Gets Delayed",
+		"No Release Date",			"Talks About China",	"Altar Of Blood",			"Something Gets Delayed",
 		"Console Gets Shafted",		"Elvia Mediah",			"Time Travel Map",			"Atoraxxion Dungeon",		"Trade Becomes Land Bartering",
 		"Mainhand 'Heart' Item",	"New World Boss",		"PvE Servers",				"Fishing",					"Who Asked For This?"
 
