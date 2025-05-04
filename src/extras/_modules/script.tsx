@@ -125,13 +125,6 @@ const projectsExtra: ExtraProjectData[] = [
 	},
 	{
 
-		id: "GeoGuesser",
-		why: (<></>),
-		about: (<></>)
-
-	},
-	{
-
 		id: "BaseConversion",
 		why: (
 			<p>
@@ -158,6 +151,13 @@ const projectsExtra: ExtraProjectData[] = [
 				</p>
 			</>
 		)
+	},
+	{
+
+		id: "BDOGuessr",
+		why: (<></>),
+		about: (<></>)
+
 	},
 	{
 		id: "BDOChecklist",

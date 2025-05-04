@@ -31,6 +31,22 @@ const BaseProjects = {
         "docs": false,
         "blog": false
     },
+    "BDOGuessr": {
+        "name": "BDOGuessr",
+        "displayName": "BDOGuessr",
+        "navbarName": "BDOGuessr",
+        "id": "GeoGuesser",
+        "activeGroup": "bdo-geo-guesser",
+        "url": "https://bdoguessr.moe",
+        "img": "geoguesser.png",
+        "shortDesc": "Guess where you are! Velia? Altinova? A fun game for beginners and veterans alike.",
+        "longDesc": "GeoGuessr, but in Black Desert, what more do I need to say? I helped assist Niyah in the development of the site.",
+        "isProject": false,
+        "fullDesc": "",
+        "github": "",
+        "docs": false,
+        "blog": false
+    },
     "BDOChecklist": {
         "name": "bdo: grind checklist",
         "displayName": "Grind Checklist",
@@ -175,22 +191,6 @@ const BaseProjects = {
         "isProject": true,
         "fullDesc": "Creates a truth table from a Javascript boolean statement. Also converts relevant JS symbols into their mathematical counterparts.",
         "github": "https://github.com/Multarix/TruthTable",
-        "docs": false,
-        "blog": false
-    },
-    "GeoGuesser": {
-        "name": "black desert geoguesser",
-        "displayName": "BDO: GeoGuesser",
-        "navbarName": "BDO: GeoGuesser",
-        "id": "GeoGuesser",
-        "activeGroup": "bdo-geo-guesser",
-        "url": "https://bdoguessr.moe",
-        "img": "geoguesser.png",
-        "shortDesc": "Guess where you are! Velia? Altinova? A fun game for beginners and veterans alike.",
-        "longDesc": "Geo-Guesser, but in Black Desert, what more do I need to say? I helped assist Niyah in the development of the site.",
-        "isProject": false,
-        "fullDesc": "",
-        "github": "",
         "docs": false,
         "blog": false
     }
