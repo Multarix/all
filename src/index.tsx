@@ -109,6 +109,7 @@ root.render(
 			<Routes>
 				<Route path="/" element={HomeElement}/>
 				<Route path="/bingo" element={BingoElement}/>
+				<Route path="/bdoguessr" Component={() => { window.location.href = "https://bdoguessr.moe"; return null; }}/>
 
 				{projectPages.flat()}
 
