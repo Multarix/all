@@ -22,14 +22,14 @@ const playBingo = () => {
 	btn.style.visibility = "hidden";
 
 	const bingoCellText = [
-		"New Treasure Item",		"PvP Changes",			"New Furiture Items",		"Coupon Code",				"DEC Armor",
-		"Lifeskill Changes",		"New Dehkia Spot",		"New Party Shrine Boss",	"'Coming Soon'",
-		"Quality of Life",			"New Outfit",			"Sovereign Offhand",		"Guild Manor Stuff",
-		"Demon Realm",				"New Class",			"Eternal Winter Pt2",		"Recycled Content",			"Class Rebalancing",
-		"KR Gets Something First",	"PA Apology",			"New Type/Tier of Mount",	"C8-10 Shrine Bosses",		"'Listening To Your Feedback'",
-		"No Release Date",			"Talks About China",	"Altar Of Blood",			"Something Gets Delayed",
-		"Console Gets Shafted",		"Elvia Mediah",			"Time Travel Map",			"Atoraxxion Dungeon",		"Trade Becomes Land Bartering",
-		"Mainhand 'Heart' Item",	"New World Boss",		"PvE Servers",				"Fishing",					"Who Asked For This?"
+		"New Treasure Item",		"PvP Changes",			"New Furiture Items",			"Coupon Code",						"DEC Armor",
+		"Demon Realm",				"New Class",			"Eternal Winter Pt2",			"Recycled Content",					"Class Rebalancing",
+		"Mainhand 'Heart' Item",	"New World Boss",		"PvE Servers",					"Fishing",							"Who Asked For This?",
+		"Lifeskill Changes",		"New Dehkia Spot",		"New Party Shrine Boss",		"'Coming Soon'",					"Alchemy Stone Rework",
+		"KR Gets Something First",	"PA Apology",			"New Type/Tier of Mount",		"C8-10 Shrine Bosses",				"'Listening To Your Feedback'",
+		"No Release Date",			"Talks About China",	"Altar Of Blood",				"Something Gets Delayed",
+		"Console Gets Shafted",		"Elvia Mediah",			"Time Travel Map",				"Trade Becomes Land Bartering",
+		"Quality of Life",			"New Outfit",			"Sovereign Offhand",			"Guild Manor Stuff"
 
 	];
 
