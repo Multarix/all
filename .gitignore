@@ -11,6 +11,7 @@ test.*
 
 # testing
 /coverage
+nginx
 
 # production
 /build

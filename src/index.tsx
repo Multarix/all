@@ -107,13 +107,12 @@ root.render(
 		<BrowserRouter>
 			<Navbar projects={projectsData} socials={socialsData} />
 			<Routes>
+				<Route path="*" element={ErrorElement}/>
 				<Route path="/" element={HomeElement}/>
 				<Route path="/bingo" element={BingoElement}/>
 				<Route path="/bdoguessr" Component={() => { window.location.href = "https://bdoguessr.moe"; return null; }}/>
 
 				{projectPages.flat()}
-
-				<Route path="*" element={ErrorElement}/>
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>
